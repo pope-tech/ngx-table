@@ -1,0 +1,9 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,extraRequire,uselessCode} checked by tsc
+ */
+/** @typedef {?} */
+var CellCallback;
+export { CellCallback };
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY2VsbC1jYWxsYmFjay50eXBlLmpzIiwic291cmNlUm9vdCI6Im5nOi8vbmd4LXRhYmxlLyIsInNvdXJjZXMiOlsibGliL3R5cGVzL2NlbGwtY2FsbGJhY2sudHlwZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtEYXRhVGFibGVSb3dDb21wb25lbnR9IGZyb20gJy4uL2NvbXBvbmVudHMvcm93L3Jvdy5jb21wb25lbnQnO1xuaW1wb3J0IHtEYXRhVGFibGVDb2x1bW5EaXJlY3RpdmV9IGZyb20gJy4uL2RpcmVjdGl2ZXMvY29sdW1uL2NvbHVtbi5kaXJlY3RpdmUnO1xuXG5leHBvcnQgdHlwZSBDZWxsQ2FsbGJhY2sgPSAoaXRlbTogYW55LCByb3c6IERhdGFUYWJsZVJvd0NvbXBvbmVudCwgY29sdW1uOiBEYXRhVGFibGVDb2x1bW5EaXJlY3RpdmUsIGluZGV4OiBudW1iZXIpID0+IHN0cmluZztcbiJdfQ==
