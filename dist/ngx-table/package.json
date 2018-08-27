@@ -1,5 +1,5 @@
 {
-  "name": "ngx-table",
+  "name": "@popetech/ngx-table",
   "description": "This library contains an Angualar 6 compatible Datatable component.",
   "version": "6.1.0",
   "private": false,
@@ -9,15 +9,15 @@
     "@angular/core": "^6.1.0",
     "@angular/common": "^6.1.0"
   },
-  "main": "bundles/ngx-table.umd.js",
-  "module": "fesm5/ngx-table.js",
-  "es2015": "fesm2015/ngx-table.js",
-  "esm5": "esm5/ngx-table.js",
-  "esm2015": "esm2015/ngx-table.js",
-  "fesm5": "fesm5/ngx-table.js",
-  "fesm2015": "fesm2015/ngx-table.js",
-  "typings": "ngx-table.d.ts",
-  "metadata": "ngx-table.metadata.json",
+  "main": "bundles/popetech-ngx-table.umd.js",
+  "module": "fesm5/popetech-ngx-table.js",
+  "es2015": "fesm2015/popetech-ngx-table.js",
+  "esm5": "esm5/popetech-ngx-table.js",
+  "esm2015": "esm2015/popetech-ngx-table.js",
+  "fesm5": "fesm5/popetech-ngx-table.js",
+  "fesm2015": "fesm2015/popetech-ngx-table.js",
+  "typings": "popetech-ngx-table.d.ts",
+  "metadata": "popetech-ngx-table.metadata.json",
   "sideEffects": false,
   "dependencies": {
     "tslib": "^1.9.0"
