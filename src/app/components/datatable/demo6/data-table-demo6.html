@@ -1,0 +1,37 @@
+<div>
+    <data-table
+        [title]="'Empty table'"
+        [items]="people"
+        [itemCount]="peopleCount"
+        (reload)="reloadPeople($event)"
+        [sortBy]="'rating'"
+        [sortAsc]="false"
+        [noDataMessage]="'Nothing to show.'"
+        [selectColumn]="true"
+        [multiSelect]="true"
+        [substituteRows]="false"
+        [expandableRows]="false"
+        [indexColumnHeader]="'#'"
+        [selectOnRowClick]="true">
+        <data-table-column
+            [property]="'name'"
+            [header]="'Name'"
+            [sortable]="true">
+        </data-table-column>
+        <data-table-column
+            [property]="'email'"
+            [header]="'Email'"
+            [sortable]="true">
+        </data-table-column>
+    </data-table>
+</div>
+<br>
+<br>
+<p class="h6">Notes for testers and developers</p>
+<ul>
+  <li>
+    This demo wants to demonstrate what will be shown when no items are rendered into the table.
+  </li>
+</ul>
+
+<h1>Hi!</h1>
