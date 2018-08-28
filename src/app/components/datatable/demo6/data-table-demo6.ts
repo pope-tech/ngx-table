@@ -10,14 +10,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataTableDemo6Component implements OnInit {
 
-    filmResource = new DataTableResource([]);
     people = [];
     peopleCount = 0;
 
     @ViewChild(DataTable) filmsTable;
 
     constructor(private http: HttpClient) {
-        // this.filmResource.count().then(count => this.filmCount = count);
     }
 
     public ngOnInit() {
@@ -42,5 +40,5 @@ export class DataTableDemo6Component implements OnInit {
 
         this.getPeople(page, params.limit); 
     }
-
+    
 }
