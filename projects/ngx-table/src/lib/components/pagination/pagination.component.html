@@ -17,7 +17,25 @@
         </select>
       </div>
     </div>
+<<<<<<< HEAD
     <div class="pagination-pages offset-md-3 col-md-6">
+=======
+    <div class="pagination-pages d-flex justify-content-between">
+      <button [disabled]="dataTable.offset <= 0"
+              (click)="pageFirst()"
+              class="btn btn-default pagination-firstpage"
+              [attr.aria-controls]="dataTable.id">
+        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        <span class="sr-only">{{ dataTable.labels.firstPage }} </span>
+      </button>
+      <button [disabled]="dataTable.offset <= 0"
+              (click)="pageBack()"
+              class="btn btn-default pagination-prevpage"
+              [attr.aria-controls]="dataTable.id">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        <span class="sr-only">{{ dataTable.labels.prevPage }} </span>
+      </button>
+>>>>>>> 0e9fb496fcf062ec3e94ef66ac7c9e3ae9fddece
       <div class="pagination-page">
         <div class="input-group">
           <button [disabled]="dataTable.offset <= 0"
@@ -73,5 +91,22 @@
           </button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+      <button [disabled]="(dataTable.offset + dataTable.limit) >= dataTable.itemCount"
+              (click)="pageForward()"
+              class="btn btn-default pagination-nextpage"
+              [attr.aria-controls]="dataTable.id">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+        <span class="sr-only">{{ dataTable.labels.nextPage }}</span>
+      </button>
+      <button [disabled]="(dataTable.offset + dataTable.limit) >= dataTable.itemCount"
+              (click)="pageLast()"
+              class="btn btn-default pagination-lastpage"
+              [attr.aria-controls]="dataTable.id">
+        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        <span class="sr-only">{{ dataTable.labels.lastPage }}</span>
+      </button>
+>>>>>>> 0e9fb496fcf062ec3e94ef66ac7c9e3ae9fddece
     </div>
 </div>

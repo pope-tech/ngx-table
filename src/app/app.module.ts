@@ -8,6 +8,8 @@ import { DocsViewerComponent } from './components/docs-viewer/docs-viewer.compon
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgxMdModule } from 'ngx-md'; 
+import { HttpClientModule } from '@angular/common/http'; 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,7 @@ import { NgxMdModule } from 'ngx-md';
     CommonModule,
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     NgxMdModule.forRoot()
   ],
   providers: [],

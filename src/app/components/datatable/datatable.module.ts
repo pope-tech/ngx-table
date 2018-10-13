@@ -10,6 +10,7 @@ import { DataTableDemo2Component } from './demo2/data-table-demo2';
 import { DataTableDemo3Component } from './demo3/data-table-demo3';
 import { DataTableDemo4Component } from './demo4/data-table-demo4';
 import { DataTableDemo5Component } from './demo5/data-table-demo5';
+import { DataTableDemo6Component } from './demo6/data-table-demo6'; 
 // routing
 import { DataTableRoutingModule } from './datatable-routing.module';
 
@@ -25,7 +26,8 @@ import { DataTableRoutingModule } from './datatable-routing.module';
     DataTableDemo2Component,
     DataTableDemo3Component,
     DataTableDemo4Component,
-    DataTableDemo5Component
+    DataTableDemo5Component,
+    DataTableDemo6Component
   ]
 })
 export class DataTableDemoModule { }
