@@ -37,6 +37,8 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   private _items: any[] = [];
   private _itemCount;
 
+  @Input() wrapperClass;
+
   @Input()
   get items(): any[] {
     return this._items;

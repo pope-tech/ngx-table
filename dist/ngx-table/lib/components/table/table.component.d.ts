@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
 export declare class DataTableComponent implements DataTableParams, OnInit, AfterContentInit, OnDestroy {
     private _items;
     private _itemCount;
+    wrapperClass: any;
     items: any[];
     itemCount: number;
     columns: QueryList<DataTableColumnDirective>;

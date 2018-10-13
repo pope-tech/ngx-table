@@ -34,7 +34,7 @@
 
 .data-table {
   box-shadow: 0 0 15px rgb(236, 236, 236);
-  table-layout: fixed;
+  /*table-layout: fixed;*/
 }
 
 /* header cells: */

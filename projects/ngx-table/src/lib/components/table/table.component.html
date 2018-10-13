@@ -8,7 +8,7 @@
 
   <data-table-header *ngIf="header"></data-table-header>
 
-  <div class="data-table-box">
+  <div class="data-table-box" [class]="wrapperClass">
     <table class="table data-table" [id]="id">
       <caption class="sr-only" [textContent]="title"></caption>
       <thead>

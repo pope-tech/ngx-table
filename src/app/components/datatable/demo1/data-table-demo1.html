@@ -5,6 +5,7 @@
         [itemCount]="itemCount"
         [pageLimits]="limits"
         (reload)="reloadItems($event)"
+        [wrapperClass]="'table-responsive'"
         (rowClick)="rowClick($event)"
         (rowDoubleClick)="rowDoubleClick($event)"
         [rowTooltip]="rowTooltip" >

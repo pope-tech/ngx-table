@@ -1,12 +1,13 @@
-<div class="d-flex justify-content-between align-items-center">
-  <div class="pagination-range">
+<div class="row">
+  <div class="pagination-range col">
     <span [textContent]="dataTable.labels.paginationText
         .replace('{from}', this.Math.ceil(dataTable.itemCount / dataTable.limit) !== 0 ? dataTable.offset + 1 + '' : '0')
         .replace('{to}', this.Math.min(dataTable.offset + dataTable.limit, dataTable.itemCount) + '')
         .replace('{total}', dataTable.itemCount + '')"></span>
   </div>
-  <div class="pagination-controllers pagination-box d-flex justify-content-between">
-    <div class="pagination-limit d-flex justify-content-between">
+</div>
+<div class="row">
+    <div class="pagination-limit col-md-3">
       <div class="input-group">
         <div class="input-group-prepend">
           <label [attr.for]="id + '-page-limit'" class="input-group-text" [textContent]="dataTable.labels.paginationLimit"></label>
@@ -16,24 +17,25 @@
         </select>
       </div>
     </div>
-    <div class="pagination-pages d-flex justify-content-between">
-      <button [disabled]="dataTable.offset <= 0"
-              (click)="pageFirst()"
-              class="btn btn-default pagination-firstpage"
-              [title]="dataTable.labels.firstPage"
-              [attr.aria-controls]="dataTable.id">
-        <i class="fa fa-angle-double-left" aria-hidden="true"></i>
-      </button>
-      <button [disabled]="dataTable.offset <= 0"
-              (click)="pageBack()"
-              class="btn btn-default pagination-prevpage"
-              [title]="dataTable.labels.prevPage"
-              [attr.aria-controls]="dataTable.id">
-        <i class="fa fa-angle-left" aria-hidden="true"></i>
-      </button>
+    <div class="pagination-pages offset-md-3 col-md-6">
       <div class="pagination-page">
         <div class="input-group">
-          <div class="input-group-prepend">
+          <button [disabled]="dataTable.offset <= 0"
+                  (click)="pageFirst()"
+                  class="btn btn-default pagination-firstpage"
+                  [title]="dataTable.labels.firstPage"
+                  [attr.aria-controls]="dataTable.id">
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+          </button>
+          <button [disabled]="dataTable.offset <= 0"
+                  (click)="pageBack()"
+                  class="btn btn-default pagination-prevpage"
+                  [title]="dataTable.labels.prevPage"
+                  [attr.aria-controls]="dataTable.id">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+          </button>
+
+          <div class="input-group-prepend d-sm-block d-none">
             <label class="input-group-text" [attr.for]="id + '-page-input'">
               {{ dataTable.labels.pageNumberLabel }}
             </label>
@@ -54,22 +56,22 @@
               {{ dataTable.labels.paginationTotalPages }}&nbsp;{{ dataTable.lastPage }}
             </span>
           </div>
+
+          <button [disabled]="(dataTable.offset + dataTable.limit) >= dataTable.itemCount"
+                  (click)="pageForward()"
+                  class="btn btn-default pagination-nextpage"
+                  [title]="dataTable.labels.nextPage"
+                  [attr.aria-controls]="dataTable.id">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </button>
+          <button [disabled]="(dataTable.offset + dataTable.limit) >= dataTable.itemCount"
+                  (click)="pageLast()"
+                  class="btn btn-default pagination-lastpage"
+                  [title]="dataTable.labels.lastPage"
+                  [attr.aria-controls]="dataTable.id">
+            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
-      <button [disabled]="(dataTable.offset + dataTable.limit) >= dataTable.itemCount"
-              (click)="pageForward()"
-              class="btn btn-default pagination-nextpage"
-              [title]="dataTable.labels.nextPage"
-              [attr.aria-controls]="dataTable.id">
-        <i class="fa fa-angle-right" aria-hidden="true"></i>
-      </button>
-      <button [disabled]="(dataTable.offset + dataTable.limit) >= dataTable.itemCount"
-              (click)="pageLast()"
-              class="btn btn-default pagination-lastpage"
-              [title]="dataTable.labels.lastPage"
-              [attr.aria-controls]="dataTable.id">
-        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-      </button>
     </div>
-  </div>
 </div>
