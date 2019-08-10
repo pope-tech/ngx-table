@@ -13,7 +13,7 @@ export class DataTableDemo6Component implements OnInit {
     people = [];
     peopleCount = 0;
 
-    @ViewChild(DataTable) filmsTable;
+    @ViewChild(DataTable, { static: true }) filmsTable;
 
     constructor(private http: HttpClient) {
     }

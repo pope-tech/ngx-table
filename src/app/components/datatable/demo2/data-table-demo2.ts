@@ -14,7 +14,7 @@ export class DataTableDemo2Component {
     cars = [];
     carCount = 0;
 
-    @ViewChild(DataTable) carsTable: DataTable;
+    @ViewChild(DataTable, { static: true }) carsTable: DataTable;
 
     constructor() {
         this.rowColors = this.rowColors.bind(this);

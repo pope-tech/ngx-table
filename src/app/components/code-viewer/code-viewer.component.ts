@@ -12,9 +12,9 @@ import { catchError } from 'rxjs/operators';
 })
 export class CodeViewerComponent {
 
-  @ViewChild('tsViewerNode') tsNode: ElementRef;
-  @ViewChild('htmlViewerNode') htmlNode: ElementRef;
-  @ViewChild('cssViewerNode') cssNode: ElementRef;
+  @ViewChild('tsViewerNode', { static: false }) tsNode: ElementRef;
+  @ViewChild('htmlViewerNode', { static: false }) htmlNode: ElementRef;
+  @ViewChild('cssViewerNode', { static: false }) cssNode: ElementRef;
 
   showTsNode = true;
   showHtmlNode = true;

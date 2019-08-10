@@ -6,7 +6,7 @@ import { DocsViewerComponent } from './components/docs-viewer/docs-viewer.compon
 const routes: Routes = [
   {
     path: 'datatable',
-    loadChildren: './components/datatable/datatable.module#DataTableDemoModule'
+    loadChildren: () => import('./components/datatable/datatable.module').then(m => m.DataTableDemoModule)
   },
   {
     path: 'docs/:component',

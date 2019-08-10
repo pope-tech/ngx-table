@@ -23,7 +23,7 @@ import { drag } from '../../utils/drag';
 import { Subject } from 'rxjs';
 import { Subscription } from 'rxjs';
 
-import { debounceTime, tap } from 'rxjs/operators'; 
+import { debounceTime, tap } from 'rxjs/operators';
 
 let nextId = 0;
 
@@ -65,7 +65,7 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   // UI components:
   @ContentChildren(DataTableColumnDirective) columns: QueryList<DataTableColumnDirective>;
   @ViewChildren(DataTableRowComponent) rows: QueryList<DataTableRowComponent>;
-  @ContentChild('dataTableExpand') expandTemplate: TemplateRef<any>;
+  @ContentChild('dataTableExpand', { static: true }) expandTemplate: TemplateRef<any>;
 
   // One-time optional bindings with default values:
   @Input() title = '';
@@ -96,6 +96,7 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   @Output() rowDoubleClick = new EventEmitter();
   @Output() headerClick = new EventEmitter();
   @Output() cellClick = new EventEmitter();
+  @Output() selectedRowsChange = new EventEmitter();
   // UI state without input:
   indexColumnVisible: boolean;
   selectColumnVisible: boolean;
@@ -259,6 +260,7 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
       this.reloading = false;
     }
   }
+
   get displayParams() {
     return this._displayParams;
   }
@@ -272,7 +274,8 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
     };
   }
 
-  constructor() { }
+  constructor() {
+  }
 
   public rowClicked(row: DataTableRowComponent, event: Event) {
     this.rowClick.emit({row, event});
@@ -346,6 +349,7 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
 
   private _onSelectAllChanged(value: boolean) {
     this.rows.toArray().forEach(row => row.selected = value);
+    this.selectedRowsChange.emit(this.selectedRows);
   }
 
   onRowSelectChanged(row: DataTableRowComponent) {
@@ -374,6 +378,8 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
         }
       });
     }
+
+    this.selectedRowsChange.emit(this.selectedRows);
   }
 
   // other:
@@ -401,7 +407,7 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
          that offsetWidth sometimes contains out-of-date values. */
     if ((dx < 0 && (columnElement.offsetWidth + dx) <= this.resizeLimit) ||
       !columnElement.nextElementSibling || // resizing doesn't make sense for the last visible column
-      (dx >= 0 && ((<HTMLElement> columnElement.nextElementSibling).offsetWidth + dx) <= this.resizeLimit)) {
+      (dx >= 0 && ((<HTMLElement>columnElement.nextElementSibling).offsetWidth + dx) <= this.resizeLimit)) {
       return false;
     }
     return true;

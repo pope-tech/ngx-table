@@ -11,7 +11,7 @@ import { filter, mergeMap, map } from 'rxjs/operators';
 })
 export class AppComponent {
 
-  @ViewChild(CodeViewerComponent) viewer;
+  @ViewChild(CodeViewerComponent, { static: true }) viewer;
 
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
 

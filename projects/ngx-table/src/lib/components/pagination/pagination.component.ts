@@ -19,7 +19,7 @@ export class DataTablePaginationComponent {
 
   id = `pagination-${nextId++}`;
 
-  @ViewChild('pageInput') pageInput: ElementRef;
+  @ViewChild('pageInput', { static: true }) pageInput: ElementRef;
 
   Math: any;
 

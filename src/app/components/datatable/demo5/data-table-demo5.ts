@@ -13,7 +13,7 @@ export class DataTableDemo5Component {
     films = [];
     filmCount = 0;
 
-    @ViewChild(DataTable) filmsTable;
+    @ViewChild(DataTable, { static: true }) filmsTable;
 
     constructor() {
         this.filmResource.count().then(count => this.filmCount = count);

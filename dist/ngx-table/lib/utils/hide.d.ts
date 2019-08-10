@@ -6,5 +6,5 @@ export declare class HideDirective {
     private _displayStyle;
     constructor(_elementRef: ElementRef, renderer: Renderer2);
     hide: boolean;
-    private initDisplayStyle();
+    private initDisplayStyle;
 }

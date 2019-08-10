@@ -22,8 +22,8 @@ export class DataTableColumnDirective implements OnInit {
   @Input() width: number | string;
   @Input() visible = true;
 
-  @ContentChild('dataTableCell') cellTemplate: ElementRef;
-  @ContentChild('dataTableHeader') headerTemplate: ElementRef;
+  @ContentChild('dataTableCell', { static: true }) cellTemplate: ElementRef;
+  @ContentChild('dataTableHeader', { static: true }) headerTemplate: ElementRef;
 
   getCellColor(row: DataTableRowComponent, index: number) {
     if (this.cellColors !== undefined) {

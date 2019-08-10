@@ -17,7 +17,7 @@ export class DataTableDemo3Component {
       paginationText: 'Your table displays {from} to {to} of {total} rows.'
     };
 
-    @ViewChild(DataTable) filmsTable;
+    @ViewChild(DataTable, { static: true }) filmsTable;
 
     constructor() {
         this.filmResource.count().then(count => this.filmCount = count);
