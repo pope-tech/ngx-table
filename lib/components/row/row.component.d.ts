@@ -10,7 +10,7 @@ export declare class DataTableRowComponent implements OnInit, OnDestroy {
     expanded: boolean;
     private _listeners;
     private _selected;
-    selectedChange: EventEmitter<{}>;
+    selectedChange: EventEmitter<any>;
     selected: boolean;
     readonly displayIndex: number;
     getTooltip(): string;

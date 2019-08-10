@@ -1,13 +1,13 @@
 {
   "name": "@popetech/ngx-table",
-  "description": "This library contains an Angualar 6 compatible Datatable component.",
-  "version": "6.1.0",
+  "description": "This library contains an Angular 8 compatible Datatable component.",
+  "version": "8.2.0",
   "private": false,
   "license": "MIT",
   "repository": "https://github.com/pope-tech/ngx-table",
   "peerDependencies": {
-    "@angular/core": "^6.1.0",
-    "@angular/common": "^6.1.0"
+    "@angular/common": "^8.0.0",
+    "@angular/core": "^8.0.0"
   },
   "main": "bundles/popetech-ngx-table.umd.js",
   "module": "fesm5/popetech-ngx-table.js",

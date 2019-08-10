@@ -15,5 +15,5 @@ export declare class DataTableColumnDirective implements OnInit {
     headerTemplate: ElementRef;
     getCellColor(row: DataTableRowComponent, index: number): string;
     ngOnInit(): void;
-    private _initCellClass();
+    private _initCellClass;
 }
