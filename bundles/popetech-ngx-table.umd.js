@@ -992,6 +992,10 @@
             if (column.sortable) {
                 /** @type {?} */
                 var ascending = this.sortBy === column.property ? !this.sortAsc : true;
+                if (column.property === this.sortBy && !this.sortAsc) {
+                    this.sort(undefined, true);
+                    return;
+                }
                 this.sort(column.property, ascending);
             }
         };
