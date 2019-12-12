@@ -40,6 +40,7 @@ export declare class DataTableComponent implements DataTableParams, OnInit, Afte
     headerClick: EventEmitter<any>;
     cellClick: EventEmitter<any>;
     selectedRowsChange: EventEmitter<any>;
+    visibleColumnsChange: EventEmitter<any>;
     indexColumnVisible: boolean;
     selectColumnVisible: boolean;
     expandColumnVisible: boolean;
