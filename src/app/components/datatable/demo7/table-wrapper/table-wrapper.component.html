@@ -1,0 +1,30 @@
+<data-table
+  [title]="title"
+  [items]="items"
+  [itemCount]="itemCount"
+  [pageLimits]="pageLimits"
+  (reload)="onReload($event)"
+  [wrapperClass]="wrapperClass"
+  (rowClick)="onRowClick($event)"
+  (rowDoubleClick)="onRowDoubleClick($event)"
+  [rowTooltip]="rowTooltip">
+
+    <data-table-column
+      *ngFor="let columnWrapper of columns"
+      [property]="columnWrapper.property"
+      [header]="columnWrapper.header"
+      [sortable]="columnWrapper.sortable"
+      [resizable]="columnWrapper.resizable"
+      [visible]="columnWrapper.visible || true">
+
+      <ng-template #dataTableHeader let-column="column">
+        <ng-container *ngTemplateOutlet="columnWrapper.showHeaderTemplate; context: { column: column }"></ng-container>
+      </ng-template>
+
+      <ng-template #dataTableCell let-item="item" let-column="column">
+        <ng-container *ngTemplateOutlet="columnWrapper.showCellTemplate; context: { item: item, column: column }"></ng-container>
+      </ng-template>
+
+    </data-table-column>
+
+</data-table>

@@ -1,0 +1,7 @@
+<ng-template #cellTemplate let-item="item" let-column="column">
+ {{ item[column.property] }}
+</ng-template>
+
+<ng-template #headerTemplate let-column="column">
+  {{ column.header }}
+</ng-template>

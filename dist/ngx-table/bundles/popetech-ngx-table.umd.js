@@ -581,6 +581,7 @@
             this.headerClick = new core.EventEmitter();
             this.cellClick = new core.EventEmitter();
             this.selectedRowsChange = new core.EventEmitter();
+            this.visibleColumnsChange = new core.EventEmitter();
             this._displayParams = (/** @type {?} */ ({})); // params of the last finished reload
             // params of the last finished reload
             this.subject = new rxjs.Subject();
@@ -1288,6 +1289,7 @@
             headerClick: [{ type: core.Output }],
             cellClick: [{ type: core.Output }],
             selectedRowsChange: [{ type: core.Output }],
+            visibleColumnsChange: [{ type: core.Output }],
             sortBy: [{ type: core.Input }],
             sortAsc: [{ type: core.Input }],
             offset: [{ type: core.Input }],
@@ -1351,6 +1353,7 @@
                 'column_name': columnName,
                 'title': this.dataTable.title
             };
+            this.dataTable.visibleColumnsChange.emit(event);
             this.dataTable.columnSelectorNotification = (isChecked ? this.dataTable.labels.headerColumnSelectorAdded :
                 this.dataTable.labels.headerColumnSelectorRemoved)
                 .replace('{column_name}', interpolateParams.column_name)

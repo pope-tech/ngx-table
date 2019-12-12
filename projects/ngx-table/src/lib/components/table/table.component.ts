@@ -97,6 +97,7 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   @Output() headerClick = new EventEmitter();
   @Output() cellClick = new EventEmitter();
   @Output() selectedRowsChange = new EventEmitter();
+  @Output() visibleColumnsChange = new EventEmitter();
   // UI state without input:
   indexColumnVisible: boolean;
   selectColumnVisible: boolean;

@@ -40,6 +40,8 @@ export class DataTableHeaderComponent {
       'title': this.dataTable.title
     };
 
+    this.dataTable.visibleColumnsChange.emit(event);
+
     this.dataTable.columnSelectorNotification = (isChecked ? this.dataTable.labels.headerColumnSelectorAdded :
       this.dataTable.labels.headerColumnSelectorRemoved)
       .replace('{column_name}', interpolateParams.column_name)

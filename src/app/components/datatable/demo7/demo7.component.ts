@@ -1,21 +1,18 @@
-import { Component, ViewChild } from '@angular/core';
-import persons from './data-table-demo1-data';
-import { DataTable, DataTableResource } from '@popetech/ngx-table';
+import { Component, OnInit } from '@angular/core';
+import persons from '../demo1/data-table-demo1-data';
+import { DataTableResource } from '@popetech/ngx-table';
 
 @Component({
-  selector: 'app-data-table-demo-1',
-  providers: [],
-  templateUrl: './data-table-demo1.html',
-  styleUrls: ['./data-table-demo1.css']
+  selector: 'app-demo7',
+  templateUrl: './demo7.component.html',
+  styleUrls: ['./demo7.component.css']
 })
-export class DataTableDemo1Component {
+export class DataTableDemo7Component {
 
   itemResource = new DataTableResource(persons);
   items = [];
   itemCount = 0;
   limits = [10, 20, 40, 80];
-
-  @ViewChild(DataTable, { static: true }) table;
 
   constructor() {
     this.itemResource.count().then(count => this.itemCount = count);
@@ -38,7 +35,4 @@ export class DataTableDemo1Component {
     return item.jobTitle;
   }
 
-  onVisibleColumnChange(event) {
-    console.log(this.table.columns.filter(c => c.visible));
-  }
 }

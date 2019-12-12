@@ -556,6 +556,7 @@ var DataTableComponent = /** @class */ (function () {
         this.headerClick = new EventEmitter();
         this.cellClick = new EventEmitter();
         this.selectedRowsChange = new EventEmitter();
+        this.visibleColumnsChange = new EventEmitter();
         this._displayParams = (/** @type {?} */ ({})); // params of the last finished reload
         // params of the last finished reload
         this.subject = new Subject();
@@ -1263,6 +1264,7 @@ var DataTableComponent = /** @class */ (function () {
         headerClick: [{ type: Output }],
         cellClick: [{ type: Output }],
         selectedRowsChange: [{ type: Output }],
+        visibleColumnsChange: [{ type: Output }],
         sortBy: [{ type: Input }],
         sortAsc: [{ type: Input }],
         offset: [{ type: Input }],
@@ -1326,6 +1328,7 @@ var DataTableHeaderComponent = /** @class */ (function () {
             'column_name': columnName,
             'title': this.dataTable.title
         };
+        this.dataTable.visibleColumnsChange.emit(event);
         this.dataTable.columnSelectorNotification = (isChecked ? this.dataTable.labels.headerColumnSelectorAdded :
             this.dataTable.labels.headerColumnSelectorRemoved)
             .replace('{column_name}', interpolateParams.column_name)
