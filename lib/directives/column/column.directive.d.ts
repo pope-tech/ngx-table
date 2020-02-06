@@ -1,7 +1,6 @@
 import { ElementRef, OnInit } from '@angular/core';
 import { DataTableRowComponent } from '../../components/row/row.component';
 import { CellCallback } from '../../types/cell-callback.type';
-import * as i0 from "@angular/core";
 export declare class DataTableColumnDirective implements OnInit {
     private styleClassObject;
     header: string;
@@ -17,6 +16,4 @@ export declare class DataTableColumnDirective implements OnInit {
     getCellColor(row: DataTableRowComponent, index: number): string;
     ngOnInit(): void;
     private _initCellClass;
-    static ɵfac: i0.ɵɵFactoryDef<DataTableColumnDirective>;
-    static ɵdir: i0.ɵɵDirectiveDefWithMeta<DataTableColumnDirective, "data-table-column", never, { "header": "header"; "sortable": "sortable"; "resizable": "resizable"; "property": "property"; "styleClass": "styleClass"; "cellColors": "cellColors"; "width": "width"; "visible": "visible"; }, {}, ["cellTemplate", "headerTemplate"]>;
 }
