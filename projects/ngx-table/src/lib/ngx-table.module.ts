@@ -42,7 +42,7 @@ export {
 })
 
 export class NgxTableModule {
-  public static forRoot(): ModuleWithProviders {
+  public static forRoot(): ModuleWithProviders<NgxTableModule> {
     return {
       ngModule: NgxTableModule,
       providers: []

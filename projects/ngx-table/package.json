@@ -1,12 +1,12 @@
 {
   "name": "@popetech/ngx-table",
-  "description": "This library contains an Angular 8 compatible Datatable component.",
+  "description": "This library contains an Angular 9 compatible Datatable component.",
   "version": "8.2.0",
   "private": false,
   "license": "MIT",
   "repository": "https://github.com/pope-tech/ngx-table",
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0"
+    "@angular/common": "^9.0.0",
+    "@angular/core": "^9.0.0"
   }
 }
