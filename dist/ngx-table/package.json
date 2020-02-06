@@ -18,8 +18,6 @@
   "fesm5": "fesm5/popetech-ngx-table.js",
   "fesm2015": "fesm2015/popetech-ngx-table.js",
   "typings": "popetech-ngx-table.d.ts",
-  "sideEffects": false,
-  "scripts": {
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
-  }
+  "metadata": "popetech-ngx-table.metadata.json",
+  "sideEffects": false
 }

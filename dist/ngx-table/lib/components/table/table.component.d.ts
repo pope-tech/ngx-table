@@ -6,7 +6,6 @@ import { RowCallback } from '../../types/row-callback.type';
 import { DataTableTranslations } from '../../types/data-table-translations.type';
 import { Subject } from 'rxjs';
 import { Subscription } from 'rxjs';
-import * as i0 from "@angular/core";
 export declare class DataTableComponent implements DataTableParams, OnInit, AfterContentInit, OnDestroy {
     private _items;
     private _itemCount;
@@ -108,6 +107,4 @@ export declare class DataTableComponent implements DataTableParams, OnInit, Afte
     ngAfterContentInit(): void;
     _notify(): void;
     ngOnDestroy(): void;
-    static ɵfac: i0.ɵɵFactoryDef<DataTableComponent>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DataTableComponent, "data-table", never, { "wrapperClass": "wrapperClass"; "items": "items"; "itemCount": "itemCount"; "title": "title"; "showTitle": "showTitle"; "header": "header"; "pagination": "pagination"; "indexColumn": "indexColumn"; "indexColumnHeader": "indexColumnHeader"; "rowColors": "rowColors"; "rowTooltip": "rowTooltip"; "selectColumn": "selectColumn"; "multiSelect": "multiSelect"; "substituteRows": "substituteRows"; "expandableRows": "expandableRows"; "labels": "labels"; "selectOnRowClick": "selectOnRowClick"; "autoReload": "autoReload"; "showReloading": "showReloading"; "noDataMessage": "noDataMessage"; "pageLimits": "pageLimits"; "primaryColumn": "primaryColumn"; "sortBy": "sortBy"; "sortAsc": "sortAsc"; "offset": "offset"; "limit": "limit"; "page": "page"; }, { "reload": "reload"; "rowClick": "rowClick"; "rowDoubleClick": "rowDoubleClick"; "headerClick": "headerClick"; "cellClick": "cellClick"; "selectedRowsChange": "selectedRowsChange"; "visibleColumnsChange": "visibleColumnsChange"; }, ["expandTemplate", "columns"]>;
 }
