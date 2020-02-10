@@ -15,7 +15,8 @@
   </td>
   <td [hide]="!dataTable.indexColumnVisible" class="index-column" [textContent]="displayIndex"></td>
   <td [hide]="!dataTable.selectColumnVisible" class="select-column">
-    <input type="checkbox" [(ngModel)]="selected"
+    <input
+           type="checkbox" [(ngModel)]="selected"
            [title]="dataTable.labels.selectRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])"
            [attr.aria-label]="dataTable.labels.selectRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])"/>
   </td>

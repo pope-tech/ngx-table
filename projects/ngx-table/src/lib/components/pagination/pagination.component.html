@@ -26,6 +26,7 @@
                 [title]="dataTable.labels.firstPage"
                 [attr.aria-controls]="dataTable.id">
           <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+          <span class="sr-only">first page</span>
         </button>
         <button [disabled]="dataTable.offset <= 0"
                 (click)="pageBack()"
@@ -33,6 +34,7 @@
                 [title]="dataTable.labels.prevPage"
                 [attr.aria-controls]="dataTable.id">
           <i class="fa fa-angle-left" aria-hidden="true"></i>
+          <span class="sr-only">previous page</span>
         </button>
 
         <div class="input-group-prepend d-sm-block d-none">
@@ -63,6 +65,7 @@
                 [title]="dataTable.labels.nextPage"
                 [attr.aria-controls]="dataTable.id">
           <i class="fa fa-angle-right" aria-hidden="true"></i>
+          <span class="sr-only">next page</span>
         </button>
         <button [disabled]="(dataTable.offset + dataTable.limit) >= dataTable.itemCount"
                 (click)="pageLast()"
@@ -70,6 +73,7 @@
                 [title]="dataTable.labels.lastPage"
                 [attr.aria-controls]="dataTable.id">
           <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+          <span class="sr-only">last page</span>
         </button>
       </div>
     </div>

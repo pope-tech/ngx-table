@@ -19,12 +19,16 @@
           <span [textContent]="indexColumnHeader"></span>
         </th>
         <td [hide]="!selectColumnVisible" class="select-column-header">
-          <input [hide]="!multiSelect"
+          <label [for]="id + '-select-all-column'" class="sr-only">
+            {{ labels.selectAllRows }}
+          </label>
+          <input
+            [id]="id + '-select-all-column'"
+            [hide]="!multiSelect"
                  type="checkbox"
                  [(ngModel)]="selectAllCheckbox"
                  [disabled]="itemCount === 0"
-                 [title]="labels.selectAllRows"
-                 [attr.aria-label]="labels.selectAllRows"/>
+                 [title]="labels.selectAllRows"/>
         </td>
         <th *ngFor="let column of columns, index as i" #th
             [hide]="!column.visible"
