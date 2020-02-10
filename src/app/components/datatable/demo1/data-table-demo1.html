@@ -20,6 +20,9 @@
             [property]="'date'"
             [header]="'Date'"
             [sortable]="true">
+          <ng-template #dataTableHeader let-item="item">
+            <span>Date</span>
+          </ng-template>
             <ng-template #dataTableCell let-item="item">
                 <span>{{ item.date | date:'yyyy-MM-dd' }}</span>
             </ng-template>
