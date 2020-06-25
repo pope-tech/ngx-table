@@ -1,5 +1,5 @@
 import { __decorate, __param, __assign } from 'tslib';
-import { ElementRef, Renderer2, Input, Directive, Pipe, ContentChild, EventEmitter, Inject, forwardRef, Output, Component, ContentChildren, ViewChildren, HostListener, ViewChild, NgModule } from '@angular/core';
+import { ElementRef, Renderer2, Input, Directive, Pipe, ContentChild, EventEmitter, Inject, forwardRef, Output, Component, ContentChildren, ViewChildren, ViewChild, HostListener, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Subject } from 'rxjs';
@@ -731,6 +731,9 @@ var DataTableComponent = /** @class */ (function () {
     __decorate([
         ViewChildren(DataTableRowComponent)
     ], DataTableComponent.prototype, "rows", void 0);
+    __decorate([
+        ViewChild(DataTablePaginationComponent, { static: true })
+    ], DataTableComponent.prototype, "paginator", void 0);
     __decorate([
         ContentChild('dataTableExpand', { static: true })
     ], DataTableComponent.prototype, "expandTemplate", void 0);
