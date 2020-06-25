@@ -1013,7 +1013,7 @@
             core.ViewChildren(DataTableRowComponent)
         ], DataTableComponent.prototype, "rows", void 0);
         __decorate([
-            core.ViewChild(DataTablePaginationComponent, { static: true })
+            core.ViewChild(DataTablePaginationComponent, { static: false })
         ], DataTableComponent.prototype, "paginator", void 0);
         __decorate([
             core.ContentChild('dataTableExpand', { static: true })
