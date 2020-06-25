@@ -24,7 +24,7 @@ import { Subject } from 'rxjs';
 import { Subscription } from 'rxjs';
 
 import { debounceTime, tap } from 'rxjs/operators';
-import { DataTablePaginationComponent } from "../../ngx-table.module";
+import { DataTablePaginationComponent } from "../pagination/pagination.component";
 
 let nextId = 0;
 

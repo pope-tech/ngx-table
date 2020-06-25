@@ -539,6 +539,91 @@
     }
 
     var nextId = 0;
+    var DataTablePaginationComponent = /** @class */ (function () {
+        function DataTablePaginationComponent(dataTable) {
+            this.dataTable = dataTable;
+            this.id = "pagination-" + nextId++;
+            this.Math = Math;
+        }
+        DataTablePaginationComponent.prototype.pageBack = function () {
+            this.dataTable.offset -= Math.min(this.dataTable.limit, this.dataTable.offset);
+            if (this.dataTable.offset <= 0) {
+                this.pageInput.nativeElement.focus();
+            }
+        };
+        DataTablePaginationComponent.prototype.pageForward = function () {
+            this.dataTable.offset += this.dataTable.limit;
+            if ((this.dataTable.offset + this.dataTable.limit) >= this.dataTable.itemCount) {
+                this.pageInput.nativeElement.focus();
+            }
+        };
+        DataTablePaginationComponent.prototype.pageFirst = function () {
+            this.dataTable.offset = 0;
+            this.pageInput.nativeElement.focus();
+        };
+        DataTablePaginationComponent.prototype.pageLast = function () {
+            this.dataTable.offset = (this.maxPage - 1) * this.dataTable.limit;
+            if ((this.dataTable.offset + this.dataTable.limit) >= this.dataTable.itemCount) {
+                this.pageInput.nativeElement.focus();
+            }
+        };
+        Object.defineProperty(DataTablePaginationComponent.prototype, "maxPage", {
+            get: function () {
+                return Math.ceil(this.dataTable.itemCount / this.dataTable.limit);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DataTablePaginationComponent.prototype, "limit", {
+            get: function () {
+                return this.dataTable.limit;
+            },
+            set: function (value) {
+                this.dataTable.limit = +value;
+                // returning back to the first page.
+                this.page = 1;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(DataTablePaginationComponent.prototype, "page", {
+            get: function () {
+                return this.dataTable.page;
+            },
+            set: function (value) {
+                this.dataTable.page = +value;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        DataTablePaginationComponent.prototype.validate = function (event) {
+            var newValue = +event.target.value;
+            if (newValue !== this.page) {
+                this.page = (event.target.value > this.maxPage) ? this.maxPage : (newValue < 1) ? 1 : newValue;
+                event.target.value = this.page;
+            }
+        };
+        DataTablePaginationComponent.ctorParameters = function () { return [
+            { type: DataTableComponent, decorators: [{ type: core.Inject, args: [core.forwardRef(function () { return DataTableComponent; }),] }] }
+        ]; };
+        __decorate([
+            core.ViewChild('pageInput', { static: true })
+        ], DataTablePaginationComponent.prototype, "pageInput", void 0);
+        __decorate([
+            core.Input()
+        ], DataTablePaginationComponent.prototype, "limits", void 0);
+        DataTablePaginationComponent = __decorate([
+            core.Component({
+                selector: 'data-table-pagination',
+                template: "<div class=\"row\">\n  <div class=\"pagination-range col\">\n    <span [textContent]=\"dataTable.labels.paginationText\n        .replace('{from}', this.Math.ceil(dataTable.itemCount / dataTable.limit) !== 0 ? dataTable.offset + 1 + '' : '0')\n        .replace('{to}', this.Math.min(dataTable.offset + dataTable.limit, dataTable.itemCount) + '')\n        .replace('{total}', dataTable.itemCount + '')\"></span>\n  </div>\n</div>\n<div class=\"row\">\n  <div class=\"pagination-limit col-md-3\">\n    <div class=\"input-group\">\n      <div class=\"input-group-prepend\">\n        <label [attr.for]=\"id + '-page-limit'\" class=\"input-group-text\" [textContent]=\"dataTable.labels.paginationLimit\"></label>\n      </div>\n      <select [id]=\"id + '-page-limit'\" class=\"form-control\" [(ngModel)]=\"limit\" [disabled]=\"dataTable.itemCount === 0\">\n        <option *ngFor=\"let l of limits\" [value]=\"l\">{{ l }}</option>\n      </select>\n    </div>\n  </div>\n  <div class=\"pagination-pages offset-md-3 col-md-6\">\n    <div class=\"pagination-page\">\n      <div class=\"input-group\">\n        <button [disabled]=\"dataTable.offset <= 0\"\n                (click)=\"pageFirst()\"\n                class=\"btn btn-default pagination-firstpage\"\n                [title]=\"dataTable.labels.firstPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-double-left\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">first page</span>\n        </button>\n        <button [disabled]=\"dataTable.offset <= 0\"\n                (click)=\"pageBack()\"\n                class=\"btn btn-default pagination-prevpage\"\n                [title]=\"dataTable.labels.prevPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-left\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">previous page</span>\n        </button>\n\n        <div class=\"input-group-prepend d-sm-block d-none\">\n          <label class=\"input-group-text\" [attr.for]=\"id + '-page-input'\">\n            {{ dataTable.labels.pageNumberLabel }}\n          </label>\n        </div>\n        <input #pageInput type=\"number\"\n               [id]=\"id + '-page-input'\"\n               class=\"form-control\" min=\"1\" step=\"1\" max=\"{{maxPage}}\"\n               [disabled]=\"dataTable.itemCount === 0\"\n               [ngModel]=\"page\"\n               (blur)=\"validate($event)\"\n               (keyup.enter)=\"validate($event)\"\n               (keyup.esc)=\"pageInput.value = page\"\n               [title]=\"dataTable.labels.pageNumber + ' ' +\n                    dataTable.labels.pageNumberNofM.replace('{N}', ''+page).replace('{M}', ''+maxPage)\"\n               [attr.aria-controls]=\"dataTable.id\"/>\n        <div class=\"input-group-append\">\n            <span class=\"input-group-text\">\n              {{ dataTable.labels.paginationTotalPages }}&nbsp;{{ dataTable.lastPage }}\n            </span>\n        </div>\n\n        <button [disabled]=\"(dataTable.offset + dataTable.limit) >= dataTable.itemCount\"\n                (click)=\"pageForward()\"\n                class=\"btn btn-default pagination-nextpage\"\n                [title]=\"dataTable.labels.nextPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">next page</span>\n        </button>\n        <button [disabled]=\"(dataTable.offset + dataTable.limit) >= dataTable.itemCount\"\n                (click)=\"pageLast()\"\n                class=\"btn btn-default pagination-lastpage\"\n                [title]=\"dataTable.labels.lastPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-double-right\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">last page</span>\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n",
+                styles: [".pagination-controllers select{text-align:right}.pagination-box button{outline:0!important}"]
+            }),
+            __param(0, core.Inject(core.forwardRef(function () { return DataTableComponent; })))
+        ], DataTablePaginationComponent);
+        return DataTablePaginationComponent;
+    }());
+
+    var nextId$1 = 0;
     var DataTableComponent = /** @class */ (function () {
         function DataTableComponent() {
             this._items = [];
@@ -571,7 +656,7 @@
             this.subject = new rxjs.Subject();
             this.notifier = new rxjs.Subject();
             this.selectedRows = [];
-            this.id = "datatable-" + nextId++;
+            this.id = "datatable-" + nextId$1++;
             // select all checkbox flag
             this._selectAllCheckbox = false;
             // column resizing:
@@ -1084,91 +1169,6 @@
             __param(0, core.Inject(core.forwardRef(function () { return DataTableComponent; })))
         ], DataTableHeaderComponent);
         return DataTableHeaderComponent;
-    }());
-
-    var nextId$1 = 0;
-    var DataTablePaginationComponent = /** @class */ (function () {
-        function DataTablePaginationComponent(dataTable) {
-            this.dataTable = dataTable;
-            this.id = "pagination-" + nextId$1++;
-            this.Math = Math;
-        }
-        DataTablePaginationComponent.prototype.pageBack = function () {
-            this.dataTable.offset -= Math.min(this.dataTable.limit, this.dataTable.offset);
-            if (this.dataTable.offset <= 0) {
-                this.pageInput.nativeElement.focus();
-            }
-        };
-        DataTablePaginationComponent.prototype.pageForward = function () {
-            this.dataTable.offset += this.dataTable.limit;
-            if ((this.dataTable.offset + this.dataTable.limit) >= this.dataTable.itemCount) {
-                this.pageInput.nativeElement.focus();
-            }
-        };
-        DataTablePaginationComponent.prototype.pageFirst = function () {
-            this.dataTable.offset = 0;
-            this.pageInput.nativeElement.focus();
-        };
-        DataTablePaginationComponent.prototype.pageLast = function () {
-            this.dataTable.offset = (this.maxPage - 1) * this.dataTable.limit;
-            if ((this.dataTable.offset + this.dataTable.limit) >= this.dataTable.itemCount) {
-                this.pageInput.nativeElement.focus();
-            }
-        };
-        Object.defineProperty(DataTablePaginationComponent.prototype, "maxPage", {
-            get: function () {
-                return Math.ceil(this.dataTable.itemCount / this.dataTable.limit);
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Object.defineProperty(DataTablePaginationComponent.prototype, "limit", {
-            get: function () {
-                return this.dataTable.limit;
-            },
-            set: function (value) {
-                this.dataTable.limit = +value;
-                // returning back to the first page.
-                this.page = 1;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        Object.defineProperty(DataTablePaginationComponent.prototype, "page", {
-            get: function () {
-                return this.dataTable.page;
-            },
-            set: function (value) {
-                this.dataTable.page = +value;
-            },
-            enumerable: true,
-            configurable: true
-        });
-        DataTablePaginationComponent.prototype.validate = function (event) {
-            var newValue = +event.target.value;
-            if (newValue !== this.page) {
-                this.page = (event.target.value > this.maxPage) ? this.maxPage : (newValue < 1) ? 1 : newValue;
-                event.target.value = this.page;
-            }
-        };
-        DataTablePaginationComponent.ctorParameters = function () { return [
-            { type: DataTableComponent, decorators: [{ type: core.Inject, args: [core.forwardRef(function () { return DataTableComponent; }),] }] }
-        ]; };
-        __decorate([
-            core.ViewChild('pageInput', { static: true })
-        ], DataTablePaginationComponent.prototype, "pageInput", void 0);
-        __decorate([
-            core.Input()
-        ], DataTablePaginationComponent.prototype, "limits", void 0);
-        DataTablePaginationComponent = __decorate([
-            core.Component({
-                selector: 'data-table-pagination',
-                template: "<div class=\"row\">\n  <div class=\"pagination-range col\">\n    <span [textContent]=\"dataTable.labels.paginationText\n        .replace('{from}', this.Math.ceil(dataTable.itemCount / dataTable.limit) !== 0 ? dataTable.offset + 1 + '' : '0')\n        .replace('{to}', this.Math.min(dataTable.offset + dataTable.limit, dataTable.itemCount) + '')\n        .replace('{total}', dataTable.itemCount + '')\"></span>\n  </div>\n</div>\n<div class=\"row\">\n  <div class=\"pagination-limit col-md-3\">\n    <div class=\"input-group\">\n      <div class=\"input-group-prepend\">\n        <label [attr.for]=\"id + '-page-limit'\" class=\"input-group-text\" [textContent]=\"dataTable.labels.paginationLimit\"></label>\n      </div>\n      <select [id]=\"id + '-page-limit'\" class=\"form-control\" [(ngModel)]=\"limit\" [disabled]=\"dataTable.itemCount === 0\">\n        <option *ngFor=\"let l of limits\" [value]=\"l\">{{ l }}</option>\n      </select>\n    </div>\n  </div>\n  <div class=\"pagination-pages offset-md-3 col-md-6\">\n    <div class=\"pagination-page\">\n      <div class=\"input-group\">\n        <button [disabled]=\"dataTable.offset <= 0\"\n                (click)=\"pageFirst()\"\n                class=\"btn btn-default pagination-firstpage\"\n                [title]=\"dataTable.labels.firstPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-double-left\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">first page</span>\n        </button>\n        <button [disabled]=\"dataTable.offset <= 0\"\n                (click)=\"pageBack()\"\n                class=\"btn btn-default pagination-prevpage\"\n                [title]=\"dataTable.labels.prevPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-left\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">previous page</span>\n        </button>\n\n        <div class=\"input-group-prepend d-sm-block d-none\">\n          <label class=\"input-group-text\" [attr.for]=\"id + '-page-input'\">\n            {{ dataTable.labels.pageNumberLabel }}\n          </label>\n        </div>\n        <input #pageInput type=\"number\"\n               [id]=\"id + '-page-input'\"\n               class=\"form-control\" min=\"1\" step=\"1\" max=\"{{maxPage}}\"\n               [disabled]=\"dataTable.itemCount === 0\"\n               [ngModel]=\"page\"\n               (blur)=\"validate($event)\"\n               (keyup.enter)=\"validate($event)\"\n               (keyup.esc)=\"pageInput.value = page\"\n               [title]=\"dataTable.labels.pageNumber + ' ' +\n                    dataTable.labels.pageNumberNofM.replace('{N}', ''+page).replace('{M}', ''+maxPage)\"\n               [attr.aria-controls]=\"dataTable.id\"/>\n        <div class=\"input-group-append\">\n            <span class=\"input-group-text\">\n              {{ dataTable.labels.paginationTotalPages }}&nbsp;{{ dataTable.lastPage }}\n            </span>\n        </div>\n\n        <button [disabled]=\"(dataTable.offset + dataTable.limit) >= dataTable.itemCount\"\n                (click)=\"pageForward()\"\n                class=\"btn btn-default pagination-nextpage\"\n                [title]=\"dataTable.labels.nextPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">next page</span>\n        </button>\n        <button [disabled]=\"(dataTable.offset + dataTable.limit) >= dataTable.itemCount\"\n                (click)=\"pageLast()\"\n                class=\"btn btn-default pagination-lastpage\"\n                [title]=\"dataTable.labels.lastPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-double-right\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">last page</span>\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n",
-                styles: [".pagination-controllers select{text-align:right}.pagination-box button{outline:0!important}"]
-            }),
-            __param(0, core.Inject(core.forwardRef(function () { return DataTableComponent; })))
-        ], DataTablePaginationComponent);
-        return DataTablePaginationComponent;
     }());
 
     var NgxTableModule = /** @class */ (function () {
