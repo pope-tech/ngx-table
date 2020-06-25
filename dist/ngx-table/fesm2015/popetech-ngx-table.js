@@ -722,7 +722,7 @@ __decorate([
     ViewChildren(DataTableRowComponent)
 ], DataTableComponent.prototype, "rows", void 0);
 __decorate([
-    ViewChild(DataTablePaginationComponent, { static: true })
+    ViewChild(DataTablePaginationComponent, { static: false })
 ], DataTableComponent.prototype, "paginator", void 0);
 __decorate([
     ContentChild('dataTableExpand', { static: true })

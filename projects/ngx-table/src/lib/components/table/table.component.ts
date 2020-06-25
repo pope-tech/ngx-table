@@ -66,7 +66,8 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   // UI components:
   @ContentChildren(DataTableColumnDirective) columns: QueryList<DataTableColumnDirective>;
   @ViewChildren(DataTableRowComponent) rows: QueryList<DataTableRowComponent>;
-  @ViewChild(DataTablePaginationComponent, {static: true}) paginator;
+  
+  @ViewChild(DataTablePaginationComponent, {static: false}) paginator;
 
   @ContentChild('dataTableExpand', { static: true }) expandTemplate: TemplateRef<any>;
 
