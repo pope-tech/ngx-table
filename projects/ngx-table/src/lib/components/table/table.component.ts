@@ -9,7 +9,7 @@ import {
   OnInit,
   Output,
   QueryList,
-  TemplateRef,
+  TemplateRef, ViewChild,
   ViewChildren
 } from '@angular/core';
 import { DataTableColumnDirective } from '../../directives/column/column.directive';
@@ -24,6 +24,7 @@ import { Subject } from 'rxjs';
 import { Subscription } from 'rxjs';
 
 import { debounceTime, tap } from 'rxjs/operators';
+import { DataTablePaginationComponent } from "../../ngx-table.module";
 
 let nextId = 0;
 
@@ -65,6 +66,8 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   // UI components:
   @ContentChildren(DataTableColumnDirective) columns: QueryList<DataTableColumnDirective>;
   @ViewChildren(DataTableRowComponent) rows: QueryList<DataTableRowComponent>;
+  @ViewChild(DataTablePaginationComponent, {static: true}) paginator;
+
   @ContentChild('dataTableExpand', { static: true }) expandTemplate: TemplateRef<any>;
 
   // One-time optional bindings with default values:

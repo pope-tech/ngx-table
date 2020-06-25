@@ -16,6 +16,7 @@ export declare class DataTableComponent implements DataTableParams, OnInit, Afte
     set itemCount(count: number);
     columns: QueryList<DataTableColumnDirective>;
     rows: QueryList<DataTableRowComponent>;
+    paginator: any;
     expandTemplate: TemplateRef<any>;
     title: string;
     showTitle: boolean;
