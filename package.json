@@ -22,7 +22,7 @@
     "bootstrap": "^4.4.1",
     "font-awesome": "^4.7.0",
     "highlight.js": "^9.18.1",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "ngx-md": "^8.1.6",
     "rxjs": "^6.5.4",
     "tslib": "^1.10.0",
