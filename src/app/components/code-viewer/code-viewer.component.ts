@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin, of } from 'rxjs';
 
-import * as Highlight from 'highlight.js';
+import hljs from 'highlight.js/lib/core';
 import { catchError } from 'rxjs/operators';
 
 @Component({
@@ -29,8 +29,8 @@ export class CodeViewerComponent {
   path = '';
 
   constructor(private http: HttpClient) {
-    Highlight.configure({ useBR: false, languages: ['css', 'html', 'ts'] });
-    Highlight.initHighlighting();
+    hljs.configure({ languages: ['css', 'html', 'ts'] });
+    // Highlight.initHighlighting();
   }
 
   public toggle(): void {
@@ -68,8 +68,8 @@ export class CodeViewerComponent {
   }
 
   highlight() {
-    if (this.showTsNode) { Highlight.highlightBlock(this.tsNode.nativeElement); }
-    if (this.showHtmlNode) { Highlight.highlightBlock(this.htmlNode.nativeElement); }
-    if (this.showCssNode) { Highlight.highlightBlock(this.cssNode.nativeElement); }
+    if (this.showTsNode) { hljs.highlightBlock(this.tsNode.nativeElement); }
+    if (this.showHtmlNode) { hljs.highlightBlock(this.htmlNode.nativeElement); }
+    if (this.showCssNode) { hljs.highlightBlock(this.cssNode.nativeElement); }
   }
 }
