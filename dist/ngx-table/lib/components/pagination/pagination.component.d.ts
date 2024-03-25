@@ -18,7 +18,7 @@ export declare class DataTablePaginationComponent {
     get page(): number;
     set page(value: number);
     validate(event: any): void;
-    static ɵfac: i0.ɵɵFactoryDef<DataTablePaginationComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DataTablePaginationComponent, "data-table-pagination", never, { "limits": "limits"; }, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DataTablePaginationComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DataTablePaginationComponent, "data-table-pagination", never, { "limits": "limits"; }, {}, never, never>;
 }
 //# sourceMappingURL=pagination.component.d.ts.map

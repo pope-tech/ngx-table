@@ -9,7 +9,7 @@ export declare class DataTableHeaderComponent {
     onClickHandler(event: any): void;
     onKeyUpHandler(event: any): void;
     onChange(event: Event): void;
-    static ɵfac: i0.ɵɵFactoryDef<DataTableHeaderComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DataTableHeaderComponent, "data-table-header", never, {}, {}, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DataTableHeaderComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DataTableHeaderComponent, "data-table-header", never, {}, {}, never, never>;
 }
 //# sourceMappingURL=header.component.d.ts.map

@@ -1,9 +1,9 @@
 
-:host /deep/ .index-column,
-:host /deep/ .index-column-header {
+:host ::ng-deep .index-column,
+:host ::ng-deep .index-column-header {
     text-align: right;
 }
 
-:host /deep/ .data-table .data-table-row.selected {
+:host ::ng-deep .data-table .data-table-row.selected {
     background-color: #E4EDF9;
 }

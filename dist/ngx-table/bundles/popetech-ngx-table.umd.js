@@ -1,8 +1,30 @@
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/forms'), require('rxjs'), require('rxjs/operators')) :
     typeof define === 'function' && define.amd ? define('@popetech/ngx-table', ['exports', '@angular/core', '@angular/common', '@angular/forms', 'rxjs', 'rxjs/operators'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.popetech = global.popetech || {}, global.popetech['ngx-table'] = {}), global.ng.core, global.ng.common, global.ng.forms, global.rxjs, global.rxjs.operators));
-}(this, (function (exports, i0, i3, i2, rxjs, operators) { 'use strict';
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.popetech = global.popetech || {}, global.popetech["ngx-table"] = {}), global.ng.core, global.ng.common, global.ng.forms, global.rxjs, global.rxjs.operators));
+})(this, (function (exports, i0, i1, i1$1, rxjs, operators) { 'use strict';
+
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () { return e[k]; }
+                    });
+                }
+            });
+        }
+        n["default"] = e;
+        return Object.freeze(n);
+    }
+
+    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
+    var i1__namespace = /*#__PURE__*/_interopNamespace(i1);
+    var i1__namespace$1 = /*#__PURE__*/_interopNamespace(i1$1);
 
     function isBlank(obj) {
         return obj === undefined || obj === null;
@@ -38,15 +60,15 @@
         };
         return HideDirective;
     }());
-    HideDirective.ɵfac = function HideDirective_Factory(t) { return new (t || HideDirective)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2)); };
-    HideDirective.ɵdir = i0.ɵɵdefineDirective({ type: HideDirective, selectors: [["", "hide", ""]], inputs: { hide: "hide" } });
+    HideDirective.ɵfac = function HideDirective_Factory(t) { return new (t || HideDirective)(i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef), i0__namespace.ɵɵdirectiveInject(i0__namespace.Renderer2)); };
+    HideDirective.ɵdir = /*@__PURE__*/ i0__namespace.ɵɵdefineDirective({ type: HideDirective, selectors: [["", "hide", ""]], inputs: { hide: "hide" } });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(HideDirective, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(HideDirective, [{
                 type: i0.Directive,
                 args: [{
                         selector: '[hide]'
                     }]
-            }], function () { return [{ type: i0.ElementRef }, { type: i0.Renderer2 }]; }, { hide: [{
+            }], function () { return [{ type: i0__namespace.ElementRef }, { type: i0__namespace.Renderer2 }]; }, { hide: [{
                     type: i0.Input
                 }] });
     })();
@@ -60,9 +82,9 @@
         return MinPipe;
     }());
     MinPipe.ɵfac = function MinPipe_Factory(t) { return new (t || MinPipe)(); };
-    MinPipe.ɵpipe = i0.ɵɵdefinePipe({ name: "min", type: MinPipe, pure: true });
+    MinPipe.ɵpipe = /*@__PURE__*/ i0__namespace.ɵɵdefinePipe({ name: "min", type: MinPipe, pure: true });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MinPipe, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(MinPipe, [{
                 type: i0.Pipe,
                 args: [{
                         name: 'min'
@@ -88,9 +110,9 @@
         return PixelConverter;
     }());
     PixelConverter.ɵfac = function PixelConverter_Factory(t) { return new (t || PixelConverter)(); };
-    PixelConverter.ɵpipe = i0.ɵɵdefinePipe({ name: "px", type: PixelConverter, pure: true });
+    PixelConverter.ɵpipe = /*@__PURE__*/ i0__namespace.ɵɵdefinePipe({ name: "px", type: PixelConverter, pure: true });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PixelConverter, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(PixelConverter, [{
                 type: i0.Pipe,
                 args: [{
                         name: 'px'
@@ -144,8 +166,8 @@
         return DataTableResource;
     }());
 
-    var _c0 = ["dataTableCell"];
-    var _c1 = ["dataTableHeader"];
+    var _c0$3 = ["dataTableCell"];
+    var _c1$2 = ["dataTableHeader"];
     var DataTableColumnDirective = /** @class */ (function () {
         function DataTableColumnDirective() {
             this.styleClassObject = {}; // for [ngClass]
@@ -180,19 +202,19 @@
         return DataTableColumnDirective;
     }());
     DataTableColumnDirective.ɵfac = function DataTableColumnDirective_Factory(t) { return new (t || DataTableColumnDirective)(); };
-    DataTableColumnDirective.ɵdir = i0.ɵɵdefineDirective({ type: DataTableColumnDirective, selectors: [["data-table-column"]], contentQueries: function DataTableColumnDirective_ContentQueries(rf, ctx, dirIndex) {
+    DataTableColumnDirective.ɵdir = /*@__PURE__*/ i0__namespace.ɵɵdefineDirective({ type: DataTableColumnDirective, selectors: [["data-table-column"]], contentQueries: function DataTableColumnDirective_ContentQueries(rf, ctx, dirIndex) {
             if (rf & 1) {
-                i0.ɵɵcontentQuery(dirIndex, _c0, 3);
-                i0.ɵɵcontentQuery(dirIndex, _c1, 3);
+                i0__namespace.ɵɵcontentQuery(dirIndex, _c0$3, 7);
+                i0__namespace.ɵɵcontentQuery(dirIndex, _c1$2, 7);
             }
             if (rf & 2) {
                 var _t = void 0;
-                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.cellTemplate = _t.first);
-                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.headerTemplate = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.cellTemplate = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.headerTemplate = _t.first);
             }
         }, inputs: { header: "header", sortable: "sortable", resizable: "resizable", property: "property", styleClass: "styleClass", cellColors: "cellColors", width: "width", visible: "visible" } });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableColumnDirective, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DataTableColumnDirective, [{
                 type: i0.Directive,
                 args: [{
                         selector: 'data-table-column'
@@ -222,113 +244,113 @@
                 }] });
     })();
 
-    var _c0$1 = ["dataTableRow", ""];
+    var _c0$2 = ["dataTableRow", ""];
     function DataTableRowComponent_ng_template_7_th_0_div_1_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "div", 14);
+            i0__namespace.ɵɵelement(0, "div", 14);
         }
         if (rf & 2) {
-            var column_r2 = i0.ɵɵnextContext(2).$implicit;
-            var ctx_r5 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("textContent", ctx_r5.item[column_r2.property]);
+            var column_r2 = i0__namespace.ɵɵnextContext(2).$implicit;
+            var ctx_r5 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("textContent", ctx_r5.item[column_r2.property]);
         }
     }
     var _c1$1 = function (a0, a1, a2) { return { column: a0, row: a1, item: a2 }; };
     function DataTableRowComponent_ng_template_7_th_0_div_2_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "div", 15);
+            i0__namespace.ɵɵelement(0, "div", 15);
         }
         if (rf & 2) {
-            var column_r2 = i0.ɵɵnextContext(2).$implicit;
-            var ctx_r6 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("ngTemplateOutlet", column_r2.cellTemplate)("ngTemplateOutletContext", i0.ɵɵpureFunction3(2, _c1$1, column_r2, ctx_r6._this, ctx_r6.item));
+            var column_r2 = i0__namespace.ɵɵnextContext(2).$implicit;
+            var ctx_r6 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("ngTemplateOutlet", column_r2.cellTemplate)("ngTemplateOutletContext", i0__namespace.ɵɵpureFunction3(2, _c1$1, column_r2, ctx_r6._this, ctx_r6.item));
         }
     }
     function DataTableRowComponent_ng_template_7_th_0_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "th", 11);
-            i0.ɵɵtemplate(1, DataTableRowComponent_ng_template_7_th_0_div_1_Template, 1, 1, "div", 12);
-            i0.ɵɵtemplate(2, DataTableRowComponent_ng_template_7_th_0_div_2_Template, 1, 6, "div", 13);
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "th", 11);
+            i0__namespace.ɵɵtemplate(1, DataTableRowComponent_ng_template_7_th_0_div_1_Template, 1, 1, "div", 12);
+            i0__namespace.ɵɵtemplate(2, DataTableRowComponent_ng_template_7_th_0_div_2_Template, 1, 6, "div", 13);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var column_r2 = i0.ɵɵnextContext().$implicit;
-            var ctx_r3 = i0.ɵɵnextContext();
-            i0.ɵɵstyleProp("background-color", column_r2.getCellColor(ctx_r3._this, ctx_r3.index));
-            i0.ɵɵproperty("hide", !column_r2.visible)("ngClass", column_r2.styleClassObject);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", !column_r2.cellTemplate);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", column_r2.cellTemplate);
+            var column_r2 = i0__namespace.ɵɵnextContext().$implicit;
+            var ctx_r3 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵstyleProp("background-color", column_r2.getCellColor(ctx_r3._this, ctx_r3.index));
+            i0__namespace.ɵɵproperty("hide", !column_r2.visible)("ngClass", column_r2.styleClassObject);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", !column_r2.cellTemplate);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", column_r2.cellTemplate);
         }
     }
     function DataTableRowComponent_ng_template_7_td_1_div_1_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "div", 14);
+            i0__namespace.ɵɵelement(0, "div", 14);
         }
         if (rf & 2) {
-            var column_r2 = i0.ɵɵnextContext(2).$implicit;
-            var ctx_r10 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("textContent", ctx_r10.item[column_r2.property]);
+            var column_r2 = i0__namespace.ɵɵnextContext(2).$implicit;
+            var ctx_r10 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("textContent", ctx_r10.item[column_r2.property]);
         }
     }
     function DataTableRowComponent_ng_template_7_td_1_div_2_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "div", 15);
+            i0__namespace.ɵɵelement(0, "div", 15);
         }
         if (rf & 2) {
-            var column_r2 = i0.ɵɵnextContext(2).$implicit;
-            var ctx_r11 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("ngTemplateOutlet", column_r2.cellTemplate)("ngTemplateOutletContext", i0.ɵɵpureFunction3(2, _c1$1, column_r2, ctx_r11._this, ctx_r11.item));
+            var column_r2 = i0__namespace.ɵɵnextContext(2).$implicit;
+            var ctx_r11 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("ngTemplateOutlet", column_r2.cellTemplate)("ngTemplateOutletContext", i0__namespace.ɵɵpureFunction3(2, _c1$1, column_r2, ctx_r11._this, ctx_r11.item));
         }
     }
     function DataTableRowComponent_ng_template_7_td_1_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "td", 16);
-            i0.ɵɵtemplate(1, DataTableRowComponent_ng_template_7_td_1_div_1_Template, 1, 1, "div", 12);
-            i0.ɵɵtemplate(2, DataTableRowComponent_ng_template_7_td_1_div_2_Template, 1, 6, "div", 13);
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "td", 16);
+            i0__namespace.ɵɵtemplate(1, DataTableRowComponent_ng_template_7_td_1_div_1_Template, 1, 1, "div", 12);
+            i0__namespace.ɵɵtemplate(2, DataTableRowComponent_ng_template_7_td_1_div_2_Template, 1, 6, "div", 13);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var column_r2 = i0.ɵɵnextContext().$implicit;
-            var ctx_r4 = i0.ɵɵnextContext();
-            i0.ɵɵstyleProp("background-color", column_r2.getCellColor(ctx_r4._this, ctx_r4.index));
-            i0.ɵɵproperty("hide", !column_r2.visible)("ngClass", column_r2.styleClassObject);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", !column_r2.cellTemplate);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", column_r2.cellTemplate);
+            var column_r2 = i0__namespace.ɵɵnextContext().$implicit;
+            var ctx_r4 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵstyleProp("background-color", column_r2.getCellColor(ctx_r4._this, ctx_r4.index));
+            i0__namespace.ɵɵproperty("hide", !column_r2.visible)("ngClass", column_r2.styleClassObject);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", !column_r2.cellTemplate);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", column_r2.cellTemplate);
         }
     }
     function DataTableRowComponent_ng_template_7_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵtemplate(0, DataTableRowComponent_ng_template_7_th_0_Template, 3, 6, "th", 9);
-            i0.ɵɵtemplate(1, DataTableRowComponent_ng_template_7_td_1_Template, 3, 6, "td", 10);
+            i0__namespace.ɵɵtemplate(0, DataTableRowComponent_ng_template_7_th_0_Template, 3, 6, "th", 9);
+            i0__namespace.ɵɵtemplate(1, DataTableRowComponent_ng_template_7_td_1_Template, 3, 6, "td", 10);
         }
         if (rf & 2) {
             var column_r2 = ctx.$implicit;
-            var ctx_r0 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("ngIf", ctx_r0.dataTable.primaryColumn === column_r2.property);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx_r0.dataTable.primaryColumn !== column_r2.property);
+            var ctx_r0 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("ngIf", ctx_r0.dataTable.primaryColumn === column_r2.property);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", ctx_r0.dataTable.primaryColumn !== column_r2.property);
         }
     }
-    var _c2 = function (a0, a1) { return { row: a0, item: a1 }; };
+    var _c2$1 = function (a0, a1) { return { row: a0, item: a1 }; };
     function DataTableRowComponent_tr_8_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "tr", 17);
-            i0.ɵɵelementStart(1, "td");
-            i0.ɵɵelement(2, "div", 15);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "tr", 17);
+            i0__namespace.ɵɵelementStart(1, "td");
+            i0__namespace.ɵɵelement(2, "div", 15);
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r1 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("hide", !ctx_r1.expanded);
-            i0.ɵɵadvance(1);
-            i0.ɵɵattribute("colspan", ctx_r1.dataTable.columnCount);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngTemplateOutlet", ctx_r1.dataTable.expandTemplate)("ngTemplateOutletContext", i0.ɵɵpureFunction2(4, _c2, ctx_r1._this, ctx_r1.item));
+            var ctx_r1 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("hide", !ctx_r1.expanded);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵattribute("colspan", ctx_r1.dataTable.columnCount);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngTemplateOutlet", ctx_r1.dataTable.expandTemplate)("ngTemplateOutletContext", i0__namespace.ɵɵpureFunction2(4, _c2$1, ctx_r1._this, ctx_r1.item));
         }
     }
     var _c3 = function (a0, a1) { return { "fa-caret-right": a0, "fa-caret-down": a1 }; };
@@ -386,52 +408,52 @@
         };
         return DataTableRowComponent;
     }());
-    DataTableRowComponent.ɵfac = function DataTableRowComponent_Factory(t) { return new (t || DataTableRowComponent)(i0.ɵɵdirectiveInject(i0.forwardRef(function () { return DataTableComponent; })), i0.ɵɵdirectiveInject(i0.Renderer2), i0.ɵɵdirectiveInject(i0.ElementRef)); };
-    DataTableRowComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DataTableRowComponent, selectors: [["", "dataTableRow", ""]], inputs: { item: "item", index: "index" }, outputs: { selectedChange: "selectedChange" }, attrs: _c0$1, decls: 9, vars: 27, consts: [[1, "data-table-row", 3, "title"], [3, "hide"], [1, "row-expand-button", 3, "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-lg", 3, "ngClass"], [1, "index-column", 3, "hide", "textContent"], [1, "select-column", 3, "hide"], ["type", "checkbox", 3, "ngModel", "title", "ngModelChange"], ["ngFor", "", 3, "ngForOf"], ["class", "row-expansion", 3, "hide", 4, "ngIf"], ["scope", "row", "class", "data-column", 3, "hide", "ngClass", "background-color", 4, "ngIf"], ["class", "data-column", 3, "hide", "ngClass", "background-color", 4, "ngIf"], ["scope", "row", 1, "data-column", 3, "hide", "ngClass"], [3, "textContent", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], [3, "textContent"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], [1, "data-column", 3, "hide", "ngClass"], [1, "row-expansion", 3, "hide"]], template: function DataTableRowComponent_Template(rf, ctx) {
+    DataTableRowComponent.ɵfac = function DataTableRowComponent_Factory(t) { return new (t || DataTableRowComponent)(i0__namespace.ɵɵdirectiveInject(i0.forwardRef(function () { return DataTableComponent; })), i0__namespace.ɵɵdirectiveInject(i0__namespace.Renderer2), i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef)); };
+    DataTableRowComponent.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: DataTableRowComponent, selectors: [["", "dataTableRow", ""]], inputs: { item: "item", index: "index" }, outputs: { selectedChange: "selectedChange" }, attrs: _c0$2, decls: 9, vars: 27, consts: [[1, "data-table-row", 3, "title"], [3, "hide"], [1, "row-expand-button", 3, "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-lg", 3, "ngClass"], [1, "index-column", 3, "hide", "textContent"], [1, "select-column", 3, "hide"], ["type", "checkbox", 3, "ngModel", "title", "ngModelChange"], ["ngFor", "", 3, "ngForOf"], ["class", "row-expansion", 3, "hide", 4, "ngIf"], ["scope", "row", "class", "data-column", 3, "hide", "ngClass", "background-color", 4, "ngIf"], ["class", "data-column", 3, "hide", "ngClass", "background-color", 4, "ngIf"], ["scope", "row", 1, "data-column", 3, "hide", "ngClass"], [3, "textContent", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], [3, "textContent"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], [1, "data-column", 3, "hide", "ngClass"], [1, "row-expansion", 3, "hide"]], template: function DataTableRowComponent_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "tr", 0);
-                i0.ɵɵelementStart(1, "td", 1);
-                i0.ɵɵelementStart(2, "button", 2);
-                i0.ɵɵlistener("click", function DataTableRowComponent_Template_button_click_2_listener($event) { ctx.expanded = !ctx.expanded; return $event.stopPropagation(); });
-                i0.ɵɵelement(3, "i", 3);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelement(4, "td", 4);
-                i0.ɵɵelementStart(5, "td", 5);
-                i0.ɵɵelementStart(6, "input", 6);
-                i0.ɵɵlistener("ngModelChange", function DataTableRowComponent_Template_input_ngModelChange_6_listener($event) { return ctx.selected = $event; });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(7, DataTableRowComponent_ng_template_7_Template, 2, 2, "ng-template", 7);
-                i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(8, DataTableRowComponent_tr_8_Template, 3, 7, "tr", 8);
+                i0__namespace.ɵɵelementStart(0, "tr", 0);
+                i0__namespace.ɵɵelementStart(1, "td", 1);
+                i0__namespace.ɵɵelementStart(2, "button", 2);
+                i0__namespace.ɵɵlistener("click", function DataTableRowComponent_Template_button_click_2_listener($event) { ctx.expanded = !ctx.expanded; return $event.stopPropagation(); });
+                i0__namespace.ɵɵelement(3, "i", 3);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelement(4, "td", 4);
+                i0__namespace.ɵɵelementStart(5, "td", 5);
+                i0__namespace.ɵɵelementStart(6, "input", 6);
+                i0__namespace.ɵɵlistener("ngModelChange", function DataTableRowComponent_Template_input_ngModelChange_6_listener($event) { return ctx.selected = $event; });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtemplate(7, DataTableRowComponent_ng_template_7_Template, 2, 2, "ng-template", 7);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtemplate(8, DataTableRowComponent_tr_8_Template, 3, 7, "tr", 8);
             }
             if (rf & 2) {
-                i0.ɵɵstyleProp("background-color", ctx.dataTable.getRowColor(ctx.item, ctx.index, ctx._this));
-                i0.ɵɵclassProp("row-odd", ctx.index % 2 === 0)("row-even", ctx.index % 2 === 1)("selected", ctx.selected)("clickable", ctx.dataTable.selectOnRowClick);
-                i0.ɵɵproperty("title", ctx.getTooltip());
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("hide", !ctx.dataTable.expandColumnVisible);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("title", ctx.dataTable.labels.expandRow.replace("{cell_content}", "" + ctx.item[ctx.dataTable.primaryColumn]));
-                i0.ɵɵattribute("aria-expanded", ctx.expanded)("aria-label", ctx.dataTable.labels.expandRow.replace("{cell_content}", "" + ctx.item[ctx.dataTable.primaryColumn]));
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction2(24, _c3, !ctx.expanded, ctx.expanded));
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("hide", !ctx.dataTable.indexColumnVisible)("textContent", ctx.displayIndex);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("hide", !ctx.dataTable.selectColumnVisible);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngModel", ctx.selected)("title", ctx.dataTable.labels.selectRow.replace("{cell_content}", "" + ctx.item[ctx.dataTable.primaryColumn]));
-                i0.ɵɵattribute("aria-label", ctx.dataTable.labels.selectRow.replace("{cell_content}", "" + ctx.item[ctx.dataTable.primaryColumn]));
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngForOf", ctx.dataTable.columns);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.dataTable.expandableRows);
+                i0__namespace.ɵɵstyleProp("background-color", ctx.dataTable.getRowColor(ctx.item, ctx.index, ctx._this));
+                i0__namespace.ɵɵclassProp("row-odd", ctx.index % 2 === 0)("row-even", ctx.index % 2 === 1)("selected", ctx.selected)("clickable", ctx.dataTable.selectOnRowClick);
+                i0__namespace.ɵɵproperty("title", ctx.getTooltip());
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("hide", !ctx.dataTable.expandColumnVisible);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("title", ctx.dataTable.labels.expandRow.replace("{cell_content}", "" + ctx.item[ctx.dataTable.primaryColumn]));
+                i0__namespace.ɵɵattribute("aria-expanded", ctx.expanded)("aria-label", ctx.dataTable.labels.expandRow.replace("{cell_content}", "" + ctx.item[ctx.dataTable.primaryColumn]));
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngClass", i0__namespace.ɵɵpureFunction2(24, _c3, !ctx.expanded, ctx.expanded));
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("hide", !ctx.dataTable.indexColumnVisible)("textContent", ctx.displayIndex);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("hide", !ctx.dataTable.selectColumnVisible);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngModel", ctx.selected)("title", ctx.dataTable.labels.selectRow.replace("{cell_content}", "" + ctx.item[ctx.dataTable.primaryColumn]));
+                i0__namespace.ɵɵattribute("aria-label", ctx.dataTable.labels.selectRow.replace("{cell_content}", "" + ctx.item[ctx.dataTable.primaryColumn]));
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngForOf", ctx.dataTable.columns);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngIf", ctx.dataTable.expandableRows);
             }
-        }, directives: [HideDirective, i3.NgClass, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i3.NgIf, i3.NgTemplateOutlet], styles: [".select-column[_ngcontent-%COMP%]{text-align:center}.row-expand-button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.clickable[_ngcontent-%COMP%]{cursor:pointer}th[_ngcontent-%COMP%]{font-weight:400}"] });
+        }, directives: [HideDirective, i1__namespace.NgClass, i1__namespace$1.CheckboxControlValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.NgModel, i1__namespace.NgForOf, i1__namespace.NgIf, i1__namespace.NgTemplateOutlet], styles: [".select-column[_ngcontent-%COMP%]{text-align:center}.row-expand-button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.clickable[_ngcontent-%COMP%]{cursor:pointer}th[_ngcontent-%COMP%]{font-weight:normal;font-weight:initial}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableRowComponent, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DataTableRowComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: '[dataTableRow]',
@@ -442,7 +464,7 @@
             return [{ type: DataTableComponent, decorators: [{
                             type: i0.Inject,
                             args: [i0.forwardRef(function () { return DataTableComponent; })]
-                        }] }, { type: i0.Renderer2 }, { type: i0.ElementRef }];
+                        }] }, { type: i0__namespace.Renderer2 }, { type: i0__namespace.ElementRef }];
         }, { item: [{
                     type: i0.Input
                 }], index: [{
@@ -513,25 +535,25 @@
         document.addEventListener('mouseup', mouseUpHandler);
     }
 
-    var _c0$2 = ["pageInput"];
+    var _c0$1 = ["pageInput"];
     function DataTablePaginationComponent_option_9_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "option", 25);
-            i0.ɵɵtext(1);
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "option", 25);
+            i0__namespace.ɵɵtext(1);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
             var l_r2 = ctx.$implicit;
-            i0.ɵɵproperty("value", l_r2);
-            i0.ɵɵadvance(1);
-            i0.ɵɵtextInterpolate(l_r2);
+            i0__namespace.ɵɵproperty("value", l_r2);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵtextInterpolate(l_r2);
         }
     }
-    var nextId = 0;
+    var nextId$1 = 0;
     var DataTablePaginationComponent = /** @class */ (function () {
         function DataTablePaginationComponent(dataTable) {
             this.dataTable = dataTable;
-            this.id = "pagination-" + nextId++;
+            this.id = "pagination-" + nextId$1++;
             this.Math = Math;
         }
         DataTablePaginationComponent.prototype.pageBack = function () {
@@ -594,120 +616,120 @@
         };
         return DataTablePaginationComponent;
     }());
-    DataTablePaginationComponent.ɵfac = function DataTablePaginationComponent_Factory(t) { return new (t || DataTablePaginationComponent)(i0.ɵɵdirectiveInject(i0.forwardRef(function () { return DataTableComponent; }))); };
-    DataTablePaginationComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DataTablePaginationComponent, selectors: [["data-table-pagination"]], viewQuery: function DataTablePaginationComponent_Query(rf, ctx) {
+    DataTablePaginationComponent.ɵfac = function DataTablePaginationComponent_Factory(t) { return new (t || DataTablePaginationComponent)(i0__namespace.ɵɵdirectiveInject(i0.forwardRef(function () { return DataTableComponent; }))); };
+    DataTablePaginationComponent.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: DataTablePaginationComponent, selectors: [["data-table-pagination"]], viewQuery: function DataTablePaginationComponent_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(_c0$2, 3);
+                i0__namespace.ɵɵviewQuery(_c0$1, 7);
             }
             if (rf & 2) {
                 var _t = void 0;
-                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.pageInput = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.pageInput = _t.first);
             }
         }, inputs: { limits: "limits" }, decls: 37, vars: 29, consts: [[1, "row"], [1, "pagination-range", "col"], [3, "textContent"], [1, "pagination-limit", "col-md-3"], [1, "input-group"], [1, "input-group-prepend"], [1, "input-group-text", 3, "textContent"], [1, "form-control", 3, "id", "ngModel", "disabled", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [1, "pagination-pages", "offset-md-3", "col-md-6"], [1, "pagination-page"], [1, "btn", "btn-default", "pagination-firstpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-left"], [1, "sr-only"], [1, "btn", "btn-default", "pagination-prevpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-left"], [1, "input-group-prepend", "d-sm-block", "d-none"], [1, "input-group-text"], ["type", "number", "min", "1", "step", "1", 1, "form-control", 3, "id", "max", "disabled", "ngModel", "title", "blur", "keyup.enter", "keyup.esc"], ["pageInput", ""], [1, "input-group-append"], [1, "btn", "btn-default", "pagination-nextpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-right"], [1, "btn", "btn-default", "pagination-lastpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-right"], [3, "value"]], template: function DataTablePaginationComponent_Template(rf, ctx) {
             if (rf & 1) {
-                var _r3_1 = i0.ɵɵgetCurrentView();
-                i0.ɵɵelementStart(0, "div", 0);
-                i0.ɵɵelementStart(1, "div", 1);
-                i0.ɵɵelement(2, "span", 2);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(3, "div", 0);
-                i0.ɵɵelementStart(4, "div", 3);
-                i0.ɵɵelementStart(5, "div", 4);
-                i0.ɵɵelementStart(6, "div", 5);
-                i0.ɵɵelement(7, "label", 6);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(8, "select", 7);
-                i0.ɵɵlistener("ngModelChange", function DataTablePaginationComponent_Template_select_ngModelChange_8_listener($event) { return ctx.limit = $event; });
-                i0.ɵɵtemplate(9, DataTablePaginationComponent_option_9_Template, 2, 2, "option", 8);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(10, "div", 9);
-                i0.ɵɵelementStart(11, "div", 10);
-                i0.ɵɵelementStart(12, "div", 4);
-                i0.ɵɵelementStart(13, "button", 11);
-                i0.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_13_listener() { return ctx.pageFirst(); });
-                i0.ɵɵelement(14, "i", 12);
-                i0.ɵɵelementStart(15, "span", 13);
-                i0.ɵɵtext(16, "first page");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(17, "button", 14);
-                i0.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_17_listener() { return ctx.pageBack(); });
-                i0.ɵɵelement(18, "i", 15);
-                i0.ɵɵelementStart(19, "span", 13);
-                i0.ɵɵtext(20, "previous page");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(21, "div", 16);
-                i0.ɵɵelementStart(22, "label", 17);
-                i0.ɵɵtext(23);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(24, "input", 18, 19);
-                i0.ɵɵlistener("blur", function DataTablePaginationComponent_Template_input_blur_24_listener($event) { return ctx.validate($event); })("keyup.enter", function DataTablePaginationComponent_Template_input_keyup_enter_24_listener($event) { return ctx.validate($event); })("keyup.esc", function DataTablePaginationComponent_Template_input_keyup_esc_24_listener() { i0.ɵɵrestoreView(_r3_1); var _r1 = i0.ɵɵreference(25); return _r1.value = ctx.page; });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(26, "div", 20);
-                i0.ɵɵelementStart(27, "span", 17);
-                i0.ɵɵtext(28);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(29, "button", 21);
-                i0.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_29_listener() { return ctx.pageForward(); });
-                i0.ɵɵelement(30, "i", 22);
-                i0.ɵɵelementStart(31, "span", 13);
-                i0.ɵɵtext(32, "next page");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(33, "button", 23);
-                i0.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_33_listener() { return ctx.pageLast(); });
-                i0.ɵɵelement(34, "i", 24);
-                i0.ɵɵelementStart(35, "span", 13);
-                i0.ɵɵtext(36, "last page");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
+                var _r3_1 = i0__namespace.ɵɵgetCurrentView();
+                i0__namespace.ɵɵelementStart(0, "div", 0);
+                i0__namespace.ɵɵelementStart(1, "div", 1);
+                i0__namespace.ɵɵelement(2, "span", 2);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(3, "div", 0);
+                i0__namespace.ɵɵelementStart(4, "div", 3);
+                i0__namespace.ɵɵelementStart(5, "div", 4);
+                i0__namespace.ɵɵelementStart(6, "div", 5);
+                i0__namespace.ɵɵelement(7, "label", 6);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(8, "select", 7);
+                i0__namespace.ɵɵlistener("ngModelChange", function DataTablePaginationComponent_Template_select_ngModelChange_8_listener($event) { return ctx.limit = $event; });
+                i0__namespace.ɵɵtemplate(9, DataTablePaginationComponent_option_9_Template, 2, 2, "option", 8);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(10, "div", 9);
+                i0__namespace.ɵɵelementStart(11, "div", 10);
+                i0__namespace.ɵɵelementStart(12, "div", 4);
+                i0__namespace.ɵɵelementStart(13, "button", 11);
+                i0__namespace.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_13_listener() { return ctx.pageFirst(); });
+                i0__namespace.ɵɵelement(14, "i", 12);
+                i0__namespace.ɵɵelementStart(15, "span", 13);
+                i0__namespace.ɵɵtext(16, "first page");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(17, "button", 14);
+                i0__namespace.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_17_listener() { return ctx.pageBack(); });
+                i0__namespace.ɵɵelement(18, "i", 15);
+                i0__namespace.ɵɵelementStart(19, "span", 13);
+                i0__namespace.ɵɵtext(20, "previous page");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(21, "div", 16);
+                i0__namespace.ɵɵelementStart(22, "label", 17);
+                i0__namespace.ɵɵtext(23);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(24, "input", 18, 19);
+                i0__namespace.ɵɵlistener("blur", function DataTablePaginationComponent_Template_input_blur_24_listener($event) { return ctx.validate($event); })("keyup.enter", function DataTablePaginationComponent_Template_input_keyup_enter_24_listener($event) { return ctx.validate($event); })("keyup.esc", function DataTablePaginationComponent_Template_input_keyup_esc_24_listener() { i0__namespace.ɵɵrestoreView(_r3_1); var _r1 = i0__namespace.ɵɵreference(25); return _r1.value = ctx.page; });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(26, "div", 20);
+                i0__namespace.ɵɵelementStart(27, "span", 17);
+                i0__namespace.ɵɵtext(28);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(29, "button", 21);
+                i0__namespace.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_29_listener() { return ctx.pageForward(); });
+                i0__namespace.ɵɵelement(30, "i", 22);
+                i0__namespace.ɵɵelementStart(31, "span", 13);
+                i0__namespace.ɵɵtext(32, "next page");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(33, "button", 23);
+                i0__namespace.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_33_listener() { return ctx.pageLast(); });
+                i0__namespace.ɵɵelement(34, "i", 24);
+                i0__namespace.ɵɵelementStart(35, "span", 13);
+                i0__namespace.ɵɵtext(36, "last page");
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("textContent", ctx.dataTable.labels.paginationText.replace("{from}", ctx.Math.ceil(ctx.dataTable.itemCount / ctx.dataTable.limit) !== 0 ? ctx.dataTable.offset + 1 + "" : "0").replace("{to}", ctx.Math.min(ctx.dataTable.offset + ctx.dataTable.limit, ctx.dataTable.itemCount) + "").replace("{total}", ctx.dataTable.itemCount + ""));
-                i0.ɵɵadvance(5);
-                i0.ɵɵproperty("textContent", ctx.dataTable.labels.paginationLimit);
-                i0.ɵɵattribute("for", ctx.id + "-page-limit");
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("id", ctx.id + "-page-limit")("ngModel", ctx.limit)("disabled", ctx.dataTable.itemCount === 0);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngForOf", ctx.limits);
-                i0.ɵɵadvance(4);
-                i0.ɵɵproperty("disabled", ctx.dataTable.offset <= 0)("title", ctx.dataTable.labels.firstPage);
-                i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
-                i0.ɵɵadvance(4);
-                i0.ɵɵproperty("disabled", ctx.dataTable.offset <= 0)("title", ctx.dataTable.labels.prevPage);
-                i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
-                i0.ɵɵadvance(5);
-                i0.ɵɵattribute("for", ctx.id + "-page-input");
-                i0.ɵɵadvance(1);
-                i0.ɵɵtextInterpolate1(" ", ctx.dataTable.labels.pageNumberLabel, " ");
-                i0.ɵɵadvance(1);
-                i0.ɵɵpropertyInterpolate("max", ctx.maxPage);
-                i0.ɵɵproperty("id", ctx.id + "-page-input")("disabled", ctx.dataTable.itemCount === 0)("ngModel", ctx.page)("title", ctx.dataTable.labels.pageNumber + " " + ctx.dataTable.labels.pageNumberNofM.replace("{N}", "" + ctx.page).replace("{M}", "" + ctx.maxPage));
-                i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
-                i0.ɵɵadvance(4);
-                i0.ɵɵtextInterpolate2(" ", ctx.dataTable.labels.paginationTotalPages, "\u00A0", ctx.dataTable.lastPage, " ");
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("disabled", ctx.dataTable.offset + ctx.dataTable.limit >= ctx.dataTable.itemCount)("title", ctx.dataTable.labels.nextPage);
-                i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
-                i0.ɵɵadvance(4);
-                i0.ɵɵproperty("disabled", ctx.dataTable.offset + ctx.dataTable.limit >= ctx.dataTable.itemCount)("title", ctx.dataTable.labels.lastPage);
-                i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("textContent", ctx.dataTable.labels.paginationText.replace("{from}", ctx.Math.ceil(ctx.dataTable.itemCount / ctx.dataTable.limit) !== 0 ? ctx.dataTable.offset + 1 + "" : "0").replace("{to}", ctx.Math.min(ctx.dataTable.offset + ctx.dataTable.limit, ctx.dataTable.itemCount) + "").replace("{total}", ctx.dataTable.itemCount + ""));
+                i0__namespace.ɵɵadvance(5);
+                i0__namespace.ɵɵproperty("textContent", ctx.dataTable.labels.paginationLimit);
+                i0__namespace.ɵɵattribute("for", ctx.id + "-page-limit");
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("id", ctx.id + "-page-limit")("ngModel", ctx.limit)("disabled", ctx.dataTable.itemCount === 0);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngForOf", ctx.limits);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("disabled", ctx.dataTable.offset <= 0)("title", ctx.dataTable.labels.firstPage);
+                i0__namespace.ɵɵattribute("aria-controls", ctx.dataTable.id);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("disabled", ctx.dataTable.offset <= 0)("title", ctx.dataTable.labels.prevPage);
+                i0__namespace.ɵɵattribute("aria-controls", ctx.dataTable.id);
+                i0__namespace.ɵɵadvance(5);
+                i0__namespace.ɵɵattribute("for", ctx.id + "-page-input");
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵtextInterpolate1(" ", ctx.dataTable.labels.pageNumberLabel, " ");
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵpropertyInterpolate("max", ctx.maxPage);
+                i0__namespace.ɵɵproperty("id", ctx.id + "-page-input")("disabled", ctx.dataTable.itemCount === 0)("ngModel", ctx.page)("title", ctx.dataTable.labels.pageNumber + " " + ctx.dataTable.labels.pageNumberNofM.replace("{N}", "" + ctx.page).replace("{M}", "" + ctx.maxPage));
+                i0__namespace.ɵɵattribute("aria-controls", ctx.dataTable.id);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵtextInterpolate2(" ", ctx.dataTable.labels.paginationTotalPages, "\u00A0", ctx.dataTable.lastPage, " ");
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("disabled", ctx.dataTable.offset + ctx.dataTable.limit >= ctx.dataTable.itemCount)("title", ctx.dataTable.labels.nextPage);
+                i0__namespace.ɵɵattribute("aria-controls", ctx.dataTable.id);
+                i0__namespace.ɵɵadvance(4);
+                i0__namespace.ɵɵproperty("disabled", ctx.dataTable.offset + ctx.dataTable.limit >= ctx.dataTable.itemCount)("title", ctx.dataTable.labels.lastPage);
+                i0__namespace.ɵɵattribute("aria-controls", ctx.dataTable.id);
             }
-        }, directives: [i2.SelectControlValueAccessor, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i2.NumberValueAccessor, i2.DefaultValueAccessor, i2.NgSelectOption, i2.ɵangular_packages_forms_forms_z], styles: [".pagination-controllers[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]{text-align:right}.pagination-box[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}"] });
+        }, directives: [i1__namespace$1.SelectControlValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.NgModel, i1__namespace.NgForOf, i1__namespace$1.MinValidator, i1__namespace$1.MaxValidator, i1__namespace$1.NumberValueAccessor, i1__namespace$1.DefaultValueAccessor, i1__namespace$1.NgSelectOption, i1__namespace$1.ɵNgSelectMultipleOption], styles: [".pagination-controllers[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]{text-align:right}.pagination-box[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTablePaginationComponent, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DataTablePaginationComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: 'data-table-pagination',
@@ -727,270 +749,270 @@
                 }] });
     })();
 
-    var _c0$3 = ["dataTableExpand"];
+    var _c0 = ["dataTableExpand"];
     function DataTableComponent_data_table_header_6_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "data-table-header");
+            i0__namespace.ɵɵelement(0, "data-table-header");
         }
     }
     function DataTableComponent_th_19_button_3_span_1_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "span", 25);
+            i0__namespace.ɵɵelement(0, "span", 25);
         }
         if (rf & 2) {
-            var ctx_r16 = i0.ɵɵnextContext(2);
+            var ctx_r16 = i0__namespace.ɵɵnextContext(2);
             var i_r8 = ctx_r16.index;
             var column_r7 = ctx_r16.$implicit;
-            var ctx_r12 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("id", "col-" + ctx_r12.id + "-" + i_r8)("textContent", column_r7.header);
+            var ctx_r12 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("id", "col-" + ctx_r12.id + "-" + i_r8)("textContent", column_r7.header);
         }
     }
-    var _c1$2 = function (a0) { return { column: a0 }; };
+    var _c1 = function (a0) { return { column: a0 }; };
     function DataTableComponent_th_19_button_3_span_2_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "span", 26);
+            i0__namespace.ɵɵelement(0, "span", 26);
         }
         if (rf & 2) {
-            var ctx_r17 = i0.ɵɵnextContext(2);
+            var ctx_r17 = i0__namespace.ɵɵnextContext(2);
             var i_r8 = ctx_r17.index;
             var column_r7 = ctx_r17.$implicit;
-            var ctx_r13 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("id", "col-" + ctx_r13.id + "-" + i_r8)("ngTemplateOutlet", column_r7.headerTemplate)("ngTemplateOutletContext", i0.ɵɵpureFunction1(3, _c1$2, column_r7));
+            var ctx_r13 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("id", "col-" + ctx_r13.id + "-" + i_r8)("ngTemplateOutlet", column_r7.headerTemplate)("ngTemplateOutletContext", i0__namespace.ɵɵpureFunction1(3, _c1, column_r7));
         }
     }
-    var _c2$1 = function (a0, a1) { return { "fa-sort-asc": a0, "fa-sort-desc": a1 }; };
+    var _c2 = function (a0, a1) { return { "fa-sort-asc": a0, "fa-sort-desc": a1 }; };
     function DataTableComponent_th_19_button_3_span_3_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "span", 27);
-            i0.ɵɵelement(1, "i", 28);
-            i0.ɵɵelement(2, "i", 29);
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "span", 27);
+            i0__namespace.ɵɵelement(1, "i", 28);
+            i0__namespace.ɵɵelement(2, "i", 29);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var column_r7 = i0.ɵɵnextContext(2).$implicit;
-            var ctx_r14 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("hide", column_r7.property === ctx_r14.sortBy);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("hide", column_r7.property !== ctx_r14.sortBy)("ngClass", i0.ɵɵpureFunction2(3, _c2$1, ctx_r14.sortAsc, !ctx_r14.sortAsc));
+            var column_r7 = i0__namespace.ɵɵnextContext(2).$implicit;
+            var ctx_r14 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("hide", column_r7.property === ctx_r14.sortBy);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("hide", column_r7.property !== ctx_r14.sortBy)("ngClass", i0__namespace.ɵɵpureFunction2(3, _c2, ctx_r14.sortAsc, !ctx_r14.sortAsc));
         }
     }
     function DataTableComponent_th_19_button_3_span_4_Template(rf, ctx) {
         if (rf & 1) {
-            var _r21_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "span", 30);
-            i0.ɵɵlistener("mousedown", function DataTableComponent_th_19_button_3_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r21_1); var column_r7 = i0.ɵɵnextContext(2).$implicit; var _r9 = i0.ɵɵreference(1); var ctx_r19 = i0.ɵɵnextContext(); return ctx_r19.resizeColumnStart($event, column_r7, _r9); });
-            i0.ɵɵelementEnd();
+            var _r21_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "span", 30);
+            i0__namespace.ɵɵlistener("mousedown", function DataTableComponent_th_19_button_3_span_4_Template_span_mousedown_0_listener($event) { i0__namespace.ɵɵrestoreView(_r21_1); var column_r7 = i0__namespace.ɵɵnextContext(2).$implicit; var _r9 = i0__namespace.ɵɵreference(1); var ctx_r19 = i0__namespace.ɵɵnextContext(); return ctx_r19.resizeColumnStart($event, column_r7, _r9); });
+            i0__namespace.ɵɵelementEnd();
         }
     }
     function DataTableComponent_th_19_button_3_Template(rf, ctx) {
         if (rf & 1) {
-            var _r24_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "button", 20);
-            i0.ɵɵlistener("click", function DataTableComponent_th_19_button_3_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r24_1); var column_r7 = i0.ɵɵnextContext().$implicit; var ctx_r22 = i0.ɵɵnextContext(); return ctx_r22.headerClicked(column_r7, $event); });
-            i0.ɵɵtemplate(1, DataTableComponent_th_19_button_3_span_1_Template, 1, 2, "span", 21);
-            i0.ɵɵtemplate(2, DataTableComponent_th_19_button_3_span_2_Template, 1, 5, "span", 22);
-            i0.ɵɵtemplate(3, DataTableComponent_th_19_button_3_span_3_Template, 3, 6, "span", 23);
-            i0.ɵɵtemplate(4, DataTableComponent_th_19_button_3_span_4_Template, 1, 0, "span", 24);
-            i0.ɵɵelementEnd();
+            var _r24_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "button", 20);
+            i0__namespace.ɵɵlistener("click", function DataTableComponent_th_19_button_3_Template_button_click_0_listener($event) { i0__namespace.ɵɵrestoreView(_r24_1); var column_r7 = i0__namespace.ɵɵnextContext().$implicit; var ctx_r22 = i0__namespace.ɵɵnextContext(); return ctx_r22.headerClicked(column_r7, $event); });
+            i0__namespace.ɵɵtemplate(1, DataTableComponent_th_19_button_3_span_1_Template, 1, 2, "span", 21);
+            i0__namespace.ɵɵtemplate(2, DataTableComponent_th_19_button_3_span_2_Template, 1, 5, "span", 22);
+            i0__namespace.ɵɵtemplate(3, DataTableComponent_th_19_button_3_span_3_Template, 3, 6, "span", 23);
+            i0__namespace.ɵɵtemplate(4, DataTableComponent_th_19_button_3_span_4_Template, 1, 0, "span", 24);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r25 = i0.ɵɵnextContext();
+            var ctx_r25 = i0__namespace.ɵɵnextContext();
             var column_r7 = ctx_r25.$implicit;
             var i_r8 = ctx_r25.index;
-            var ctx_r10 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("disabled", ctx_r10.itemCount === 0)("title", !ctx_r10.sortAsc ? ctx_r10.labels.sortAscending : ctx_r10.labels.sortDescending);
-            i0.ɵɵattribute("aria-controls", column_r7.sortable ? ctx_r10.id : null)("aria-labelledby", "col-" + ctx_r10.id + "-" + i_r8);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", !column_r7.headerTemplate);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", column_r7.headerTemplate);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", column_r7.sortable);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", column_r7.resizable);
+            var ctx_r10 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("disabled", ctx_r10.itemCount === 0)("title", !ctx_r10.sortAsc ? ctx_r10.labels.sortAscending : ctx_r10.labels.sortDescending);
+            i0__namespace.ɵɵattribute("aria-controls", column_r7.sortable ? ctx_r10.id : null)("aria-labelledby", "col-" + ctx_r10.id + "-" + i_r8);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", !column_r7.headerTemplate);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", column_r7.headerTemplate);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", column_r7.sortable);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", column_r7.resizable);
         }
     }
     function DataTableComponent_th_19_span_4_span_1_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "span", 2);
+            i0__namespace.ɵɵelement(0, "span", 2);
         }
         if (rf & 2) {
-            var column_r7 = i0.ɵɵnextContext(2).$implicit;
-            i0.ɵɵproperty("textContent", column_r7.header);
+            var column_r7 = i0__namespace.ɵɵnextContext(2).$implicit;
+            i0__namespace.ɵɵproperty("textContent", column_r7.header);
         }
     }
     function DataTableComponent_th_19_span_4_span_2_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "span", 33);
+            i0__namespace.ɵɵelement(0, "span", 33);
         }
         if (rf & 2) {
-            var column_r7 = i0.ɵɵnextContext(2).$implicit;
-            i0.ɵɵproperty("ngTemplateOutlet", column_r7.headerTemplate)("ngTemplateOutletContext", i0.ɵɵpureFunction1(2, _c1$2, column_r7));
+            var column_r7 = i0__namespace.ɵɵnextContext(2).$implicit;
+            i0__namespace.ɵɵproperty("ngTemplateOutlet", column_r7.headerTemplate)("ngTemplateOutletContext", i0__namespace.ɵɵpureFunction1(2, _c1, column_r7));
         }
     }
     function DataTableComponent_th_19_span_4_span_3_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "span", 27);
-            i0.ɵɵelement(1, "i", 28);
-            i0.ɵɵelement(2, "i", 29);
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "span", 27);
+            i0__namespace.ɵɵelement(1, "i", 28);
+            i0__namespace.ɵɵelement(2, "i", 29);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var column_r7 = i0.ɵɵnextContext(2).$implicit;
-            var ctx_r28 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("hide", column_r7.property === ctx_r28.sortBy);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("hide", column_r7.property !== ctx_r28.sortBy)("ngClass", i0.ɵɵpureFunction2(3, _c2$1, ctx_r28.sortAsc, !ctx_r28.sortAsc));
+            var column_r7 = i0__namespace.ɵɵnextContext(2).$implicit;
+            var ctx_r28 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("hide", column_r7.property === ctx_r28.sortBy);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("hide", column_r7.property !== ctx_r28.sortBy)("ngClass", i0__namespace.ɵɵpureFunction2(3, _c2, ctx_r28.sortAsc, !ctx_r28.sortAsc));
         }
     }
     function DataTableComponent_th_19_span_4_span_4_Template(rf, ctx) {
         if (rf & 1) {
-            var _r35_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "span", 30);
-            i0.ɵɵlistener("mousedown", function DataTableComponent_th_19_span_4_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r35_1); var column_r7 = i0.ɵɵnextContext(2).$implicit; var _r9 = i0.ɵɵreference(1); var ctx_r33 = i0.ɵɵnextContext(); return ctx_r33.resizeColumnStart($event, column_r7, _r9); });
-            i0.ɵɵelementEnd();
+            var _r35_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "span", 30);
+            i0__namespace.ɵɵlistener("mousedown", function DataTableComponent_th_19_span_4_span_4_Template_span_mousedown_0_listener($event) { i0__namespace.ɵɵrestoreView(_r35_1); var column_r7 = i0__namespace.ɵɵnextContext(2).$implicit; var _r9 = i0__namespace.ɵɵreference(1); var ctx_r33 = i0__namespace.ɵɵnextContext(); return ctx_r33.resizeColumnStart($event, column_r7, _r9); });
+            i0__namespace.ɵɵelementEnd();
         }
     }
     function DataTableComponent_th_19_span_4_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "span");
-            i0.ɵɵtemplate(1, DataTableComponent_th_19_span_4_span_1_Template, 1, 1, "span", 31);
-            i0.ɵɵtemplate(2, DataTableComponent_th_19_span_4_span_2_Template, 1, 4, "span", 32);
-            i0.ɵɵtemplate(3, DataTableComponent_th_19_span_4_span_3_Template, 3, 6, "span", 23);
-            i0.ɵɵtemplate(4, DataTableComponent_th_19_span_4_span_4_Template, 1, 0, "span", 24);
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "span");
+            i0__namespace.ɵɵtemplate(1, DataTableComponent_th_19_span_4_span_1_Template, 1, 1, "span", 31);
+            i0__namespace.ɵɵtemplate(2, DataTableComponent_th_19_span_4_span_2_Template, 1, 4, "span", 32);
+            i0__namespace.ɵɵtemplate(3, DataTableComponent_th_19_span_4_span_3_Template, 3, 6, "span", 23);
+            i0__namespace.ɵɵtemplate(4, DataTableComponent_th_19_span_4_span_4_Template, 1, 0, "span", 24);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var column_r7 = i0.ɵɵnextContext().$implicit;
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", !column_r7.headerTemplate);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", column_r7.headerTemplate);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", column_r7.sortable);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", column_r7.resizable);
+            var column_r7 = i0__namespace.ɵɵnextContext().$implicit;
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", !column_r7.headerTemplate);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", column_r7.headerTemplate);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", column_r7.sortable);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", column_r7.resizable);
         }
     }
     function DataTableComponent_th_19_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "th", 17, 18);
-            i0.ɵɵpipe(2, "px");
-            i0.ɵɵtemplate(3, DataTableComponent_th_19_button_3_Template, 5, 8, "button", 19);
-            i0.ɵɵtemplate(4, DataTableComponent_th_19_span_4_Template, 5, 4, "span", 3);
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "th", 17, 18);
+            i0__namespace.ɵɵpipe(2, "px");
+            i0__namespace.ɵɵtemplate(3, DataTableComponent_th_19_button_3_Template, 5, 8, "button", 19);
+            i0__namespace.ɵɵtemplate(4, DataTableComponent_th_19_span_4_Template, 5, 4, "span", 3);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
             var column_r7 = ctx.$implicit;
-            var ctx_r1 = i0.ɵɵnextContext();
-            i0.ɵɵstyleProp("width", i0.ɵɵpipeBind1(2, 11, column_r7.width));
-            i0.ɵɵclassProp("sortable", column_r7.sortable)("resizable", column_r7.resizable);
-            i0.ɵɵproperty("hide", !column_r7.visible)("ngClass", column_r7.styleClassObject);
-            i0.ɵɵattribute("aria-sort", column_r7.sortable ? column_r7.property === ctx_r1.sortBy ? ctx_r1.sortAsc ? "ascending" : "descending" : "none" : null);
-            i0.ɵɵadvance(3);
-            i0.ɵɵproperty("ngIf", column_r7.sortable);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", !column_r7.sortable);
+            var ctx_r1 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵstyleProp("width", i0__namespace.ɵɵpipeBind1(2, 11, column_r7.width));
+            i0__namespace.ɵɵclassProp("sortable", column_r7.sortable)("resizable", column_r7.resizable);
+            i0__namespace.ɵɵproperty("hide", !column_r7.visible)("ngClass", column_r7.styleClassObject);
+            i0__namespace.ɵɵattribute("aria-sort", column_r7.sortable ? column_r7.property === ctx_r1.sortBy ? ctx_r1.sortAsc ? "ascending" : "descending" : "none" : null);
+            i0__namespace.ɵɵadvance(3);
+            i0__namespace.ɵɵproperty("ngIf", column_r7.sortable);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", !column_r7.sortable);
         }
     }
     function DataTableComponent_tbody_20_Template(rf, ctx) {
         if (rf & 1) {
-            var _r41_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "tbody", 34, 35);
-            i0.ɵɵlistener("selectedChange", function DataTableComponent_tbody_20_Template_tbody_selectedChange_0_listener() { i0.ɵɵrestoreView(_r41_1); var _r39 = i0.ɵɵreference(1); var ctx_r40 = i0.ɵɵnextContext(); return ctx_r40.onRowSelectChanged(_r39); });
-            i0.ɵɵelementEnd();
+            var _r41_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "tbody", 34, 35);
+            i0__namespace.ɵɵlistener("selectedChange", function DataTableComponent_tbody_20_Template_tbody_selectedChange_0_listener() { i0__namespace.ɵɵrestoreView(_r41_1); var _r39 = i0__namespace.ɵɵreference(1); var ctx_r40 = i0__namespace.ɵɵnextContext(); return ctx_r40.onRowSelectChanged(_r39); });
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
             var item_r37 = ctx.$implicit;
             var index_r38 = ctx.index;
-            i0.ɵɵproperty("item", item_r37)("index", index_r38);
+            i0__namespace.ɵɵproperty("item", item_r37)("index", index_r38);
         }
     }
     function DataTableComponent_tbody_21_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "tbody");
-            i0.ɵɵelementStart(1, "tr");
-            i0.ɵɵelementStart(2, "td");
-            i0.ɵɵtext(3);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "tbody");
+            i0__namespace.ɵɵelementStart(1, "tr");
+            i0__namespace.ɵɵelementStart(2, "td");
+            i0__namespace.ɵɵtext(3);
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r3 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(2);
-            i0.ɵɵattribute("colspan", ctx_r3.columnCount);
-            i0.ɵɵadvance(1);
-            i0.ɵɵtextInterpolate(ctx_r3.noDataMessage);
+            var ctx_r3 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵadvance(2);
+            i0__namespace.ɵɵattribute("colspan", ctx_r3.columnCount);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵtextInterpolate(ctx_r3.noDataMessage);
         }
     }
     function DataTableComponent_tbody_22_tr_1_td_5_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "td", 39);
+            i0__namespace.ɵɵelement(0, "td", 39);
         }
         if (rf & 2) {
             var column_r46 = ctx.$implicit;
-            i0.ɵɵproperty("hide", !column_r46.visible);
+            i0__namespace.ɵɵproperty("hide", !column_r46.visible);
         }
     }
     function DataTableComponent_tbody_22_tr_1_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "tr", 38);
-            i0.ɵɵelement(1, "td", 39);
-            i0.ɵɵelementStart(2, "td", 39);
-            i0.ɵɵtext(3, "\u00A0");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelement(4, "td", 39);
-            i0.ɵɵtemplate(5, DataTableComponent_tbody_22_tr_1_td_5_Template, 1, 1, "td", 40);
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "tr", 38);
+            i0__namespace.ɵɵelement(1, "td", 39);
+            i0__namespace.ɵɵelementStart(2, "td", 39);
+            i0__namespace.ɵɵtext(3, "\u00A0");
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelement(4, "td", 39);
+            i0__namespace.ɵɵtemplate(5, DataTableComponent_tbody_22_tr_1_td_5_Template, 1, 1, "td", 40);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
             var index_r44 = ctx.index;
-            var ctx_r42 = i0.ɵɵnextContext(2);
-            i0.ɵɵclassProp("row-odd", (index_r44 + ctx_r42.items.length) % 2 === 0)("row-even", (index_r44 + ctx_r42.items.length) % 2 === 1);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("hide", !ctx_r42.expandColumnVisible);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("hide", !ctx_r42.indexColumnVisible);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("hide", !ctx_r42.selectColumnVisible);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngForOf", ctx_r42.columns);
+            var ctx_r42 = i0__namespace.ɵɵnextContext(2);
+            i0__namespace.ɵɵclassProp("row-odd", (index_r44 + ctx_r42.items.length) % 2 === 0)("row-even", (index_r44 + ctx_r42.items.length) % 2 === 1);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("hide", !ctx_r42.expandColumnVisible);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("hide", !ctx_r42.indexColumnVisible);
+            i0__namespace.ɵɵadvance(2);
+            i0__namespace.ɵɵproperty("hide", !ctx_r42.selectColumnVisible);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngForOf", ctx_r42.columns);
         }
     }
     function DataTableComponent_tbody_22_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "tbody", 36);
-            i0.ɵɵtemplate(1, DataTableComponent_tbody_22_tr_1_Template, 6, 8, "tr", 37);
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "tbody", 36);
+            i0__namespace.ɵɵtemplate(1, DataTableComponent_tbody_22_tr_1_Template, 6, 8, "tr", 37);
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r4 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngForOf", ctx_r4.substituteItems);
+            var ctx_r4 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngForOf", ctx_r4.substituteItems);
         }
     }
     function DataTableComponent_div_23_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 41);
-            i0.ɵɵelementStart(1, "i");
-            i0.ɵɵelement(2, "i", 42);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "div", 41);
+            i0__namespace.ɵɵelementStart(1, "i");
+            i0__namespace.ɵɵelement(2, "i", 42);
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
         }
     }
     function DataTableComponent_data_table_pagination_24_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "data-table-pagination", 43);
+            i0__namespace.ɵɵelement(0, "data-table-pagination", 43);
         }
         if (rf & 2) {
-            var ctx_r6 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("limits", ctx_r6.pageLimits);
+            var ctx_r6 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("limits", ctx_r6.pageLimits);
         }
     }
-    var nextId$1 = 0;
+    var nextId = 0;
     var DataTableComponent = /** @class */ (function () {
         function DataTableComponent() {
             this._items = [];
@@ -1023,7 +1045,7 @@
             this.subject = new rxjs.Subject();
             this.notifier = new rxjs.Subject();
             this.selectedRows = [];
-            this.id = "datatable-" + nextId$1++;
+            this.id = "datatable-" + nextId++;
             // select all checkbox flag
             this._selectAllCheckbox = false;
             // column resizing:
@@ -1367,112 +1389,112 @@
         return DataTableComponent;
     }());
     DataTableComponent.ɵfac = function DataTableComponent_Factory(t) { return new (t || DataTableComponent)(); };
-    DataTableComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DataTableComponent, selectors: [["data-table"]], contentQueries: function DataTableComponent_ContentQueries(rf, ctx, dirIndex) {
+    DataTableComponent.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: DataTableComponent, selectors: [["data-table"]], contentQueries: function DataTableComponent_ContentQueries(rf, ctx, dirIndex) {
             if (rf & 1) {
-                i0.ɵɵcontentQuery(dirIndex, _c0$3, 3);
-                i0.ɵɵcontentQuery(dirIndex, DataTableColumnDirective, 0);
+                i0__namespace.ɵɵcontentQuery(dirIndex, _c0, 7);
+                i0__namespace.ɵɵcontentQuery(dirIndex, DataTableColumnDirective, 4);
             }
             if (rf & 2) {
                 var _t = void 0;
-                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.expandTemplate = _t.first);
-                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.columns = _t);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.expandTemplate = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.columns = _t);
             }
         }, viewQuery: function DataTableComponent_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(DataTablePaginationComponent, 1);
-                i0.ɵɵviewQuery(DataTableRowComponent, 1);
+                i0__namespace.ɵɵviewQuery(DataTablePaginationComponent, 5);
+                i0__namespace.ɵɵviewQuery(DataTableRowComponent, 5);
             }
             if (rf & 2) {
                 var _t = void 0;
-                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);
-                i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.rows = _t);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.paginator = _t.first);
+                i0__namespace.ɵɵqueryRefresh(_t = i0__namespace.ɵɵloadQuery()) && (ctx.rows = _t);
             }
         }, inputs: { wrapperClass: "wrapperClass", items: "items", itemCount: "itemCount", title: "title", showTitle: "showTitle", header: "header", pagination: "pagination", indexColumn: "indexColumn", indexColumnHeader: "indexColumnHeader", rowColors: "rowColors", rowTooltip: "rowTooltip", selectColumn: "selectColumn", multiSelect: "multiSelect", substituteRows: "substituteRows", expandableRows: "expandableRows", labels: "labels", selectOnRowClick: "selectOnRowClick", autoReload: "autoReload", showReloading: "showReloading", noDataMessage: "noDataMessage", pageLimits: "pageLimits", primaryColumn: "primaryColumn", sortBy: "sortBy", sortAsc: "sortAsc", offset: "offset", limit: "limit", page: "page" }, outputs: { reload: "reload", rowClick: "rowClick", rowDoubleClick: "rowDoubleClick", headerClick: "headerClick", cellClick: "cellClick", selectedRowsChange: "selectedRowsChange", visibleColumnsChange: "visibleColumnsChange" }, decls: 25, vars: 26, consts: [[1, "data-table-wrapper"], ["role", "status", "aria-live", "polite", "aria-atomic", "false", "aria-relevant", "text", 1, "sr-only"], [3, "textContent"], [4, "ngIf"], [1, "data-table-box"], ["tabindex", "-1", 1, "table", "data-table", 3, "id"], [1, "sr-only", 3, "textContent"], [1, "expand-column-header", 3, "hide"], ["scope", "col", 1, "index-column-header", 3, "hide"], [1, "select-column-header", 3, "hide"], [1, "sr-only", 3, "for"], ["type", "checkbox", 3, "id", "hide", "ngModel", "disabled", "title", "ngModelChange"], ["scope", "col", "class", "column-header", 3, "hide", "sortable", "resizable", "ngClass", "width", 4, "ngFor", "ngForOf"], ["class", "data-table-row-wrapper", "dataTableRow", "", 3, "item", "index", "selectedChange", 4, "ngFor", "ngForOf"], ["class", "substitute-rows", 4, "ngIf"], ["class", "busy", 4, "ngIf"], [3, "limits", 4, "ngIf"], ["scope", "col", 1, "column-header", 3, "hide", "ngClass"], ["th", ""], [3, "disabled", "title", "click", 4, "ngIf"], [3, "disabled", "title", "click"], [3, "id", "textContent", 4, "ngIf"], [3, "id", "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], ["class", "column-sort-icon", 4, "ngIf"], ["class", "column-resize-handle", 3, "mousedown", 4, "ngIf"], [3, "id", "textContent"], [3, "id", "ngTemplateOutlet", "ngTemplateOutletContext"], [1, "column-sort-icon"], ["aria-hidden", "true", 1, "fa", "fa-sort", "column-sortable-icon", 3, "hide"], ["aria-hidden", "true", 1, "fa", 3, "hide", "ngClass"], [1, "column-resize-handle", 3, "mousedown"], [3, "textContent", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], ["dataTableRow", "", 1, "data-table-row-wrapper", 3, "item", "index", "selectedChange"], ["row", ""], [1, "substitute-rows"], ["role", "presentation", 3, "row-odd", "row-even", 4, "ngFor", "ngForOf"], ["role", "presentation"], [3, "hide"], [3, "hide", 4, "ngFor", "ngForOf"], [1, "busy"], [1, "fa", "fa-spin", "fa-cog", "fa-2x"], [3, "limits"]], template: function DataTableComponent_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "div", 0);
-                i0.ɵɵelementStart(1, "span", 1);
-                i0.ɵɵelement(2, "span", 2);
-                i0.ɵɵelement(3, "span", 2);
-                i0.ɵɵelement(4, "span", 2);
-                i0.ɵɵelement(5, "span", 2);
-                i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(6, DataTableComponent_data_table_header_6_Template, 1, 0, "data-table-header", 3);
-                i0.ɵɵelementStart(7, "div", 4);
-                i0.ɵɵelementStart(8, "table", 5);
-                i0.ɵɵelement(9, "caption", 6);
-                i0.ɵɵelementStart(10, "thead");
-                i0.ɵɵelementStart(11, "tr");
-                i0.ɵɵelement(12, "td", 7);
-                i0.ɵɵelementStart(13, "th", 8);
-                i0.ɵɵelement(14, "span", 2);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(15, "td", 9);
-                i0.ɵɵelementStart(16, "label", 10);
-                i0.ɵɵtext(17);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(18, "input", 11);
-                i0.ɵɵlistener("ngModelChange", function DataTableComponent_Template_input_ngModelChange_18_listener($event) { return ctx.selectAllCheckbox = $event; });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(19, DataTableComponent_th_19_Template, 5, 13, "th", 12);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(20, DataTableComponent_tbody_20_Template, 2, 2, "tbody", 13);
-                i0.ɵɵtemplate(21, DataTableComponent_tbody_21_Template, 4, 2, "tbody", 3);
-                i0.ɵɵtemplate(22, DataTableComponent_tbody_22_Template, 2, 1, "tbody", 14);
-                i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(23, DataTableComponent_div_23_Template, 3, 0, "div", 15);
-                i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(24, DataTableComponent_data_table_pagination_24_Template, 1, 1, "data-table-pagination", 16);
-                i0.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(0, "div", 0);
+                i0__namespace.ɵɵelementStart(1, "span", 1);
+                i0__namespace.ɵɵelement(2, "span", 2);
+                i0__namespace.ɵɵelement(3, "span", 2);
+                i0__namespace.ɵɵelement(4, "span", 2);
+                i0__namespace.ɵɵelement(5, "span", 2);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtemplate(6, DataTableComponent_data_table_header_6_Template, 1, 0, "data-table-header", 3);
+                i0__namespace.ɵɵelementStart(7, "div", 4);
+                i0__namespace.ɵɵelementStart(8, "table", 5);
+                i0__namespace.ɵɵelement(9, "caption", 6);
+                i0__namespace.ɵɵelementStart(10, "thead");
+                i0__namespace.ɵɵelementStart(11, "tr");
+                i0__namespace.ɵɵelement(12, "td", 7);
+                i0__namespace.ɵɵelementStart(13, "th", 8);
+                i0__namespace.ɵɵelement(14, "span", 2);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(15, "td", 9);
+                i0__namespace.ɵɵelementStart(16, "label", 10);
+                i0__namespace.ɵɵtext(17);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(18, "input", 11);
+                i0__namespace.ɵɵlistener("ngModelChange", function DataTableComponent_Template_input_ngModelChange_18_listener($event) { return ctx.selectAllCheckbox = $event; });
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtemplate(19, DataTableComponent_th_19_Template, 5, 13, "th", 12);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtemplate(20, DataTableComponent_tbody_20_Template, 2, 2, "tbody", 13);
+                i0__namespace.ɵɵtemplate(21, DataTableComponent_tbody_21_Template, 4, 2, "tbody", 3);
+                i0__namespace.ɵɵtemplate(22, DataTableComponent_tbody_22_Template, 2, 1, "tbody", 14);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtemplate(23, DataTableComponent_div_23_Template, 3, 0, "div", 15);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵtemplate(24, DataTableComponent_data_table_pagination_24_Template, 1, 1, "data-table-pagination", 16);
+                i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("textContent", ctx.reloadNotification);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("textContent", ctx.paginationNotification);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("textContent", ctx.sortNotification);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("textContent", ctx.columnSelectorNotification);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.header);
-                i0.ɵɵadvance(1);
-                i0.ɵɵclassMap(ctx.wrapperClass);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("id", ctx.id);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("textContent", ctx.title);
-                i0.ɵɵadvance(3);
-                i0.ɵɵproperty("hide", !ctx.expandColumnVisible);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("hide", !ctx.indexColumnVisible);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("textContent", ctx.indexColumnHeader);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("hide", !ctx.selectColumnVisible);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("for", ctx.id + "-select-all-column");
-                i0.ɵɵadvance(1);
-                i0.ɵɵtextInterpolate1(" ", ctx.labels.selectAllRows, " ");
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("id", ctx.id + "-select-all-column")("hide", !ctx.multiSelect)("ngModel", ctx.selectAllCheckbox)("disabled", ctx.itemCount === 0)("title", ctx.labels.selectAllRows);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngForOf", ctx.columns);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngForOf", ctx.items);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.itemCount === 0 && ctx.noDataMessage);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.pagination && ctx.substituteRows);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.showReloading && ctx.reloading);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.pagination);
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("textContent", ctx.reloadNotification);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("textContent", ctx.paginationNotification);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("textContent", ctx.sortNotification);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("textContent", ctx.columnSelectorNotification);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngIf", ctx.header);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵclassMap(ctx.wrapperClass);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("id", ctx.id);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("textContent", ctx.title);
+                i0__namespace.ɵɵadvance(3);
+                i0__namespace.ɵɵproperty("hide", !ctx.expandColumnVisible);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("hide", !ctx.indexColumnVisible);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("textContent", ctx.indexColumnHeader);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("hide", !ctx.selectColumnVisible);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("for", ctx.id + "-select-all-column");
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵtextInterpolate1(" ", ctx.labels.selectAllRows, " ");
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("id", ctx.id + "-select-all-column")("hide", !ctx.multiSelect)("ngModel", ctx.selectAllCheckbox)("disabled", ctx.itemCount === 0)("title", ctx.labels.selectAllRows);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngForOf", ctx.columns);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngForOf", ctx.items);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngIf", ctx.itemCount === 0 && ctx.noDataMessage);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngIf", ctx.pagination && ctx.substituteRows);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngIf", ctx.showReloading && ctx.reloading);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngIf", ctx.pagination);
             }
-        }, styles: ["[_nghost-%COMP%]     .data-table.table>tbody+tbody{border-top:none}[_nghost-%COMP%]     .data-table.table td{vertical-align:middle}[_nghost-%COMP%]     .data-table>tbody>tr>td, [_nghost-%COMP%]     .data-table>thead>tr>th{overflow:hidden}[_nghost-%COMP%]     .data-table>thead>tr>td{border-bottom:2px solid #dee2e6}[_nghost-%COMP%]     .row-odd{background-color:#f6f6f6}.data-table[_ngcontent-%COMP%]   .substitute-rows[_ngcontent-%COMP%] > tr[_ngcontent-%COMP%]:hover, [_nghost-%COMP%]     .data-table .data-table-row:hover{background-color:#ececec}.data-table[_ngcontent-%COMP%]{box-shadow:0 0 15px #ececec}.column-header[_ngcontent-%COMP%]{position:relative}.expand-column-header[_ngcontent-%COMP%]{width:50px}.select-column-header[_ngcontent-%COMP%]{width:50px;text-align:center}.index-column-header[_ngcontent-%COMP%]{width:40px}.column-header.sortable[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:0;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;text-align:left}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-left:8px}.column-header.resizable[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-right:8px}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]   .column-sortable-icon[_ngcontent-%COMP%]{color:#d3d3d3}.column-header[_ngcontent-%COMP%]   .column-resize-handle[_ngcontent-%COMP%]{position:absolute;top:0;right:0;margin:0;padding:0;width:8px;height:100%;cursor:col-resize}.data-table-box[_ngcontent-%COMP%]{position:relative}.busy[_ngcontent-%COMP%]{z-index:1;top:0;bottom:0;left:0;right:0;background-color:rgba(0,0,0,.25)}.busy[_ngcontent-%COMP%], .busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{position:absolute}.busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{left:50%;top:50%;transform:translate(-50%,-50%)}"] });
+        }, styles: ["[_nghost-%COMP%]     .data-table.table>tbody+tbody{border-top:none}[_nghost-%COMP%]     .data-table.table td{vertical-align:middle}[_nghost-%COMP%]     .data-table>thead>tr>th, [_nghost-%COMP%]     .data-table>tbody>tr>td{overflow:hidden}[_nghost-%COMP%]     .data-table>thead>tr>td{border-bottom:2px solid #dee2e6}[_nghost-%COMP%]     .row-odd{background-color:#f6f6f6}.data-table[_ngcontent-%COMP%]   .substitute-rows[_ngcontent-%COMP%] > tr[_ngcontent-%COMP%]:hover, [_nghost-%COMP%]     .data-table .data-table-row:hover{background-color:#ececec}.data-table[_ngcontent-%COMP%]{box-shadow:0 0 15px #ececec}.column-header[_ngcontent-%COMP%]{position:relative}.expand-column-header[_ngcontent-%COMP%]{width:50px}.select-column-header[_ngcontent-%COMP%]{width:50px;text-align:center}.index-column-header[_ngcontent-%COMP%]{width:40px}.column-header.sortable[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:0;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;text-align:left}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-left:8px}.column-header.resizable[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-right:8px}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]   .column-sortable-icon[_ngcontent-%COMP%]{color:#d3d3d3}.column-header[_ngcontent-%COMP%]   .column-resize-handle[_ngcontent-%COMP%]{position:absolute;top:0;right:0;margin:0;padding:0;width:8px;height:100%;cursor:col-resize}.data-table-box[_ngcontent-%COMP%]{position:relative}.busy[_ngcontent-%COMP%]{position:absolute;z-index:1;top:0;bottom:0;left:0;right:0;background-color:#00000040}.busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableComponent, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DataTableComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: 'data-table',
@@ -1564,129 +1586,129 @@
 
     function DataTableHeaderComponent_p_1_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelement(0, "p", 10);
+            i0__namespace.ɵɵelement(0, "p", 10);
         }
         if (rf & 2) {
-            var ctx_r0 = i0.ɵɵnextContext();
-            i0.ɵɵproperty("textContent", ctx_r0.dataTable.title);
+            var ctx_r0 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵproperty("textContent", ctx_r0.dataTable.title);
         }
     }
     function DataTableHeaderComponent_div_12_li_2_Template(rf, ctx) {
         if (rf & 1) {
-            var _r7_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "li", 15);
-            i0.ɵɵelementStart(1, "label", 16);
-            i0.ɵɵelementStart(2, "input", 17);
-            i0.ɵɵlistener("ngModelChange", function DataTableHeaderComponent_div_12_li_2_Template_input_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r7_1); var ctx_r6 = i0.ɵɵnextContext(2); return ctx_r6.dataTable.expandColumnVisible = $event; })("change", function DataTableHeaderComponent_div_12_li_2_Template_input_change_2_listener($event) { i0.ɵɵrestoreView(_r7_1); var ctx_r8 = i0.ɵɵnextContext(2); return ctx_r8.onChange($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelement(3, "span", 18);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
+            var _r7_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "li", 15);
+            i0__namespace.ɵɵelementStart(1, "label", 16);
+            i0__namespace.ɵɵelementStart(2, "input", 17);
+            i0__namespace.ɵɵlistener("ngModelChange", function DataTableHeaderComponent_div_12_li_2_Template_input_ngModelChange_2_listener($event) { i0__namespace.ɵɵrestoreView(_r7_1); var ctx_r6 = i0__namespace.ɵɵnextContext(2); return ctx_r6.dataTable.expandColumnVisible = $event; })("change", function DataTableHeaderComponent_div_12_li_2_Template_input_change_2_listener($event) { i0__namespace.ɵɵrestoreView(_r7_1); var ctx_r8 = i0__namespace.ɵɵnextContext(2); return ctx_r8.onChange($event); });
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelement(3, "span", 18);
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r2 = i0.ɵɵnextContext(2);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngModel", ctx_r2.dataTable.expandColumnVisible);
-            i0.ɵɵattribute("aria-controls", ctx_r2.dataTable.id);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("textContent", ctx_r2.dataTable.labels.expandColumn);
+            var ctx_r2 = i0__namespace.ɵɵnextContext(2);
+            i0__namespace.ɵɵadvance(2);
+            i0__namespace.ɵɵproperty("ngModel", ctx_r2.dataTable.expandColumnVisible);
+            i0__namespace.ɵɵattribute("aria-controls", ctx_r2.dataTable.id);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("textContent", ctx_r2.dataTable.labels.expandColumn);
         }
     }
     function DataTableHeaderComponent_div_12_li_3_Template(rf, ctx) {
         if (rf & 1) {
-            var _r10_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "li", 15);
-            i0.ɵɵelementStart(1, "label", 16);
-            i0.ɵɵelementStart(2, "input", 17);
-            i0.ɵɵlistener("ngModelChange", function DataTableHeaderComponent_div_12_li_3_Template_input_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r10_1); var ctx_r9 = i0.ɵɵnextContext(2); return ctx_r9.dataTable.indexColumnVisible = $event; })("change", function DataTableHeaderComponent_div_12_li_3_Template_input_change_2_listener($event) { i0.ɵɵrestoreView(_r10_1); var ctx_r11 = i0.ɵɵnextContext(2); return ctx_r11.onChange($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelement(3, "span", 18);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
+            var _r10_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "li", 15);
+            i0__namespace.ɵɵelementStart(1, "label", 16);
+            i0__namespace.ɵɵelementStart(2, "input", 17);
+            i0__namespace.ɵɵlistener("ngModelChange", function DataTableHeaderComponent_div_12_li_3_Template_input_ngModelChange_2_listener($event) { i0__namespace.ɵɵrestoreView(_r10_1); var ctx_r9 = i0__namespace.ɵɵnextContext(2); return ctx_r9.dataTable.indexColumnVisible = $event; })("change", function DataTableHeaderComponent_div_12_li_3_Template_input_change_2_listener($event) { i0__namespace.ɵɵrestoreView(_r10_1); var ctx_r11 = i0__namespace.ɵɵnextContext(2); return ctx_r11.onChange($event); });
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelement(3, "span", 18);
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r3 = i0.ɵɵnextContext(2);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngModel", ctx_r3.dataTable.indexColumnVisible);
-            i0.ɵɵattribute("aria-controls", ctx_r3.dataTable.id);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("textContent", ctx_r3.dataTable.labels.indexColumn);
+            var ctx_r3 = i0__namespace.ɵɵnextContext(2);
+            i0__namespace.ɵɵadvance(2);
+            i0__namespace.ɵɵproperty("ngModel", ctx_r3.dataTable.indexColumnVisible);
+            i0__namespace.ɵɵattribute("aria-controls", ctx_r3.dataTable.id);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("textContent", ctx_r3.dataTable.labels.indexColumn);
         }
     }
     function DataTableHeaderComponent_div_12_li_4_Template(rf, ctx) {
         if (rf & 1) {
-            var _r13_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "li", 15);
-            i0.ɵɵelementStart(1, "label", 16);
-            i0.ɵɵelementStart(2, "input", 17);
-            i0.ɵɵlistener("ngModelChange", function DataTableHeaderComponent_div_12_li_4_Template_input_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r13_1); var ctx_r12 = i0.ɵɵnextContext(2); return ctx_r12.dataTable.selectColumnVisible = $event; })("change", function DataTableHeaderComponent_div_12_li_4_Template_input_change_2_listener($event) { i0.ɵɵrestoreView(_r13_1); var ctx_r14 = i0.ɵɵnextContext(2); return ctx_r14.onChange($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelement(3, "span", 18);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
+            var _r13_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "li", 15);
+            i0__namespace.ɵɵelementStart(1, "label", 16);
+            i0__namespace.ɵɵelementStart(2, "input", 17);
+            i0__namespace.ɵɵlistener("ngModelChange", function DataTableHeaderComponent_div_12_li_4_Template_input_ngModelChange_2_listener($event) { i0__namespace.ɵɵrestoreView(_r13_1); var ctx_r12 = i0__namespace.ɵɵnextContext(2); return ctx_r12.dataTable.selectColumnVisible = $event; })("change", function DataTableHeaderComponent_div_12_li_4_Template_input_change_2_listener($event) { i0__namespace.ɵɵrestoreView(_r13_1); var ctx_r14 = i0__namespace.ɵɵnextContext(2); return ctx_r14.onChange($event); });
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelement(3, "span", 18);
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r4 = i0.ɵɵnextContext(2);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngModel", ctx_r4.dataTable.selectColumnVisible);
-            i0.ɵɵattribute("aria-controls", ctx_r4.dataTable.id);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("textContent", ctx_r4.dataTable.labels.selectColumn);
+            var ctx_r4 = i0__namespace.ɵɵnextContext(2);
+            i0__namespace.ɵɵadvance(2);
+            i0__namespace.ɵɵproperty("ngModel", ctx_r4.dataTable.selectColumnVisible);
+            i0__namespace.ɵɵattribute("aria-controls", ctx_r4.dataTable.id);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("textContent", ctx_r4.dataTable.labels.selectColumn);
         }
     }
     function DataTableHeaderComponent_div_12_ng_template_5_li_0_Template(rf, ctx) {
         if (rf & 1) {
-            var _r20_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "li", 15);
-            i0.ɵɵelementStart(1, "label", 16);
-            i0.ɵɵelementStart(2, "input", 17);
-            i0.ɵɵlistener("ngModelChange", function DataTableHeaderComponent_div_12_ng_template_5_li_0_Template_input_ngModelChange_2_listener($event) { i0.ɵɵrestoreView(_r20_1); var item_r15 = i0.ɵɵnextContext().$implicit; return item_r15.visible = $event; })("change", function DataTableHeaderComponent_div_12_ng_template_5_li_0_Template_input_change_2_listener($event) { i0.ɵɵrestoreView(_r20_1); var ctx_r21 = i0.ɵɵnextContext(3); return ctx_r21.onChange($event); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelement(3, "span", 18);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
+            var _r20_1 = i0__namespace.ɵɵgetCurrentView();
+            i0__namespace.ɵɵelementStart(0, "li", 15);
+            i0__namespace.ɵɵelementStart(1, "label", 16);
+            i0__namespace.ɵɵelementStart(2, "input", 17);
+            i0__namespace.ɵɵlistener("ngModelChange", function DataTableHeaderComponent_div_12_ng_template_5_li_0_Template_input_ngModelChange_2_listener($event) { i0__namespace.ɵɵrestoreView(_r20_1); var item_r15 = i0__namespace.ɵɵnextContext().$implicit; return item_r15.visible = $event; })("change", function DataTableHeaderComponent_div_12_ng_template_5_li_0_Template_input_change_2_listener($event) { i0__namespace.ɵɵrestoreView(_r20_1); var ctx_r21 = i0__namespace.ɵɵnextContext(3); return ctx_r21.onChange($event); });
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelement(3, "span", 18);
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var item_r15 = i0.ɵɵnextContext().$implicit;
-            var ctx_r17 = i0.ɵɵnextContext(2);
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngModel", item_r15.visible);
-            i0.ɵɵattribute("aria-controls", ctx_r17.dataTable.id);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("textContent", item_r15.header);
+            var item_r15 = i0__namespace.ɵɵnextContext().$implicit;
+            var ctx_r17 = i0__namespace.ɵɵnextContext(2);
+            i0__namespace.ɵɵadvance(2);
+            i0__namespace.ɵɵproperty("ngModel", item_r15.visible);
+            i0__namespace.ɵɵattribute("aria-controls", ctx_r17.dataTable.id);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("textContent", item_r15.header);
         }
     }
     function DataTableHeaderComponent_div_12_ng_template_5_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵtemplate(0, DataTableHeaderComponent_div_12_ng_template_5_li_0_Template, 4, 3, "li", 13);
+            i0__namespace.ɵɵtemplate(0, DataTableHeaderComponent_div_12_ng_template_5_li_0_Template, 4, 3, "li", 13);
         }
         if (rf & 2) {
             var item_r15 = ctx.$implicit;
-            var ctx_r5 = i0.ɵɵnextContext(2);
-            i0.ɵɵproperty("ngIf", ctx_r5.dataTable.primaryColumn !== item_r15.property);
+            var ctx_r5 = i0__namespace.ɵɵnextContext(2);
+            i0__namespace.ɵɵproperty("ngIf", ctx_r5.dataTable.primaryColumn !== item_r15.property);
         }
     }
     function DataTableHeaderComponent_div_12_Template(rf, ctx) {
         if (rf & 1) {
-            i0.ɵɵelementStart(0, "div", 11);
-            i0.ɵɵelementStart(1, "ul", 12);
-            i0.ɵɵtemplate(2, DataTableHeaderComponent_div_12_li_2_Template, 4, 3, "li", 13);
-            i0.ɵɵtemplate(3, DataTableHeaderComponent_div_12_li_3_Template, 4, 3, "li", 13);
-            i0.ɵɵtemplate(4, DataTableHeaderComponent_div_12_li_4_Template, 4, 3, "li", 13);
-            i0.ɵɵtemplate(5, DataTableHeaderComponent_div_12_ng_template_5_Template, 1, 1, "ng-template", 14);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
+            i0__namespace.ɵɵelementStart(0, "div", 11);
+            i0__namespace.ɵɵelementStart(1, "ul", 12);
+            i0__namespace.ɵɵtemplate(2, DataTableHeaderComponent_div_12_li_2_Template, 4, 3, "li", 13);
+            i0__namespace.ɵɵtemplate(3, DataTableHeaderComponent_div_12_li_3_Template, 4, 3, "li", 13);
+            i0__namespace.ɵɵtemplate(4, DataTableHeaderComponent_div_12_li_4_Template, 4, 3, "li", 13);
+            i0__namespace.ɵɵtemplate(5, DataTableHeaderComponent_div_12_ng_template_5_Template, 1, 1, "ng-template", 14);
+            i0__namespace.ɵɵelementEnd();
+            i0__namespace.ɵɵelementEnd();
         }
         if (rf & 2) {
-            var ctx_r1 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(2);
-            i0.ɵɵproperty("ngIf", ctx_r1.dataTable.expandableRows);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx_r1.dataTable.indexColumn);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx_r1.dataTable.selectColumn);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngForOf", ctx_r1.dataTable.columns);
+            var ctx_r1 = i0__namespace.ɵɵnextContext();
+            i0__namespace.ɵɵadvance(2);
+            i0__namespace.ɵɵproperty("ngIf", ctx_r1.dataTable.expandableRows);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", ctx_r1.dataTable.indexColumn);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngIf", ctx_r1.dataTable.selectColumn);
+            i0__namespace.ɵɵadvance(1);
+            i0__namespace.ɵɵproperty("ngForOf", ctx_r1.dataTable.columns);
         }
     }
     var DataTableHeaderComponent = /** @class */ (function () {
@@ -1720,52 +1742,52 @@
         };
         return DataTableHeaderComponent;
     }());
-    DataTableHeaderComponent.ɵfac = function DataTableHeaderComponent_Factory(t) { return new (t || DataTableHeaderComponent)(i0.ɵɵdirectiveInject(i0.forwardRef(function () { return DataTableComponent; })), i0.ɵɵdirectiveInject(i0.ElementRef)); };
-    DataTableHeaderComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DataTableHeaderComponent, selectors: [["data-table-header"]], hostBindings: function DataTableHeaderComponent_HostBindings(rf, ctx) {
+    DataTableHeaderComponent.ɵfac = function DataTableHeaderComponent_Factory(t) { return new (t || DataTableHeaderComponent)(i0__namespace.ɵɵdirectiveInject(i0.forwardRef(function () { return DataTableComponent; })), i0__namespace.ɵɵdirectiveInject(i0__namespace.ElementRef)); };
+    DataTableHeaderComponent.ɵcmp = /*@__PURE__*/ i0__namespace.ɵɵdefineComponent({ type: DataTableHeaderComponent, selectors: [["data-table-header"]], hostBindings: function DataTableHeaderComponent_HostBindings(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵlistener("click", function DataTableHeaderComponent_click_HostBindingHandler($event) { return ctx.onClickHandler($event); }, false, i0.ɵɵresolveDocument)("keyup", function DataTableHeaderComponent_keyup_HostBindingHandler($event) { return ctx.onKeyUpHandler($event); }, false, i0.ɵɵresolveDocument);
+                i0__namespace.ɵɵlistener("click", function DataTableHeaderComponent_click_HostBindingHandler($event) { return ctx.onClickHandler($event); }, false, i0__namespace.ɵɵresolveDocument)("keyup", function DataTableHeaderComponent_keyup_HostBindingHandler($event) { return ctx.onKeyUpHandler($event); }, false, i0__namespace.ɵɵresolveDocument);
             }
         }, decls: 13, vars: 8, consts: [[1, "data-table-header"], ["class", "h4 title", 3, "textContent", 4, "ngIf"], [1, "button-panel"], ["type", "button", 1, "btn", "btn-default", "btn-sm", "refresh-button", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-refresh"], [1, "sr-only"], ["type", "button", 1, "btn", "btn-default", "btn-sm", "column-selector-button", 3, "click"], ["aria-hidden", "true", 1, "fa", "fa-list"], [1, "column-selector-wrapper"], ["class", "column-selector-box panel panel-default", 4, "ngIf"], [1, "h4", "title", 3, "textContent"], [1, "column-selector-box", "panel", "panel-default"], [1, "list-group", "list-group-flush"], ["class", "list-group-item column-selector-column checkbox", 4, "ngIf"], ["ngFor", "", 3, "ngForOf"], [1, "list-group-item", "column-selector-column", "checkbox"], [1, "d-flex", "align-items-center"], ["type", "checkbox", 3, "ngModel", "ngModelChange", "change"], [3, "textContent"]], template: function DataTableHeaderComponent_Template(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵelementStart(0, "div", 0);
-                i0.ɵɵtemplate(1, DataTableHeaderComponent_p_1_Template, 1, 1, "p", 1);
-                i0.ɵɵelementStart(2, "div", 2);
-                i0.ɵɵelementStart(3, "button", 3);
-                i0.ɵɵlistener("click", function DataTableHeaderComponent_Template_button_click_3_listener() { return ctx.dataTable.reloadItems(); });
-                i0.ɵɵelement(4, "i", 4);
-                i0.ɵɵelementStart(5, "span", 5);
-                i0.ɵɵtext(6);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(7, "button", 6);
-                i0.ɵɵlistener("click", function DataTableHeaderComponent_Template_button_click_7_listener() { return ctx.columnSelectorOpen = !ctx.columnSelectorOpen; });
-                i0.ɵɵelement(8, "i", 7);
-                i0.ɵɵelementStart(9, "span", 5);
-                i0.ɵɵtext(10);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(11, "div", 8);
-                i0.ɵɵtemplate(12, DataTableHeaderComponent_div_12_Template, 6, 4, "div", 9);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(0, "div", 0);
+                i0__namespace.ɵɵtemplate(1, DataTableHeaderComponent_p_1_Template, 1, 1, "p", 1);
+                i0__namespace.ɵɵelementStart(2, "div", 2);
+                i0__namespace.ɵɵelementStart(3, "button", 3);
+                i0__namespace.ɵɵlistener("click", function DataTableHeaderComponent_Template_button_click_3_listener() { return ctx.dataTable.reloadItems(); });
+                i0__namespace.ɵɵelement(4, "i", 4);
+                i0__namespace.ɵɵelementStart(5, "span", 5);
+                i0__namespace.ɵɵtext(6);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(7, "button", 6);
+                i0__namespace.ɵɵlistener("click", function DataTableHeaderComponent_Template_button_click_7_listener() { return ctx.columnSelectorOpen = !ctx.columnSelectorOpen; });
+                i0__namespace.ɵɵelement(8, "i", 7);
+                i0__namespace.ɵɵelementStart(9, "span", 5);
+                i0__namespace.ɵɵtext(10);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementStart(11, "div", 8);
+                i0__namespace.ɵɵtemplate(12, DataTableHeaderComponent_div_12_Template, 6, 4, "div", 9);
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
+                i0__namespace.ɵɵelementEnd();
             }
             if (rf & 2) {
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.dataTable.showTitle);
-                i0.ɵɵadvance(5);
-                i0.ɵɵtextInterpolate(ctx.dataTable.labels.headerReload.replace("{title}", ctx.dataTable.title));
-                i0.ɵɵadvance(1);
-                i0.ɵɵclassProp("active", ctx.columnSelectorOpen);
-                i0.ɵɵattribute("aria-haspopup", true)("aria-expanded", ctx.columnSelectorOpen);
-                i0.ɵɵadvance(3);
-                i0.ɵɵtextInterpolate(ctx.dataTable.labels.headerColumnSelector.replace("{title}", ctx.dataTable.title));
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("ngIf", ctx.columnSelectorOpen);
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵproperty("ngIf", ctx.dataTable.showTitle);
+                i0__namespace.ɵɵadvance(5);
+                i0__namespace.ɵɵtextInterpolate(ctx.dataTable.labels.headerReload.replace("{title}", ctx.dataTable.title));
+                i0__namespace.ɵɵadvance(1);
+                i0__namespace.ɵɵclassProp("active", ctx.columnSelectorOpen);
+                i0__namespace.ɵɵattribute("aria-haspopup", true)("aria-expanded", ctx.columnSelectorOpen);
+                i0__namespace.ɵɵadvance(3);
+                i0__namespace.ɵɵtextInterpolate(ctx.dataTable.labels.headerColumnSelector.replace("{title}", ctx.dataTable.title));
+                i0__namespace.ɵɵadvance(2);
+                i0__namespace.ɵɵproperty("ngIf", ctx.columnSelectorOpen);
             }
-        }, directives: [i3.NgIf, i3.NgForOf, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel], styles: [".data-table-header[_ngcontent-%COMP%]{min-height:25px;margin-bottom:10px}.title[_ngcontent-%COMP%]{display:inline-block;margin:5px 0 0 5px}.button-panel[_ngcontent-%COMP%]{float:right}.button-panel[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}.column-selector-wrapper[_ngcontent-%COMP%]{position:relative}.column-selector-box[_ngcontent-%COMP%]{box-shadow:0 0 10px #d3d3d3;background:#fff;width:150px;padding:10px;position:absolute;right:0;top:1px;z-index:1060}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]{padding:.5rem .25rem}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{margin-bottom:0}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]{margin-right:4px;font-style:italic}"] });
+        }, directives: [i1__namespace.NgIf, i1__namespace.NgForOf, i1__namespace$1.CheckboxControlValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.NgModel], styles: [".data-table-header[_ngcontent-%COMP%]{min-height:25px;margin-bottom:10px}.title[_ngcontent-%COMP%]{display:inline-block;margin:5px 0 0 5px}.button-panel[_ngcontent-%COMP%]{float:right}.button-panel[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}.column-selector-wrapper[_ngcontent-%COMP%]{position:relative}.column-selector-box[_ngcontent-%COMP%]{box-shadow:0 0 10px #d3d3d3;background:white;width:150px;padding:10px;position:absolute;right:0;top:1px;z-index:1060}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]{padding:.5rem .25rem}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{margin-bottom:0}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]{margin-right:4px;font-style:italic}"] });
     (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableHeaderComponent, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(DataTableHeaderComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: 'data-table-header',
@@ -1776,7 +1798,7 @@
             return [{ type: DataTableComponent, decorators: [{
                             type: i0.Inject,
                             args: [i0.forwardRef(function () { return DataTableComponent; })]
-                        }] }, { type: i0.ElementRef }];
+                        }] }, { type: i0__namespace.ElementRef }];
         }, { onClickHandler: [{
                     type: i0.HostListener,
                     args: ['document:click', ['$event']]
@@ -1799,19 +1821,13 @@
         return NgxTableModule;
     }());
     NgxTableModule.ɵfac = function NgxTableModule_Factory(t) { return new (t || NgxTableModule)(); };
-    NgxTableModule.ɵmod = i0.ɵɵdefineNgModule({ type: NgxTableModule });
-    NgxTableModule.ɵinj = i0.ɵɵdefineInjector({ imports: [[
-                i3.CommonModule,
-                i2.FormsModule
+    NgxTableModule.ɵmod = /*@__PURE__*/ i0__namespace.ɵɵdefineNgModule({ type: NgxTableModule });
+    NgxTableModule.ɵinj = /*@__PURE__*/ i0__namespace.ɵɵdefineInjector({ imports: [[
+                i1.CommonModule,
+                i1$1.FormsModule
             ]] });
     (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(NgxTableModule, { declarations: [DataTableComponent, DataTableColumnDirective,
-                DataTableRowComponent, DataTablePaginationComponent, DataTableHeaderComponent,
-                PixelConverter, HideDirective, MinPipe], imports: [i3.CommonModule,
-                i2.FormsModule], exports: [DataTableComponent, DataTableColumnDirective] });
-    })();
-    (function () {
-        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NgxTableModule, [{
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(NgxTableModule, [{
                 type: i0.NgModule,
                 args: [{
                         declarations: [
@@ -1820,15 +1836,21 @@
                             PixelConverter, HideDirective, MinPipe
                         ],
                         imports: [
-                            i3.CommonModule,
-                            i2.FormsModule
+                            i1.CommonModule,
+                            i1$1.FormsModule
                         ],
                         exports: [DataTableComponent, DataTableColumnDirective]
                     }]
             }], null, null);
     })();
-    i0.ɵɵsetComponentScope(DataTableComponent, [i3.NgIf, DataTableHeaderComponent,
-        HideDirective, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i3.NgClass, i3.NgTemplateOutlet, DataTableRowComponent, DataTablePaginationComponent], [PixelConverter]);
+    (function () {
+        (typeof ngJitMode === "undefined" || ngJitMode) && i0__namespace.ɵɵsetNgModuleScope(NgxTableModule, { declarations: [DataTableComponent, DataTableColumnDirective,
+                DataTableRowComponent, DataTablePaginationComponent, DataTableHeaderComponent,
+                PixelConverter, HideDirective, MinPipe], imports: [i1.CommonModule,
+                i1$1.FormsModule], exports: [DataTableComponent, DataTableColumnDirective] });
+    })();
+    i0__namespace.ɵɵsetComponentScope(DataTableComponent, [i1__namespace.NgIf, DataTableHeaderComponent,
+        HideDirective, i1__namespace$1.CheckboxControlValueAccessor, i1__namespace$1.NgControlStatus, i1__namespace$1.NgModel, i1__namespace.NgForOf, i1__namespace.NgClass, i1__namespace.NgTemplateOutlet, DataTableRowComponent, DataTablePaginationComponent], [PixelConverter]);
 
     /**
      * Generated bundle index. Do not edit.
@@ -1844,5 +1866,5 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
 //# sourceMappingURL=popetech-ngx-table.umd.js.map

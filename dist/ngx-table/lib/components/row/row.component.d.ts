@@ -19,7 +19,7 @@ export declare class DataTableRowComponent implements OnInit, OnDestroy {
     constructor(dataTable: DataTableComponent, renderer: Renderer2, elementRef: ElementRef);
     ngOnInit(): void;
     ngOnDestroy(): void;
-    static ɵfac: i0.ɵɵFactoryDef<DataTableRowComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<DataTableRowComponent, "[dataTableRow]", never, { "item": "item"; "index": "index"; }, { "selectedChange": "selectedChange"; }, never, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DataTableRowComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DataTableRowComponent, "[dataTableRow]", never, { "item": "item"; "index": "index"; }, { "selectedChange": "selectedChange"; }, never, never>;
 }
 //# sourceMappingURL=row.component.d.ts.map

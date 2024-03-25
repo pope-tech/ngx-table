@@ -8,7 +8,7 @@ export declare class HideDirective {
     constructor(_elementRef: ElementRef, renderer: Renderer2);
     set hide(newCondition: boolean);
     private initDisplayStyle;
-    static ɵfac: i0.ɵɵFactoryDef<HideDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDefWithMeta<HideDirective, "[hide]", never, { "hide": "hide"; }, {}, never>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<HideDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<HideDirective, "[hide]", never, { "hide": "hide"; }, {}, never>;
 }
 //# sourceMappingURL=hide.d.ts.map

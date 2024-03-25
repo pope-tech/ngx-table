@@ -23,8 +23,8 @@ import * as i10 from "@angular/forms";
 export { DataTableComponent, DataTableColumnDirective, DataTableRowComponent, DataTablePaginationComponent, DataTableHeaderComponent, DataTableResource, DataTableParams, DataTableTranslations, CellCallback, RowCallback };
 export declare class NgxTableModule {
     static forRoot(): ModuleWithProviders<NgxTableModule>;
-    static ɵfac: i0.ɵɵFactoryDef<NgxTableModule, never>;
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<NgxTableModule, [typeof i1.DataTableComponent, typeof i2.DataTableColumnDirective, typeof i3.DataTableRowComponent, typeof i4.DataTablePaginationComponent, typeof i5.DataTableHeaderComponent, typeof i6.PixelConverter, typeof i7.HideDirective, typeof i8.MinPipe], [typeof i9.CommonModule, typeof i10.FormsModule], [typeof i1.DataTableComponent, typeof i2.DataTableColumnDirective]>;
-    static ɵinj: i0.ɵɵInjectorDef<NgxTableModule>;
+    static ɵfac: i0.ɵɵFactoryDeclaration<NgxTableModule, never>;
+    static ɵmod: i0.ɵɵNgModuleDeclaration<NgxTableModule, [typeof i1.DataTableComponent, typeof i2.DataTableColumnDirective, typeof i3.DataTableRowComponent, typeof i4.DataTablePaginationComponent, typeof i5.DataTableHeaderComponent, typeof i6.PixelConverter, typeof i7.HideDirective, typeof i8.MinPipe], [typeof i9.CommonModule, typeof i10.FormsModule], [typeof i1.DataTableComponent, typeof i2.DataTableColumnDirective]>;
+    static ɵinj: i0.ɵɵInjectorDeclaration<NgxTableModule>;
 }
 //# sourceMappingURL=ngx-table.module.d.ts.map
