@@ -1,23 +1,25 @@
 {
   "name": "@popetech/ngx-table",
-  "description": "This library contains an Angular 9 compatible Datatable component.",
-  "version": "9.0.0",
+  "description": "This library contains an Angular 10 compatible Datatable component.",
+  "version": "10.0.0",
   "private": false,
   "license": "MIT",
   "repository": "https://github.com/pope-tech/ngx-table",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
-    "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0",
-    "tslib": "^1.10.0"
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0"
   },
   "main": "bundles/popetech-ngx-table.umd.js",
-  "module": "fesm5/popetech-ngx-table.js",
+  "module": "fesm2015/popetech-ngx-table.js",
   "es2015": "fesm2015/popetech-ngx-table.js",
-  "esm5": "esm5/popetech-ngx-table.js",
   "esm2015": "esm2015/popetech-ngx-table.js",
-  "fesm5": "fesm5/popetech-ngx-table.js",
   "fesm2015": "fesm2015/popetech-ngx-table.js",
   "typings": "popetech-ngx-table.d.ts",
-  "metadata": "popetech-ngx-table.metadata.json",
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  }
 }

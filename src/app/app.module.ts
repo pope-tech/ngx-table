@@ -7,8 +7,7 @@ import { CodeViewerComponent } from './components/code-viewer/code-viewer.compon
 import { DocsViewerComponent } from './components/docs-viewer/docs-viewer.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { NgxMdModule } from 'ngx-md'; 
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxMdModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
