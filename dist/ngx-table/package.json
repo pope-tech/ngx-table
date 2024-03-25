@@ -12,12 +12,25 @@
     "@angular/common": "^11.0.0",
     "@angular/core": "^11.0.0"
   },
-  "main": "bundles/popetech-ngx-table.umd.js",
-  "module": "fesm2015/popetech-ngx-table.js",
-  "es2015": "fesm2015/popetech-ngx-table.js",
-  "esm2015": "esm2015/popetech-ngx-table.js",
-  "fesm2015": "fesm2015/popetech-ngx-table.js",
+  "module": "fesm2015/popetech-ngx-table.mjs",
+  "es2020": "fesm2020/popetech-ngx-table.mjs",
+  "esm2020": "esm2020/popetech-ngx-table.mjs",
+  "fesm2020": "fesm2020/popetech-ngx-table.mjs",
+  "fesm2015": "fesm2015/popetech-ngx-table.mjs",
   "typings": "popetech-ngx-table.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./popetech-ngx-table.d.ts",
+      "esm2020": "./esm2020/popetech-ngx-table.mjs",
+      "es2020": "./fesm2020/popetech-ngx-table.mjs",
+      "es2015": "./fesm2015/popetech-ngx-table.mjs",
+      "node": "./fesm2015/popetech-ngx-table.mjs",
+      "default": "./fesm2020/popetech-ngx-table.mjs"
+    }
+  },
   "sideEffects": false,
   "scripts": {
     "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
