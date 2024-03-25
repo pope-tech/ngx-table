@@ -11,3 +11,4 @@ export declare class HideDirective {
     static ɵfac: i0.ɵɵFactoryDef<HideDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDefWithMeta<HideDirective, "[hide]", never, { "hide": "hide"; }, {}, never>;
 }
+//# sourceMappingURL=hide.d.ts.map

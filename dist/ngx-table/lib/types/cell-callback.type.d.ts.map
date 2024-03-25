@@ -1,0 +1,1 @@
+{"version":3,"file":"cell-callback.type.d.ts","sourceRoot":"","sources":["../../../../projects/ngx-table/src/lib/types/cell-callback.type.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,qBAAqB,EAAC,MAAM,iCAAiC,CAAC;AACtE,OAAO,EAAC,wBAAwB,EAAC,MAAM,uCAAuC,CAAC;AAE/E,oBAAY,YAAY,GAAG,CAAC,IAAI,EAAE,GAAG,EAAE,GAAG,EAAE,qBAAqB,EAAE,MAAM,EAAE,wBAAwB,EAAE,KAAK,EAAE,MAAM,KAAK,MAAM,CAAC"}

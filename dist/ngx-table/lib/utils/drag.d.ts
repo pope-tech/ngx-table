@@ -4,3 +4,4 @@ export declare function drag(event: MouseEvent, { move: move, up: up }: {
     move: MoveHandler;
     up?: UpHandler;
 }): void;
+//# sourceMappingURL=drag.d.ts.map

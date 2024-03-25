@@ -2,7 +2,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/forms'), require('rxjs'), require('rxjs/operators')) :
     typeof define === 'function' && define.amd ? define('@popetech/ngx-table', ['exports', '@angular/core', '@angular/common', '@angular/forms', 'rxjs', 'rxjs/operators'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.popetech = global.popetech || {}, global.popetech['ngx-table'] = {}), global.ng.core, global.ng.common, global.ng.forms, global.rxjs, global.rxjs.operators));
-}(this, (function (exports, i0, i1, i2, rxjs, operators) { 'use strict';
+}(this, (function (exports, i0, i3, i2, rxjs, operators) { 'use strict';
 
     function isBlank(obj) {
         return obj === undefined || obj === null;
@@ -40,8 +40,8 @@
     }());
     HideDirective.ɵfac = function HideDirective_Factory(t) { return new (t || HideDirective)(i0.ɵɵdirectiveInject(i0.ElementRef), i0.ɵɵdirectiveInject(i0.Renderer2)); };
     HideDirective.ɵdir = i0.ɵɵdefineDirective({ type: HideDirective, selectors: [["", "hide", ""]], inputs: { hide: "hide" } });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(HideDirective, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(HideDirective, [{
                 type: i0.Directive,
                 args: [{
                         selector: '[hide]'
@@ -61,8 +61,8 @@
     }());
     MinPipe.ɵfac = function MinPipe_Factory(t) { return new (t || MinPipe)(); };
     MinPipe.ɵpipe = i0.ɵɵdefinePipe({ name: "min", type: MinPipe, pure: true });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(MinPipe, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(MinPipe, [{
                 type: i0.Pipe,
                 args: [{
                         name: 'min'
@@ -89,8 +89,8 @@
     }());
     PixelConverter.ɵfac = function PixelConverter_Factory(t) { return new (t || PixelConverter)(); };
     PixelConverter.ɵpipe = i0.ɵɵdefinePipe({ name: "px", type: PixelConverter, pure: true });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PixelConverter, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PixelConverter, [{
                 type: i0.Pipe,
                 args: [{
                         name: 'px'
@@ -182,17 +182,17 @@
     DataTableColumnDirective.ɵfac = function DataTableColumnDirective_Factory(t) { return new (t || DataTableColumnDirective)(); };
     DataTableColumnDirective.ɵdir = i0.ɵɵdefineDirective({ type: DataTableColumnDirective, selectors: [["data-table-column"]], contentQueries: function DataTableColumnDirective_ContentQueries(rf, ctx, dirIndex) {
             if (rf & 1) {
-                i0.ɵɵstaticContentQuery(dirIndex, _c0, true);
-                i0.ɵɵstaticContentQuery(dirIndex, _c1, true);
+                i0.ɵɵcontentQuery(dirIndex, _c0, 3);
+                i0.ɵɵcontentQuery(dirIndex, _c1, 3);
             }
             if (rf & 2) {
-                var _t;
+                var _t = void 0;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.cellTemplate = _t.first);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.headerTemplate = _t.first);
             }
         }, inputs: { header: "header", sortable: "sortable", resizable: "resizable", property: "property", styleClass: "styleClass", cellColors: "cellColors", width: "width", visible: "visible" } });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DataTableColumnDirective, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableColumnDirective, [{
                 type: i0.Directive,
                 args: [{
                         selector: 'data-table-column'
@@ -429,9 +429,9 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.dataTable.expandableRows);
             }
-        }, directives: [HideDirective, i1.NgClass, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel, i1.NgForOf, i1.NgIf, i1.NgTemplateOutlet], styles: [".select-column[_ngcontent-%COMP%]{text-align:center}.row-expand-button[_ngcontent-%COMP%]{-moz-user-select:none;-ms-user-select:none;-webkit-appearance:button;-webkit-user-select:none;background:none;border:0;box-sizing:content-box;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem}.clickable[_ngcontent-%COMP%]{cursor:pointer}th[_ngcontent-%COMP%]{font-weight:400}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DataTableRowComponent, [{
+        }, directives: [HideDirective, i3.NgClass, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i3.NgIf, i3.NgTemplateOutlet], styles: [".select-column[_ngcontent-%COMP%]{text-align:center}.row-expand-button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.clickable[_ngcontent-%COMP%]{cursor:pointer}th[_ngcontent-%COMP%]{font-weight:400}"] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableRowComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: '[dataTableRow]',
@@ -597,10 +597,10 @@
     DataTablePaginationComponent.ɵfac = function DataTablePaginationComponent_Factory(t) { return new (t || DataTablePaginationComponent)(i0.ɵɵdirectiveInject(i0.forwardRef(function () { return DataTableComponent; }))); };
     DataTablePaginationComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DataTablePaginationComponent, selectors: [["data-table-pagination"]], viewQuery: function DataTablePaginationComponent_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵstaticViewQuery(_c0$2, true);
+                i0.ɵɵviewQuery(_c0$2, 3);
             }
             if (rf & 2) {
-                var _t;
+                var _t = void 0;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.pageInput = _t.first);
             }
         }, inputs: { limits: "limits" }, decls: 37, vars: 29, consts: [[1, "row"], [1, "pagination-range", "col"], [3, "textContent"], [1, "pagination-limit", "col-md-3"], [1, "input-group"], [1, "input-group-prepend"], [1, "input-group-text", 3, "textContent"], [1, "form-control", 3, "id", "ngModel", "disabled", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [1, "pagination-pages", "offset-md-3", "col-md-6"], [1, "pagination-page"], [1, "btn", "btn-default", "pagination-firstpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-left"], [1, "sr-only"], [1, "btn", "btn-default", "pagination-prevpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-left"], [1, "input-group-prepend", "d-sm-block", "d-none"], [1, "input-group-text"], ["type", "number", "min", "1", "step", "1", 1, "form-control", 3, "id", "max", "disabled", "ngModel", "title", "blur", "keyup.enter", "keyup.esc"], ["pageInput", ""], [1, "input-group-append"], [1, "btn", "btn-default", "pagination-nextpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-right"], [1, "btn", "btn-default", "pagination-lastpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-right"], [3, "value"]], template: function DataTablePaginationComponent_Template(rf, ctx) {
@@ -705,9 +705,9 @@
                 i0.ɵɵproperty("disabled", ctx.dataTable.offset + ctx.dataTable.limit >= ctx.dataTable.itemCount)("title", ctx.dataTable.labels.lastPage);
                 i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
             }
-        }, directives: [i2.SelectControlValueAccessor, i2.NgControlStatus, i2.NgModel, i1.NgForOf, i2.NumberValueAccessor, i2.DefaultValueAccessor, i2.NgSelectOption, i2.ɵangular_packages_forms_forms_x], styles: [".pagination-controllers[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]{text-align:right}.pagination-box[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DataTablePaginationComponent, [{
+        }, directives: [i2.SelectControlValueAccessor, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i2.NumberValueAccessor, i2.DefaultValueAccessor, i2.NgSelectOption, i2.ɵangular_packages_forms_forms_z], styles: [".pagination-controllers[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]{text-align:right}.pagination-box[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}"] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTablePaginationComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: 'data-table-pagination',
@@ -777,9 +777,9 @@
     }
     function DataTableComponent_th_19_button_3_span_4_Template(rf, ctx) {
         if (rf & 1) {
-            var _r20_1 = i0.ɵɵgetCurrentView();
+            var _r21_1 = i0.ɵɵgetCurrentView();
             i0.ɵɵelementStart(0, "span", 30);
-            i0.ɵɵlistener("mousedown", function DataTableComponent_th_19_button_3_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r20_1); var column_r7 = i0.ɵɵnextContext(2).$implicit; var _r9 = i0.ɵɵreference(1); var ctx_r19 = i0.ɵɵnextContext(); return ctx_r19.resizeColumnStart($event, column_r7, _r9); });
+            i0.ɵɵlistener("mousedown", function DataTableComponent_th_19_button_3_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r21_1); var column_r7 = i0.ɵɵnextContext(2).$implicit; var _r9 = i0.ɵɵreference(1); var ctx_r19 = i0.ɵɵnextContext(); return ctx_r19.resizeColumnStart($event, column_r7, _r9); });
             i0.ɵɵelementEnd();
         }
     }
@@ -847,9 +847,9 @@
     }
     function DataTableComponent_th_19_span_4_span_4_Template(rf, ctx) {
         if (rf & 1) {
-            var _r34_1 = i0.ɵɵgetCurrentView();
+            var _r35_1 = i0.ɵɵgetCurrentView();
             i0.ɵɵelementStart(0, "span", 30);
-            i0.ɵɵlistener("mousedown", function DataTableComponent_th_19_span_4_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r34_1); var column_r7 = i0.ɵɵnextContext(2).$implicit; var _r9 = i0.ɵɵreference(1); var ctx_r33 = i0.ɵɵnextContext(); return ctx_r33.resizeColumnStart($event, column_r7, _r9); });
+            i0.ɵɵlistener("mousedown", function DataTableComponent_th_19_span_4_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r35_1); var column_r7 = i0.ɵɵnextContext(2).$implicit; var _r9 = i0.ɵɵreference(1); var ctx_r33 = i0.ɵɵnextContext(); return ctx_r33.resizeColumnStart($event, column_r7, _r9); });
             i0.ɵɵelementEnd();
         }
     }
@@ -1369,21 +1369,21 @@
     DataTableComponent.ɵfac = function DataTableComponent_Factory(t) { return new (t || DataTableComponent)(); };
     DataTableComponent.ɵcmp = i0.ɵɵdefineComponent({ type: DataTableComponent, selectors: [["data-table"]], contentQueries: function DataTableComponent_ContentQueries(rf, ctx, dirIndex) {
             if (rf & 1) {
-                i0.ɵɵstaticContentQuery(dirIndex, _c0$3, true);
-                i0.ɵɵcontentQuery(dirIndex, DataTableColumnDirective, false);
+                i0.ɵɵcontentQuery(dirIndex, _c0$3, 3);
+                i0.ɵɵcontentQuery(dirIndex, DataTableColumnDirective, 0);
             }
             if (rf & 2) {
-                var _t;
+                var _t = void 0;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.expandTemplate = _t.first);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.columns = _t);
             }
         }, viewQuery: function DataTableComponent_Query(rf, ctx) {
             if (rf & 1) {
-                i0.ɵɵviewQuery(DataTablePaginationComponent, true);
-                i0.ɵɵviewQuery(DataTableRowComponent, true);
+                i0.ɵɵviewQuery(DataTablePaginationComponent, 1);
+                i0.ɵɵviewQuery(DataTableRowComponent, 1);
             }
             if (rf & 2) {
-                var _t;
+                var _t = void 0;
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);
                 i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.rows = _t);
             }
@@ -1470,9 +1470,9 @@
                 i0.ɵɵadvance(1);
                 i0.ɵɵproperty("ngIf", ctx.pagination);
             }
-        }, styles: ["[_nghost-%COMP%]     .data-table.table>tbody+tbody{border-top:none}[_nghost-%COMP%]     .data-table.table td{vertical-align:middle}[_nghost-%COMP%]     .data-table>tbody>tr>td, [_nghost-%COMP%]     .data-table>thead>tr>th{overflow:hidden}[_nghost-%COMP%]     .data-table>thead>tr>td{border-bottom:2px solid #dee2e6}[_nghost-%COMP%]     .row-odd{background-color:#f6f6f6}.data-table[_ngcontent-%COMP%]   .substitute-rows[_ngcontent-%COMP%] > tr[_ngcontent-%COMP%]:hover, [_nghost-%COMP%]     .data-table .data-table-row:hover{background-color:#ececec}.data-table[_ngcontent-%COMP%]{box-shadow:0 0 15px #ececec}.column-header[_ngcontent-%COMP%]{position:relative}.expand-column-header[_ngcontent-%COMP%]{width:50px}.select-column-header[_ngcontent-%COMP%]{text-align:center;width:50px}.index-column-header[_ngcontent-%COMP%]{width:40px}.column-header.sortable[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{-moz-user-select:none;-ms-user-select:none;-webkit-appearance:button;-webkit-user-select:none;background:none;border:0;box-sizing:content-box;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:0;text-align:left}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-left:8px}.column-header.resizable[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-right:8px}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]   .column-sortable-icon[_ngcontent-%COMP%]{color:#d3d3d3}.column-header[_ngcontent-%COMP%]   .column-resize-handle[_ngcontent-%COMP%]{cursor:col-resize;height:100%;margin:0;padding:0;position:absolute;right:0;top:0;width:8px}.data-table-box[_ngcontent-%COMP%]{position:relative}.busy[_ngcontent-%COMP%]{background-color:rgba(0,0,0,.25);bottom:0;left:0;right:0;top:0;z-index:1}.busy[_ngcontent-%COMP%], .busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{position:absolute}.busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{left:50%;top:50%;transform:translate(-50%,-50%)}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DataTableComponent, [{
+        }, styles: ["[_nghost-%COMP%]     .data-table.table>tbody+tbody{border-top:none}[_nghost-%COMP%]     .data-table.table td{vertical-align:middle}[_nghost-%COMP%]     .data-table>tbody>tr>td, [_nghost-%COMP%]     .data-table>thead>tr>th{overflow:hidden}[_nghost-%COMP%]     .data-table>thead>tr>td{border-bottom:2px solid #dee2e6}[_nghost-%COMP%]     .row-odd{background-color:#f6f6f6}.data-table[_ngcontent-%COMP%]   .substitute-rows[_ngcontent-%COMP%] > tr[_ngcontent-%COMP%]:hover, [_nghost-%COMP%]     .data-table .data-table-row:hover{background-color:#ececec}.data-table[_ngcontent-%COMP%]{box-shadow:0 0 15px #ececec}.column-header[_ngcontent-%COMP%]{position:relative}.expand-column-header[_ngcontent-%COMP%]{width:50px}.select-column-header[_ngcontent-%COMP%]{width:50px;text-align:center}.index-column-header[_ngcontent-%COMP%]{width:40px}.column-header.sortable[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:0;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;text-align:left}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-left:8px}.column-header.resizable[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-right:8px}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]   .column-sortable-icon[_ngcontent-%COMP%]{color:#d3d3d3}.column-header[_ngcontent-%COMP%]   .column-resize-handle[_ngcontent-%COMP%]{position:absolute;top:0;right:0;margin:0;padding:0;width:8px;height:100%;cursor:col-resize}.data-table-box[_ngcontent-%COMP%]{position:relative}.busy[_ngcontent-%COMP%]{z-index:1;top:0;bottom:0;left:0;right:0;background-color:rgba(0,0,0,.25)}.busy[_ngcontent-%COMP%], .busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{position:absolute}.busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{left:50%;top:50%;transform:translate(-50%,-50%)}"] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: 'data-table',
@@ -1763,9 +1763,9 @@
                 i0.ɵɵadvance(2);
                 i0.ɵɵproperty("ngIf", ctx.columnSelectorOpen);
             }
-        }, directives: [i1.NgIf, i1.NgForOf, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel], styles: [".data-table-header[_ngcontent-%COMP%]{margin-bottom:10px;min-height:25px}.title[_ngcontent-%COMP%]{display:inline-block;margin:5px 0 0 5px}.button-panel[_ngcontent-%COMP%]{float:right}.button-panel[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}.column-selector-wrapper[_ngcontent-%COMP%]{position:relative}.column-selector-box[_ngcontent-%COMP%]{background:#fff;box-shadow:0 0 10px #d3d3d3;padding:10px;position:absolute;right:0;top:1px;width:150px;z-index:1060}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]{padding:.5rem .25rem}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{margin-bottom:0}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]{font-style:italic;margin-right:4px}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(DataTableHeaderComponent, [{
+        }, directives: [i3.NgIf, i3.NgForOf, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel], styles: [".data-table-header[_ngcontent-%COMP%]{min-height:25px;margin-bottom:10px}.title[_ngcontent-%COMP%]{display:inline-block;margin:5px 0 0 5px}.button-panel[_ngcontent-%COMP%]{float:right}.button-panel[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}.column-selector-wrapper[_ngcontent-%COMP%]{position:relative}.column-selector-box[_ngcontent-%COMP%]{box-shadow:0 0 10px #d3d3d3;background:#fff;width:150px;padding:10px;position:absolute;right:0;top:1px;z-index:1060}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]{padding:.5rem .25rem}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{margin-bottom:0}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]{margin-right:4px;font-style:italic}"] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableHeaderComponent, [{
                 type: i0.Component,
                 args: [{
                         selector: 'data-table-header',
@@ -1798,19 +1798,20 @@
         };
         return NgxTableModule;
     }());
+    NgxTableModule.ɵfac = function NgxTableModule_Factory(t) { return new (t || NgxTableModule)(); };
     NgxTableModule.ɵmod = i0.ɵɵdefineNgModule({ type: NgxTableModule });
-    NgxTableModule.ɵinj = i0.ɵɵdefineInjector({ factory: function NgxTableModule_Factory(t) { return new (t || NgxTableModule)(); }, imports: [[
-                i1.CommonModule,
+    NgxTableModule.ɵinj = i0.ɵɵdefineInjector({ imports: [[
+                i3.CommonModule,
                 i2.FormsModule
             ]] });
     (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(NgxTableModule, { declarations: [DataTableComponent, DataTableColumnDirective,
                 DataTableRowComponent, DataTablePaginationComponent, DataTableHeaderComponent,
-                PixelConverter, HideDirective, MinPipe], imports: [i1.CommonModule,
+                PixelConverter, HideDirective, MinPipe], imports: [i3.CommonModule,
                 i2.FormsModule], exports: [DataTableComponent, DataTableColumnDirective] });
     })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(NgxTableModule, [{
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(NgxTableModule, [{
                 type: i0.NgModule,
                 args: [{
                         declarations: [
@@ -1819,16 +1820,15 @@
                             PixelConverter, HideDirective, MinPipe
                         ],
                         imports: [
-                            i1.CommonModule,
+                            i3.CommonModule,
                             i2.FormsModule
                         ],
                         exports: [DataTableComponent, DataTableColumnDirective]
                     }]
             }], null, null);
     })();
-    i0.ɵɵsetComponentScope(DataTableComponent, [i1.NgClass, i1.NgComponentOutlet, i1.NgForOf, i1.NgIf, i1.NgTemplateOutlet, i1.NgStyle, i1.NgSwitch, i1.NgSwitchCase, i1.NgSwitchDefault, i1.NgPlural, i1.NgPluralCase, i2.ɵangular_packages_forms_forms_y, i2.NgSelectOption, i2.ɵangular_packages_forms_forms_x, i2.DefaultValueAccessor, i2.NumberValueAccessor, i2.RangeValueAccessor, i2.CheckboxControlValueAccessor, i2.SelectControlValueAccessor, i2.SelectMultipleControlValueAccessor, i2.RadioControlValueAccessor, i2.NgControlStatus, i2.NgControlStatusGroup, i2.RequiredValidator, i2.MinLengthValidator, i2.MaxLengthValidator, i2.PatternValidator, i2.CheckboxRequiredValidator, i2.EmailValidator, i2.NgModel, i2.NgModelGroup, i2.NgForm, DataTableComponent, DataTableColumnDirective,
-        DataTableRowComponent, DataTablePaginationComponent, DataTableHeaderComponent,
-        HideDirective], [i1.AsyncPipe, i1.UpperCasePipe, i1.LowerCasePipe, i1.JsonPipe, i1.SlicePipe, i1.DecimalPipe, i1.PercentPipe, i1.TitleCasePipe, i1.CurrencyPipe, i1.DatePipe, i1.I18nPluralPipe, i1.I18nSelectPipe, i1.KeyValuePipe, PixelConverter, MinPipe]);
+    i0.ɵɵsetComponentScope(DataTableComponent, [i3.NgIf, DataTableHeaderComponent,
+        HideDirective, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel, i3.NgForOf, i3.NgClass, i3.NgTemplateOutlet, DataTableRowComponent, DataTablePaginationComponent], [PixelConverter]);
 
     /**
      * Generated bundle index. Do not edit.

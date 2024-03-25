@@ -20,3 +20,4 @@ export declare class DataTableColumnDirective implements OnInit {
     static ɵfac: i0.ɵɵFactoryDef<DataTableColumnDirective, never>;
     static ɵdir: i0.ɵɵDirectiveDefWithMeta<DataTableColumnDirective, "data-table-column", never, { "header": "header"; "sortable": "sortable"; "resizable": "resizable"; "property": "property"; "styleClass": "styleClass"; "cellColors": "cellColors"; "width": "width"; "visible": "visible"; }, {}, ["cellTemplate", "headerTemplate"]>;
 }
+//# sourceMappingURL=column.directive.d.ts.map

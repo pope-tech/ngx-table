@@ -21,3 +21,4 @@ export declare class DataTablePaginationComponent {
     static ɵfac: i0.ɵɵFactoryDef<DataTablePaginationComponent, never>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<DataTablePaginationComponent, "data-table-pagination", never, { "limits": "limits"; }, {}, never, never>;
 }
+//# sourceMappingURL=pagination.component.d.ts.map

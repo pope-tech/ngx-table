@@ -5,3 +5,4 @@ export declare class PixelConverter implements PipeTransform {
     static ɵfac: i0.ɵɵFactoryDef<PixelConverter, never>;
     static ɵpipe: i0.ɵɵPipeDefWithMeta<PixelConverter, "px">;
 }
+//# sourceMappingURL=px.d.ts.map

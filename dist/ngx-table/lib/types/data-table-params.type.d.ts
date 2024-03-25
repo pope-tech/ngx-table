@@ -5,3 +5,4 @@ export interface DataTableParams {
     sortBy?: string;
     sortAsc?: boolean;
 }
+//# sourceMappingURL=data-table-params.type.d.ts.map

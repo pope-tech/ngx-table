@@ -5,3 +5,4 @@ export declare class MinPipe implements PipeTransform {
     static ɵfac: i0.ɵɵFactoryDef<MinPipe, never>;
     static ɵpipe: i0.ɵɵPipeDefWithMeta<MinPipe, "min">;
 }
+//# sourceMappingURL=min.d.ts.map

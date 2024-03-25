@@ -1,6 +1,6 @@
-import { ɵɵdirectiveInject, ElementRef, Renderer2, ɵɵdefineDirective, ɵsetClassMetadata, Directive, Input, ɵɵdefinePipe, Pipe, ɵɵstaticContentQuery, ɵɵqueryRefresh, ɵɵloadQuery, ContentChild, ɵɵelement, ɵɵnextContext, ɵɵproperty, ɵɵpureFunction3, ɵɵelementStart, ɵɵtemplate, ɵɵelementEnd, ɵɵstyleProp, ɵɵadvance, ɵɵattribute, ɵɵpureFunction2, EventEmitter, forwardRef, ɵɵdefineComponent, ɵɵlistener, ɵɵclassProp, Component, Inject, Output, ɵɵtext, ɵɵtextInterpolate, ɵɵstaticViewQuery, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵreference, ɵɵtextInterpolate1, ɵɵpropertyInterpolate, ɵɵtextInterpolate2, ViewChild, ɵɵpureFunction1, ɵɵpipe, ɵɵpipeBind1, ɵɵcontentQuery, ɵɵviewQuery, ɵɵclassMap, ContentChildren, ViewChildren, ɵɵresolveDocument, HostListener, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵsetComponentScope } from '@angular/core';
-import { NgClass, NgForOf, NgIf, NgTemplateOutlet, CommonModule, NgComponentOutlet, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgPlural, NgPluralCase, AsyncPipe, UpperCasePipe, LowerCasePipe, JsonPipe, SlicePipe, DecimalPipe, PercentPipe, TitleCasePipe, CurrencyPipe, DatePipe, I18nPluralPipe, I18nSelectPipe, KeyValuePipe } from '@angular/common';
-import { CheckboxControlValueAccessor, NgControlStatus, NgModel, SelectControlValueAccessor, NumberValueAccessor, DefaultValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x, FormsModule, ɵangular_packages_forms_forms_y, RangeValueAccessor, SelectMultipleControlValueAccessor, RadioControlValueAccessor, NgControlStatusGroup, RequiredValidator, MinLengthValidator, MaxLengthValidator, PatternValidator, CheckboxRequiredValidator, EmailValidator, NgModelGroup, NgForm } from '@angular/forms';
+import { ɵɵdirectiveInject, ElementRef, Renderer2, ɵɵdefineDirective, ɵsetClassMetadata, Directive, Input, ɵɵdefinePipe, Pipe, ɵɵcontentQuery, ɵɵqueryRefresh, ɵɵloadQuery, ContentChild, ɵɵelement, ɵɵnextContext, ɵɵproperty, ɵɵpureFunction3, ɵɵelementStart, ɵɵtemplate, ɵɵelementEnd, ɵɵstyleProp, ɵɵadvance, ɵɵattribute, ɵɵpureFunction2, EventEmitter, forwardRef, ɵɵdefineComponent, ɵɵlistener, ɵɵclassProp, Component, Inject, Output, ɵɵtext, ɵɵtextInterpolate, ɵɵviewQuery, ɵɵgetCurrentView, ɵɵrestoreView, ɵɵreference, ɵɵtextInterpolate1, ɵɵpropertyInterpolate, ɵɵtextInterpolate2, ViewChild, ɵɵpureFunction1, ɵɵpipe, ɵɵpipeBind1, ɵɵclassMap, ContentChildren, ViewChildren, ɵɵresolveDocument, HostListener, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule, ɵɵsetComponentScope } from '@angular/core';
+import { NgClass, NgForOf, NgIf, NgTemplateOutlet, CommonModule } from '@angular/common';
+import { CheckboxControlValueAccessor, NgControlStatus, NgModel, SelectControlValueAccessor, NumberValueAccessor, DefaultValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_z, FormsModule } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
@@ -35,7 +35,7 @@ class HideDirective {
 }
 HideDirective.ɵfac = function HideDirective_Factory(t) { return new (t || HideDirective)(ɵɵdirectiveInject(ElementRef), ɵɵdirectiveInject(Renderer2)); };
 HideDirective.ɵdir = ɵɵdefineDirective({ type: HideDirective, selectors: [["", "hide", ""]], inputs: { hide: "hide" } });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(HideDirective, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(HideDirective, [{
         type: Directive,
         args: [{
                 selector: '[hide]'
@@ -51,7 +51,7 @@ class MinPipe {
 }
 MinPipe.ɵfac = function MinPipe_Factory(t) { return new (t || MinPipe)(); };
 MinPipe.ɵpipe = ɵɵdefinePipe({ name: "min", type: MinPipe, pure: true });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(MinPipe, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(MinPipe, [{
         type: Pipe,
         args: [{
                 name: 'min'
@@ -73,7 +73,7 @@ class PixelConverter {
 }
 PixelConverter.ɵfac = function PixelConverter_Factory(t) { return new (t || PixelConverter)(); };
 PixelConverter.ɵpipe = ɵɵdefinePipe({ name: "px", type: PixelConverter, pure: true });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(PixelConverter, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(PixelConverter, [{
         type: Pipe,
         args: [{
                 name: 'px'
@@ -159,14 +159,14 @@ class DataTableColumnDirective {
 }
 DataTableColumnDirective.ɵfac = function DataTableColumnDirective_Factory(t) { return new (t || DataTableColumnDirective)(); };
 DataTableColumnDirective.ɵdir = ɵɵdefineDirective({ type: DataTableColumnDirective, selectors: [["data-table-column"]], contentQueries: function DataTableColumnDirective_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-        ɵɵstaticContentQuery(dirIndex, _c0, true);
-        ɵɵstaticContentQuery(dirIndex, _c1, true);
+        ɵɵcontentQuery(dirIndex, _c0, 3);
+        ɵɵcontentQuery(dirIndex, _c1, 3);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.cellTemplate = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.headerTemplate = _t.first);
     } }, inputs: { header: "header", sortable: "sortable", resizable: "resizable", property: "property", styleClass: "styleClass", cellColors: "cellColors", width: "width", visible: "visible" } });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DataTableColumnDirective, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DataTableColumnDirective, [{
         type: Directive,
         args: [{
                 selector: 'data-table-column'
@@ -365,8 +365,8 @@ DataTableRowComponent.ɵcmp = ɵɵdefineComponent({ type: DataTableRowComponent,
         ɵɵproperty("ngForOf", ctx.dataTable.columns);
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.dataTable.expandableRows);
-    } }, directives: [HideDirective, NgClass, CheckboxControlValueAccessor, NgControlStatus, NgModel, NgForOf, NgIf, NgTemplateOutlet], styles: [".select-column[_ngcontent-%COMP%]{text-align:center}.row-expand-button[_ngcontent-%COMP%]{-moz-user-select:none;-ms-user-select:none;-webkit-appearance:button;-webkit-user-select:none;background:none;border:0;box-sizing:content-box;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem}.clickable[_ngcontent-%COMP%]{cursor:pointer}th[_ngcontent-%COMP%]{font-weight:400}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DataTableRowComponent, [{
+    } }, directives: [HideDirective, NgClass, CheckboxControlValueAccessor, NgControlStatus, NgModel, NgForOf, NgIf, NgTemplateOutlet], styles: [".select-column[_ngcontent-%COMP%]{text-align:center}.row-expand-button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.clickable[_ngcontent-%COMP%]{cursor:pointer}th[_ngcontent-%COMP%]{font-weight:400}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DataTableRowComponent, [{
         type: Component,
         args: [{
                 selector: '[dataTableRow]',
@@ -511,9 +511,9 @@ class DataTablePaginationComponent {
 }
 DataTablePaginationComponent.ɵfac = function DataTablePaginationComponent_Factory(t) { return new (t || DataTablePaginationComponent)(ɵɵdirectiveInject(forwardRef(() => DataTableComponent))); };
 DataTablePaginationComponent.ɵcmp = ɵɵdefineComponent({ type: DataTablePaginationComponent, selectors: [["data-table-pagination"]], viewQuery: function DataTablePaginationComponent_Query(rf, ctx) { if (rf & 1) {
-        ɵɵstaticViewQuery(_c0$2, true);
+        ɵɵviewQuery(_c0$2, 3);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.pageInput = _t.first);
     } }, inputs: { limits: "limits" }, decls: 37, vars: 29, consts: [[1, "row"], [1, "pagination-range", "col"], [3, "textContent"], [1, "pagination-limit", "col-md-3"], [1, "input-group"], [1, "input-group-prepend"], [1, "input-group-text", 3, "textContent"], [1, "form-control", 3, "id", "ngModel", "disabled", "ngModelChange"], [3, "value", 4, "ngFor", "ngForOf"], [1, "pagination-pages", "offset-md-3", "col-md-6"], [1, "pagination-page"], [1, "btn", "btn-default", "pagination-firstpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-left"], [1, "sr-only"], [1, "btn", "btn-default", "pagination-prevpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-left"], [1, "input-group-prepend", "d-sm-block", "d-none"], [1, "input-group-text"], ["type", "number", "min", "1", "step", "1", 1, "form-control", 3, "id", "max", "disabled", "ngModel", "title", "blur", "keyup.enter", "keyup.esc"], ["pageInput", ""], [1, "input-group-append"], [1, "btn", "btn-default", "pagination-nextpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-right"], [1, "btn", "btn-default", "pagination-lastpage", 3, "disabled", "title", "click"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-right"], [3, "value"]], template: function DataTablePaginationComponent_Template(rf, ctx) { if (rf & 1) {
         const _r3 = ɵɵgetCurrentView();
@@ -614,8 +614,8 @@ DataTablePaginationComponent.ɵcmp = ɵɵdefineComponent({ type: DataTablePagina
         ɵɵadvance(4);
         ɵɵproperty("disabled", ctx.dataTable.offset + ctx.dataTable.limit >= ctx.dataTable.itemCount)("title", ctx.dataTable.labels.lastPage);
         ɵɵattribute("aria-controls", ctx.dataTable.id);
-    } }, directives: [SelectControlValueAccessor, NgControlStatus, NgModel, NgForOf, NumberValueAccessor, DefaultValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_x], styles: [".pagination-controllers[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]{text-align:right}.pagination-box[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DataTablePaginationComponent, [{
+    } }, directives: [SelectControlValueAccessor, NgControlStatus, NgModel, NgForOf, NumberValueAccessor, DefaultValueAccessor, NgSelectOption, ɵangular_packages_forms_forms_z], styles: [".pagination-controllers[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]{text-align:right}.pagination-box[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DataTablePaginationComponent, [{
         type: Component,
         args: [{
                 selector: 'data-table-pagination',
@@ -670,9 +670,9 @@ function DataTableComponent_th_19_button_3_span_3_Template(rf, ctx) { if (rf & 1
     ɵɵproperty("hide", column_r7.property !== ctx_r14.sortBy)("ngClass", ɵɵpureFunction2(3, _c2$1, ctx_r14.sortAsc, !ctx_r14.sortAsc));
 } }
 function DataTableComponent_th_19_button_3_span_4_Template(rf, ctx) { if (rf & 1) {
-    const _r20 = ɵɵgetCurrentView();
+    const _r21 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "span", 30);
-    ɵɵlistener("mousedown", function DataTableComponent_th_19_button_3_span_4_Template_span_mousedown_0_listener($event) { ɵɵrestoreView(_r20); const column_r7 = ɵɵnextContext(2).$implicit; const _r9 = ɵɵreference(1); const ctx_r19 = ɵɵnextContext(); return ctx_r19.resizeColumnStart($event, column_r7, _r9); });
+    ɵɵlistener("mousedown", function DataTableComponent_th_19_button_3_span_4_Template_span_mousedown_0_listener($event) { ɵɵrestoreView(_r21); const column_r7 = ɵɵnextContext(2).$implicit; const _r9 = ɵɵreference(1); const ctx_r19 = ɵɵnextContext(); return ctx_r19.resizeColumnStart($event, column_r7, _r9); });
     ɵɵelementEnd();
 } }
 function DataTableComponent_th_19_button_3_Template(rf, ctx) { if (rf & 1) {
@@ -726,9 +726,9 @@ function DataTableComponent_th_19_span_4_span_3_Template(rf, ctx) { if (rf & 1) 
     ɵɵproperty("hide", column_r7.property !== ctx_r28.sortBy)("ngClass", ɵɵpureFunction2(3, _c2$1, ctx_r28.sortAsc, !ctx_r28.sortAsc));
 } }
 function DataTableComponent_th_19_span_4_span_4_Template(rf, ctx) { if (rf & 1) {
-    const _r34 = ɵɵgetCurrentView();
+    const _r35 = ɵɵgetCurrentView();
     ɵɵelementStart(0, "span", 30);
-    ɵɵlistener("mousedown", function DataTableComponent_th_19_span_4_span_4_Template_span_mousedown_0_listener($event) { ɵɵrestoreView(_r34); const column_r7 = ɵɵnextContext(2).$implicit; const _r9 = ɵɵreference(1); const ctx_r33 = ɵɵnextContext(); return ctx_r33.resizeColumnStart($event, column_r7, _r9); });
+    ɵɵlistener("mousedown", function DataTableComponent_th_19_span_4_span_4_Template_span_mousedown_0_listener($event) { ɵɵrestoreView(_r35); const column_r7 = ɵɵnextContext(2).$implicit; const _r9 = ɵɵreference(1); const ctx_r33 = ɵɵnextContext(); return ctx_r33.resizeColumnStart($event, column_r7, _r9); });
     ɵɵelementEnd();
 } }
 function DataTableComponent_th_19_span_4_Template(rf, ctx) { if (rf & 1) {
@@ -1163,17 +1163,17 @@ class DataTableComponent {
 }
 DataTableComponent.ɵfac = function DataTableComponent_Factory(t) { return new (t || DataTableComponent)(); };
 DataTableComponent.ɵcmp = ɵɵdefineComponent({ type: DataTableComponent, selectors: [["data-table"]], contentQueries: function DataTableComponent_ContentQueries(rf, ctx, dirIndex) { if (rf & 1) {
-        ɵɵstaticContentQuery(dirIndex, _c0$3, true);
-        ɵɵcontentQuery(dirIndex, DataTableColumnDirective, false);
+        ɵɵcontentQuery(dirIndex, _c0$3, 3);
+        ɵɵcontentQuery(dirIndex, DataTableColumnDirective, 0);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.expandTemplate = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.columns = _t);
     } }, viewQuery: function DataTableComponent_Query(rf, ctx) { if (rf & 1) {
-        ɵɵviewQuery(DataTablePaginationComponent, true);
-        ɵɵviewQuery(DataTableRowComponent, true);
+        ɵɵviewQuery(DataTablePaginationComponent, 1);
+        ɵɵviewQuery(DataTableRowComponent, 1);
     } if (rf & 2) {
-        var _t;
+        let _t;
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.paginator = _t.first);
         ɵɵqueryRefresh(_t = ɵɵloadQuery()) && (ctx.rows = _t);
     } }, inputs: { wrapperClass: "wrapperClass", items: "items", itemCount: "itemCount", title: "title", showTitle: "showTitle", header: "header", pagination: "pagination", indexColumn: "indexColumn", indexColumnHeader: "indexColumnHeader", rowColors: "rowColors", rowTooltip: "rowTooltip", selectColumn: "selectColumn", multiSelect: "multiSelect", substituteRows: "substituteRows", expandableRows: "expandableRows", labels: "labels", selectOnRowClick: "selectOnRowClick", autoReload: "autoReload", showReloading: "showReloading", noDataMessage: "noDataMessage", pageLimits: "pageLimits", primaryColumn: "primaryColumn", sortBy: "sortBy", sortAsc: "sortAsc", offset: "offset", limit: "limit", page: "page" }, outputs: { reload: "reload", rowClick: "rowClick", rowDoubleClick: "rowDoubleClick", headerClick: "headerClick", cellClick: "cellClick", selectedRowsChange: "selectedRowsChange", visibleColumnsChange: "visibleColumnsChange" }, decls: 25, vars: 26, consts: [[1, "data-table-wrapper"], ["role", "status", "aria-live", "polite", "aria-atomic", "false", "aria-relevant", "text", 1, "sr-only"], [3, "textContent"], [4, "ngIf"], [1, "data-table-box"], ["tabindex", "-1", 1, "table", "data-table", 3, "id"], [1, "sr-only", 3, "textContent"], [1, "expand-column-header", 3, "hide"], ["scope", "col", 1, "index-column-header", 3, "hide"], [1, "select-column-header", 3, "hide"], [1, "sr-only", 3, "for"], ["type", "checkbox", 3, "id", "hide", "ngModel", "disabled", "title", "ngModelChange"], ["scope", "col", "class", "column-header", 3, "hide", "sortable", "resizable", "ngClass", "width", 4, "ngFor", "ngForOf"], ["class", "data-table-row-wrapper", "dataTableRow", "", 3, "item", "index", "selectedChange", 4, "ngFor", "ngForOf"], ["class", "substitute-rows", 4, "ngIf"], ["class", "busy", 4, "ngIf"], [3, "limits", 4, "ngIf"], ["scope", "col", 1, "column-header", 3, "hide", "ngClass"], ["th", ""], [3, "disabled", "title", "click", 4, "ngIf"], [3, "disabled", "title", "click"], [3, "id", "textContent", 4, "ngIf"], [3, "id", "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], ["class", "column-sort-icon", 4, "ngIf"], ["class", "column-resize-handle", 3, "mousedown", 4, "ngIf"], [3, "id", "textContent"], [3, "id", "ngTemplateOutlet", "ngTemplateOutletContext"], [1, "column-sort-icon"], ["aria-hidden", "true", 1, "fa", "fa-sort", "column-sortable-icon", 3, "hide"], ["aria-hidden", "true", 1, "fa", 3, "hide", "ngClass"], [1, "column-resize-handle", 3, "mousedown"], [3, "textContent", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], ["dataTableRow", "", 1, "data-table-row-wrapper", 3, "item", "index", "selectedChange"], ["row", ""], [1, "substitute-rows"], ["role", "presentation", 3, "row-odd", "row-even", 4, "ngFor", "ngForOf"], ["role", "presentation"], [3, "hide"], [3, "hide", 4, "ngFor", "ngForOf"], [1, "busy"], [1, "fa", "fa-spin", "fa-cog", "fa-2x"], [3, "limits"]], template: function DataTableComponent_Template(rf, ctx) { if (rf & 1) {
@@ -1256,8 +1256,8 @@ DataTableComponent.ɵcmp = ɵɵdefineComponent({ type: DataTableComponent, selec
         ɵɵproperty("ngIf", ctx.showReloading && ctx.reloading);
         ɵɵadvance(1);
         ɵɵproperty("ngIf", ctx.pagination);
-    } }, styles: ["[_nghost-%COMP%]     .data-table.table>tbody+tbody{border-top:none}[_nghost-%COMP%]     .data-table.table td{vertical-align:middle}[_nghost-%COMP%]     .data-table>tbody>tr>td, [_nghost-%COMP%]     .data-table>thead>tr>th{overflow:hidden}[_nghost-%COMP%]     .data-table>thead>tr>td{border-bottom:2px solid #dee2e6}[_nghost-%COMP%]     .row-odd{background-color:#f6f6f6}.data-table[_ngcontent-%COMP%]   .substitute-rows[_ngcontent-%COMP%] > tr[_ngcontent-%COMP%]:hover, [_nghost-%COMP%]     .data-table .data-table-row:hover{background-color:#ececec}.data-table[_ngcontent-%COMP%]{box-shadow:0 0 15px #ececec}.column-header[_ngcontent-%COMP%]{position:relative}.expand-column-header[_ngcontent-%COMP%]{width:50px}.select-column-header[_ngcontent-%COMP%]{text-align:center;width:50px}.index-column-header[_ngcontent-%COMP%]{width:40px}.column-header.sortable[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{-moz-user-select:none;-ms-user-select:none;-webkit-appearance:button;-webkit-user-select:none;background:none;border:0;box-sizing:content-box;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:0;text-align:left}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-left:8px}.column-header.resizable[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-right:8px}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]   .column-sortable-icon[_ngcontent-%COMP%]{color:#d3d3d3}.column-header[_ngcontent-%COMP%]   .column-resize-handle[_ngcontent-%COMP%]{cursor:col-resize;height:100%;margin:0;padding:0;position:absolute;right:0;top:0;width:8px}.data-table-box[_ngcontent-%COMP%]{position:relative}.busy[_ngcontent-%COMP%]{background-color:rgba(0,0,0,.25);bottom:0;left:0;right:0;top:0;z-index:1}.busy[_ngcontent-%COMP%], .busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{position:absolute}.busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{left:50%;top:50%;transform:translate(-50%,-50%)}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DataTableComponent, [{
+    } }, styles: ["[_nghost-%COMP%]     .data-table.table>tbody+tbody{border-top:none}[_nghost-%COMP%]     .data-table.table td{vertical-align:middle}[_nghost-%COMP%]     .data-table>tbody>tr>td, [_nghost-%COMP%]     .data-table>thead>tr>th{overflow:hidden}[_nghost-%COMP%]     .data-table>thead>tr>td{border-bottom:2px solid #dee2e6}[_nghost-%COMP%]     .row-odd{background-color:#f6f6f6}.data-table[_ngcontent-%COMP%]   .substitute-rows[_ngcontent-%COMP%] > tr[_ngcontent-%COMP%]:hover, [_nghost-%COMP%]     .data-table .data-table-row:hover{background-color:#ececec}.data-table[_ngcontent-%COMP%]{box-shadow:0 0 15px #ececec}.column-header[_ngcontent-%COMP%]{position:relative}.expand-column-header[_ngcontent-%COMP%]{width:50px}.select-column-header[_ngcontent-%COMP%]{width:50px;text-align:center}.index-column-header[_ngcontent-%COMP%]{width:40px}.column-header.sortable[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:0;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;text-align:left}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-left:8px}.column-header.resizable[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]{margin-right:8px}.column-header[_ngcontent-%COMP%]   .column-sort-icon[_ngcontent-%COMP%]   .column-sortable-icon[_ngcontent-%COMP%]{color:#d3d3d3}.column-header[_ngcontent-%COMP%]   .column-resize-handle[_ngcontent-%COMP%]{position:absolute;top:0;right:0;margin:0;padding:0;width:8px;height:100%;cursor:col-resize}.data-table-box[_ngcontent-%COMP%]{position:relative}.busy[_ngcontent-%COMP%]{z-index:1;top:0;bottom:0;left:0;right:0;background-color:rgba(0,0,0,.25)}.busy[_ngcontent-%COMP%], .busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{position:absolute}.busy[_ngcontent-%COMP%] > i[_ngcontent-%COMP%]{left:50%;top:50%;transform:translate(-50%,-50%)}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DataTableComponent, [{
         type: Component,
         args: [{
                 selector: 'data-table',
@@ -1520,8 +1520,8 @@ DataTableHeaderComponent.ɵcmp = ɵɵdefineComponent({ type: DataTableHeaderComp
         ɵɵtextInterpolate(ctx.dataTable.labels.headerColumnSelector.replace("{title}", ctx.dataTable.title));
         ɵɵadvance(2);
         ɵɵproperty("ngIf", ctx.columnSelectorOpen);
-    } }, directives: [NgIf, NgForOf, CheckboxControlValueAccessor, NgControlStatus, NgModel], styles: [".data-table-header[_ngcontent-%COMP%]{margin-bottom:10px;min-height:25px}.title[_ngcontent-%COMP%]{display:inline-block;margin:5px 0 0 5px}.button-panel[_ngcontent-%COMP%]{float:right}.button-panel[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}.column-selector-wrapper[_ngcontent-%COMP%]{position:relative}.column-selector-box[_ngcontent-%COMP%]{background:#fff;box-shadow:0 0 10px #d3d3d3;padding:10px;position:absolute;right:0;top:1px;width:150px;z-index:1060}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]{padding:.5rem .25rem}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{margin-bottom:0}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]{font-style:italic;margin-right:4px}"] });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(DataTableHeaderComponent, [{
+    } }, directives: [NgIf, NgForOf, CheckboxControlValueAccessor, NgControlStatus, NgModel], styles: [".data-table-header[_ngcontent-%COMP%]{min-height:25px;margin-bottom:10px}.title[_ngcontent-%COMP%]{display:inline-block;margin:5px 0 0 5px}.button-panel[_ngcontent-%COMP%]{float:right}.button-panel[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}.column-selector-wrapper[_ngcontent-%COMP%]{position:relative}.column-selector-box[_ngcontent-%COMP%]{box-shadow:0 0 10px #d3d3d3;background:#fff;width:150px;padding:10px;position:absolute;right:0;top:1px;z-index:1060}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]{padding:.5rem .25rem}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   label[_ngcontent-%COMP%]{margin-bottom:0}.column-selector-box[_ngcontent-%COMP%]   .list-group-item.column-selector-column[_ngcontent-%COMP%]   input[_ngcontent-%COMP%]{margin-right:4px;font-style:italic}"] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(DataTableHeaderComponent, [{
         type: Component,
         args: [{
                 selector: 'data-table-header',
@@ -1548,8 +1548,9 @@ class NgxTableModule {
         };
     }
 }
+NgxTableModule.ɵfac = function NgxTableModule_Factory(t) { return new (t || NgxTableModule)(); };
 NgxTableModule.ɵmod = ɵɵdefineNgModule({ type: NgxTableModule });
-NgxTableModule.ɵinj = ɵɵdefineInjector({ factory: function NgxTableModule_Factory(t) { return new (t || NgxTableModule)(); }, imports: [[
+NgxTableModule.ɵinj = ɵɵdefineInjector({ imports: [[
             CommonModule,
             FormsModule
         ]] });
@@ -1557,7 +1558,7 @@ NgxTableModule.ɵinj = ɵɵdefineInjector({ factory: function NgxTableModule_Fac
         DataTableRowComponent, DataTablePaginationComponent, DataTableHeaderComponent,
         PixelConverter, HideDirective, MinPipe], imports: [CommonModule,
         FormsModule], exports: [DataTableComponent, DataTableColumnDirective] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(NgxTableModule, [{
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && ɵsetClassMetadata(NgxTableModule, [{
         type: NgModule,
         args: [{
                 declarations: [
@@ -1572,9 +1573,8 @@ NgxTableModule.ɵinj = ɵɵdefineInjector({ factory: function NgxTableModule_Fac
                 exports: [DataTableComponent, DataTableColumnDirective]
             }]
     }], null, null); })();
-ɵɵsetComponentScope(DataTableComponent, [NgClass, NgComponentOutlet, NgForOf, NgIf, NgTemplateOutlet, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault, NgPlural, NgPluralCase, ɵangular_packages_forms_forms_y, NgSelectOption, ɵangular_packages_forms_forms_x, DefaultValueAccessor, NumberValueAccessor, RangeValueAccessor, CheckboxControlValueAccessor, SelectControlValueAccessor, SelectMultipleControlValueAccessor, RadioControlValueAccessor, NgControlStatus, NgControlStatusGroup, RequiredValidator, MinLengthValidator, MaxLengthValidator, PatternValidator, CheckboxRequiredValidator, EmailValidator, NgModel, NgModelGroup, NgForm, DataTableComponent, DataTableColumnDirective,
-    DataTableRowComponent, DataTablePaginationComponent, DataTableHeaderComponent,
-    HideDirective], [AsyncPipe, UpperCasePipe, LowerCasePipe, JsonPipe, SlicePipe, DecimalPipe, PercentPipe, TitleCasePipe, CurrencyPipe, DatePipe, I18nPluralPipe, I18nSelectPipe, KeyValuePipe, PixelConverter, MinPipe]);
+ɵɵsetComponentScope(DataTableComponent, [NgIf, DataTableHeaderComponent,
+    HideDirective, CheckboxControlValueAccessor, NgControlStatus, NgModel, NgForOf, NgClass, NgTemplateOutlet, DataTableRowComponent, DataTablePaginationComponent], [PixelConverter]);
 
 /**
  * Generated bundle index. Do not edit.

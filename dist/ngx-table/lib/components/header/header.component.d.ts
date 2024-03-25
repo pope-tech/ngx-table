@@ -12,3 +12,4 @@ export declare class DataTableHeaderComponent {
     static ɵfac: i0.ɵɵFactoryDef<DataTableHeaderComponent, never>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<DataTableHeaderComponent, "data-table-header", never, {}, {}, never, never>;
 }
+//# sourceMappingURL=header.component.d.ts.map

@@ -22,3 +22,4 @@ export declare class DataTableRowComponent implements OnInit, OnDestroy {
     static ɵfac: i0.ɵɵFactoryDef<DataTableRowComponent, never>;
     static ɵcmp: i0.ɵɵComponentDefWithMeta<DataTableRowComponent, "[dataTableRow]", never, { "item": "item"; "index": "index"; }, { "selectedChange": "selectedChange"; }, never, never>;
 }
+//# sourceMappingURL=row.component.d.ts.map

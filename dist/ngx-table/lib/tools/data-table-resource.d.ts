@@ -5,3 +5,4 @@ export declare class DataTableResource<T> {
     query(params: DataTableParams, filter?: (item: T, index: number, items: T[]) => boolean): Promise<T[]>;
     count(): Promise<number>;
 }
+//# sourceMappingURL=data-table-resource.d.ts.map
