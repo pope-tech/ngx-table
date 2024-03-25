@@ -5,6 +5,9 @@
   "private": false,
   "license": "MIT",
   "repository": "https://github.com/pope-tech/ngx-table",
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
     "@angular/common": "^9.0.0",
     "@angular/core": "^9.0.0"
