@@ -9,6 +9,6 @@ export declare class HideDirective {
     set hide(newCondition: boolean);
     private initDisplayStyle;
     static ɵfac: i0.ɵɵFactoryDeclaration<HideDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<HideDirective, "[hide]", never, { "hide": "hide"; }, {}, never, never, false, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<HideDirective, "[hide]", never, { "hide": { "alias": "hide"; "required": false; }; }, {}, never, never, false, never>;
 }
 //# sourceMappingURL=hide.d.ts.map
