@@ -318,14 +318,6 @@ function DataTableRowComponent_tr_8_Template(rf, ctx) {
 }
 const _c3 = function (a0, a1) { return { "fa-caret-right": a0, "fa-caret-down": a1 }; };
 class DataTableRowComponent {
-    constructor(dataTable, renderer, elementRef) {
-        this.dataTable = dataTable;
-        this.renderer = renderer;
-        this.elementRef = elementRef;
-        this._this = this;
-        this._listeners = [];
-        this.selectedChange = new EventEmitter();
-    }
     get selected() {
         return this._selected;
     }
@@ -347,6 +339,14 @@ class DataTableRowComponent {
             return this.dataTable.rowTooltip(this.item, this, this.index);
         }
         return '';
+    }
+    constructor(dataTable, renderer, elementRef) {
+        this.dataTable = dataTable;
+        this.renderer = renderer;
+        this.elementRef = elementRef;
+        this._this = this;
+        this._listeners = [];
+        this.selectedChange = new EventEmitter();
     }
     ngOnInit() {
         if (this.dataTable.rowClick.observers.length > 0) {
@@ -399,11 +399,11 @@ DataTableRowComponent.ɵcmp = /*@__PURE__*/ i0.ɵɵdefineComponent({ type: DataT
             i0.ɵɵadvance(1);
             i0.ɵɵproperty("ngIf", ctx.dataTable.expandableRows);
         }
-    }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgTemplateOutlet, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel, HideDirective], styles: [".select-column[_ngcontent-%COMP%]{text-align:center}.row-expand-button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.clickable[_ngcontent-%COMP%]{cursor:pointer}th[_ngcontent-%COMP%]{font-weight:400;font-weight:initial}"] });
+    }, dependencies: [i1.NgClass, i1.NgForOf, i1.NgIf, i1.NgTemplateOutlet, i2.CheckboxControlValueAccessor, i2.NgControlStatus, i2.NgModel, HideDirective], styles: [".select-column[_ngcontent-%COMP%]{text-align:center}.row-expand-button[_ngcontent-%COMP%]{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.clickable[_ngcontent-%COMP%]{cursor:pointer}th[_ngcontent-%COMP%]{font-weight:initial}"] });
 (function () {
     (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableRowComponent, [{
             type: Component,
-            args: [{ selector: '[dataTableRow]', template: "<tr class=\"data-table-row\"\n    [title]=\"getTooltip()\"\n    [style.background-color]=\"dataTable.getRowColor(item, index, _this)\"\n    [class.row-odd]=\"index % 2 === 0\"\n    [class.row-even]=\"index % 2 === 1\"\n    [class.selected]=\"selected\"\n    [class.clickable]=\"dataTable.selectOnRowClick\">\n  <td [hide]=\"!dataTable.expandColumnVisible\">\n    <button (click)=\"expanded = !expanded; $event.stopPropagation()\" class=\"row-expand-button\"\n         [attr.aria-expanded]=\"expanded\"\n         [title]=\"dataTable.labels.expandRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])\"\n         [attr.aria-label]=\"dataTable.labels.expandRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])\">\n      <i [ngClass]=\"{'fa-caret-right': !expanded, 'fa-caret-down': expanded}\" class=\"fa fa-lg\" aria-hidden=\"true\"></i>\n    </button>\n  </td>\n  <td [hide]=\"!dataTable.indexColumnVisible\" class=\"index-column\" [textContent]=\"displayIndex\"></td>\n  <td [hide]=\"!dataTable.selectColumnVisible\" class=\"select-column\">\n    <input\n           type=\"checkbox\" [(ngModel)]=\"selected\"\n           [title]=\"dataTable.labels.selectRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])\"\n           [attr.aria-label]=\"dataTable.labels.selectRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])\"/>\n  </td>\n  <ng-template ngFor [ngForOf]=\"dataTable.columns\" let-column>\n    <th *ngIf=\"dataTable.primaryColumn === column.property\" scope=\"row\" [hide]=\"!column.visible\" [ngClass]=\"column.styleClassObject\"\n        class=\"data-column\"\n        [style.background-color]=\"column.getCellColor(_this, index)\">\n      <div *ngIf=\"!column.cellTemplate\" [textContent]=\"item[column.property]\"></div>\n      <div *ngIf=\"column.cellTemplate\" [ngTemplateOutlet]=\"column.cellTemplate\"\n           [ngTemplateOutletContext]=\"{column: column, row: _this, item: item}\"></div>\n    </th>\n    <td *ngIf=\"dataTable.primaryColumn !== column.property\" [hide]=\"!column.visible\" [ngClass]=\"column.styleClassObject\"\n        class=\"data-column\"\n        [style.background-color]=\"column.getCellColor(_this, index)\">\n      <div *ngIf=\"!column.cellTemplate\" [textContent]=\"item[column.property]\"></div>\n      <div *ngIf=\"column.cellTemplate\" [ngTemplateOutlet]=\"column.cellTemplate\"\n           [ngTemplateOutletContext]=\"{column: column, row: _this, item: item}\"></div>\n    </td>\n  </ng-template>\n</tr>\n<tr *ngIf=\"dataTable.expandableRows\" [hide]=\"!expanded\" class=\"row-expansion\">\n  <td [attr.colspan]=\"dataTable.columnCount\">\n    <div [ngTemplateOutlet]=\"dataTable.expandTemplate\" [ngTemplateOutletContext]=\"{row: _this, item: item}\"></div>\n  </td>\n</tr>\n", styles: [".select-column{text-align:center}.row-expand-button{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.clickable{cursor:pointer}th{font-weight:400;font-weight:initial}\n"] }]
+            args: [{ selector: '[dataTableRow]', template: "<tr class=\"data-table-row\"\n    [title]=\"getTooltip()\"\n    [style.background-color]=\"dataTable.getRowColor(item, index, _this)\"\n    [class.row-odd]=\"index % 2 === 0\"\n    [class.row-even]=\"index % 2 === 1\"\n    [class.selected]=\"selected\"\n    [class.clickable]=\"dataTable.selectOnRowClick\">\n  <td [hide]=\"!dataTable.expandColumnVisible\">\n    <button (click)=\"expanded = !expanded; $event.stopPropagation()\" class=\"row-expand-button\"\n         [attr.aria-expanded]=\"expanded\"\n         [title]=\"dataTable.labels.expandRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])\"\n         [attr.aria-label]=\"dataTable.labels.expandRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])\">\n      <i [ngClass]=\"{'fa-caret-right': !expanded, 'fa-caret-down': expanded}\" class=\"fa fa-lg\" aria-hidden=\"true\"></i>\n    </button>\n  </td>\n  <td [hide]=\"!dataTable.indexColumnVisible\" class=\"index-column\" [textContent]=\"displayIndex\"></td>\n  <td [hide]=\"!dataTable.selectColumnVisible\" class=\"select-column\">\n    <input\n           type=\"checkbox\" [(ngModel)]=\"selected\"\n           [title]=\"dataTable.labels.selectRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])\"\n           [attr.aria-label]=\"dataTable.labels.selectRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])\"/>\n  </td>\n  <ng-template ngFor [ngForOf]=\"dataTable.columns\" let-column>\n    <th *ngIf=\"dataTable.primaryColumn === column.property\" scope=\"row\" [hide]=\"!column.visible\" [ngClass]=\"column.styleClassObject\"\n        class=\"data-column\"\n        [style.background-color]=\"column.getCellColor(_this, index)\">\n      <div *ngIf=\"!column.cellTemplate\" [textContent]=\"item[column.property]\"></div>\n      <div *ngIf=\"column.cellTemplate\" [ngTemplateOutlet]=\"column.cellTemplate\"\n           [ngTemplateOutletContext]=\"{column: column, row: _this, item: item}\"></div>\n    </th>\n    <td *ngIf=\"dataTable.primaryColumn !== column.property\" [hide]=\"!column.visible\" [ngClass]=\"column.styleClassObject\"\n        class=\"data-column\"\n        [style.background-color]=\"column.getCellColor(_this, index)\">\n      <div *ngIf=\"!column.cellTemplate\" [textContent]=\"item[column.property]\"></div>\n      <div *ngIf=\"column.cellTemplate\" [ngTemplateOutlet]=\"column.cellTemplate\"\n           [ngTemplateOutletContext]=\"{column: column, row: _this, item: item}\"></div>\n    </td>\n  </ng-template>\n</tr>\n<tr *ngIf=\"dataTable.expandableRows\" [hide]=\"!expanded\" class=\"row-expansion\">\n  <td [attr.colspan]=\"dataTable.columnCount\">\n    <div [ngTemplateOutlet]=\"dataTable.expandTemplate\" [ngTemplateOutletContext]=\"{row: _this, item: item}\"></div>\n  </td>\n</tr>\n", styles: [".select-column{text-align:center}.row-expand-button{box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:.15rem .75rem;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none}.clickable{cursor:pointer}th{font-weight:initial}\n"] }]
         }], function () {
         return [{ type: DataTableComponent, decorators: [{
                         type: Inject,
@@ -910,49 +910,6 @@ function DataTableComponent_data_table_pagination_24_Template(rf, ctx) {
 }
 let nextId = 0;
 class DataTableComponent {
-    constructor() {
-        this._items = [];
-        // One-time optional bindings with default values:
-        this.title = '';
-        this.showTitle = true;
-        this.header = true;
-        this.pagination = true;
-        this.indexColumn = true;
-        this.indexColumnHeader = '';
-        this.selectColumn = false;
-        this.multiSelect = true;
-        this.substituteRows = true;
-        this.expandableRows = false;
-        this.selectOnRowClick = false;
-        this.autoReload = true;
-        this.showReloading = false;
-        this.pageLimits = [10, 25, 50, 100, 250];
-        this.primaryColumn = '';
-        // reload emitter
-        this.reload = new EventEmitter();
-        // event handlers:
-        this.rowClick = new EventEmitter();
-        this.rowDoubleClick = new EventEmitter();
-        this.headerClick = new EventEmitter();
-        this.cellClick = new EventEmitter();
-        this.selectedRowsChange = new EventEmitter();
-        this.visibleColumnsChange = new EventEmitter();
-        this._displayParams = {}; // params of the last finished reload
-        this.subject = new Subject();
-        this.notifier = new Subject();
-        this.selectedRows = [];
-        this.id = `datatable-${nextId++}`;
-        // select all checkbox flag
-        this._selectAllCheckbox = false;
-        // column resizing:
-        this._resizeInProgress = false;
-        this.resizeLimit = 30;
-        // Reloading:
-        this._reloading = false;
-        this._sortAsc = true;
-        this._offset = 0;
-        this._limit = 10;
-    }
     get items() {
         return this._items;
     }
@@ -1066,6 +1023,49 @@ class DataTableComponent {
             offset: this.offset,
             limit: this.limit
         };
+    }
+    constructor() {
+        this._items = [];
+        // One-time optional bindings with default values:
+        this.title = '';
+        this.showTitle = true;
+        this.header = true;
+        this.pagination = true;
+        this.indexColumn = true;
+        this.indexColumnHeader = '';
+        this.selectColumn = false;
+        this.multiSelect = true;
+        this.substituteRows = true;
+        this.expandableRows = false;
+        this.selectOnRowClick = false;
+        this.autoReload = true;
+        this.showReloading = false;
+        this.pageLimits = [10, 25, 50, 100, 250];
+        this.primaryColumn = '';
+        // reload emitter
+        this.reload = new EventEmitter();
+        // event handlers:
+        this.rowClick = new EventEmitter();
+        this.rowDoubleClick = new EventEmitter();
+        this.headerClick = new EventEmitter();
+        this.cellClick = new EventEmitter();
+        this.selectedRowsChange = new EventEmitter();
+        this.visibleColumnsChange = new EventEmitter();
+        this._displayParams = {}; // params of the last finished reload
+        this.subject = new Subject();
+        this.notifier = new Subject();
+        this.selectedRows = [];
+        this.id = `datatable-${nextId++}`;
+        // select all checkbox flag
+        this._selectAllCheckbox = false;
+        // column resizing:
+        this._resizeInProgress = false;
+        this.resizeLimit = 30;
+        // Reloading:
+        this._reloading = false;
+        this._sortAsc = true;
+        this._offset = 0;
+        this._limit = 10;
     }
     rowClicked(row, event) {
         this.rowClick.emit({ row, event });

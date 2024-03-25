@@ -18,6 +18,6 @@ export declare class DataTableColumnDirective implements OnInit {
     ngOnInit(): void;
     private _initCellClass;
     static ɵfac: i0.ɵɵFactoryDeclaration<DataTableColumnDirective, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<DataTableColumnDirective, "data-table-column", never, { "header": "header"; "sortable": "sortable"; "resizable": "resizable"; "property": "property"; "styleClass": "styleClass"; "cellColors": "cellColors"; "width": "width"; "visible": "visible"; }, {}, ["cellTemplate", "headerTemplate"], never, false>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<DataTableColumnDirective, "data-table-column", never, { "header": "header"; "sortable": "sortable"; "resizable": "resizable"; "property": "property"; "styleClass": "styleClass"; "cellColors": "cellColors"; "width": "width"; "visible": "visible"; }, {}, ["cellTemplate", "headerTemplate"], never, false, never>;
 }
 //# sourceMappingURL=column.directive.d.ts.map
