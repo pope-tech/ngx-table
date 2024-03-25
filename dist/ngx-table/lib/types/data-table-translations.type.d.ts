@@ -26,3 +26,4 @@ export interface DataTableTranslations {
     loadingText?: string;
     loadedText?: string;
 }
+//# sourceMappingURL=data-table-translations.type.d.ts.map

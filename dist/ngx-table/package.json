@@ -1,23 +1,32 @@
 {
   "name": "@popetech/ngx-table",
-  "description": "This library contains an Angular 9 compatible Datatable component.",
-  "version": "9.0.0",
+  "description": "This library contains an Angular 17 compatible Datatable component.",
+  "version": "17.0.0",
   "private": false,
   "license": "MIT",
   "repository": "https://github.com/pope-tech/ngx-table",
-  "peerDependencies": {
-    "@angular/common": "^9.0.0",
-    "@angular/core": "^9.0.0",
-    "tslib": "^1.10.0"
+  "dependencies": {
+    "tslib": "^2.0.0"
   },
-  "main": "bundles/popetech-ngx-table.umd.js",
-  "module": "fesm5/popetech-ngx-table.js",
-  "es2015": "fesm2015/popetech-ngx-table.js",
-  "esm5": "esm5/popetech-ngx-table.js",
-  "esm2015": "esm2015/popetech-ngx-table.js",
-  "fesm5": "fesm5/popetech-ngx-table.js",
-  "fesm2015": "fesm2015/popetech-ngx-table.js",
-  "typings": "popetech-ngx-table.d.ts",
-  "metadata": "popetech-ngx-table.metadata.json",
-  "sideEffects": false
+  "peerDependencies": {
+    "@angular/common": "^17.0.0",
+    "@angular/core": "^17.0.0"
+  },
+  "module": "fesm2022/popetech-ngx-table.mjs",
+  "typings": "index.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2022": "./esm2022/popetech-ngx-table.mjs",
+      "esm": "./esm2022/popetech-ngx-table.mjs",
+      "default": "./fesm2022/popetech-ngx-table.mjs"
+    }
+  },
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy in full compilation mode. This is not allowed.\\nPlease delete and rebuild the package with Ivy partial compilation mode, before attempting to publish.\\n')\" && exit 1"
+  }
 }

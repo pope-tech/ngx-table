@@ -9,3 +9,4 @@ export { CellCallback } from './lib/types/cell-callback.type';
 export { RowCallback } from './lib/types/row-callback.type';
 export { DataTableTranslations } from './lib/types/data-table-translations.type';
 export { DataTableParams } from './lib/types/data-table-params.type';
+//# sourceMappingURL=public_api.d.ts.map

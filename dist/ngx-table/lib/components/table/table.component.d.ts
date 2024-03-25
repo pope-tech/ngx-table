@@ -6,6 +6,7 @@ import { RowCallback } from '../../types/row-callback.type';
 import { DataTableTranslations } from '../../types/data-table-translations.type';
 import { Subject } from 'rxjs';
 import { Subscription } from 'rxjs';
+import * as i0 from "@angular/core";
 export declare class DataTableComponent implements DataTableParams, OnInit, AfterContentInit, OnDestroy {
     private _items;
     private _itemCount;
@@ -108,4 +109,7 @@ export declare class DataTableComponent implements DataTableParams, OnInit, Afte
     ngAfterContentInit(): void;
     _notify(): void;
     ngOnDestroy(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DataTableComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DataTableComponent, "data-table", never, { "wrapperClass": { "alias": "wrapperClass"; "required": false; }; "items": { "alias": "items"; "required": false; }; "itemCount": { "alias": "itemCount"; "required": false; }; "title": { "alias": "title"; "required": false; }; "showTitle": { "alias": "showTitle"; "required": false; }; "header": { "alias": "header"; "required": false; }; "pagination": { "alias": "pagination"; "required": false; }; "indexColumn": { "alias": "indexColumn"; "required": false; }; "indexColumnHeader": { "alias": "indexColumnHeader"; "required": false; }; "rowColors": { "alias": "rowColors"; "required": false; }; "rowTooltip": { "alias": "rowTooltip"; "required": false; }; "selectColumn": { "alias": "selectColumn"; "required": false; }; "multiSelect": { "alias": "multiSelect"; "required": false; }; "substituteRows": { "alias": "substituteRows"; "required": false; }; "expandableRows": { "alias": "expandableRows"; "required": false; }; "labels": { "alias": "labels"; "required": false; }; "selectOnRowClick": { "alias": "selectOnRowClick"; "required": false; }; "autoReload": { "alias": "autoReload"; "required": false; }; "showReloading": { "alias": "showReloading"; "required": false; }; "noDataMessage": { "alias": "noDataMessage"; "required": false; }; "pageLimits": { "alias": "pageLimits"; "required": false; }; "primaryColumn": { "alias": "primaryColumn"; "required": false; }; "sortBy": { "alias": "sortBy"; "required": false; }; "sortAsc": { "alias": "sortAsc"; "required": false; }; "offset": { "alias": "offset"; "required": false; }; "limit": { "alias": "limit"; "required": false; }; "page": { "alias": "page"; "required": false; }; }, { "reload": "reload"; "rowClick": "rowClick"; "rowDoubleClick": "rowDoubleClick"; "headerClick": "headerClick"; "cellClick": "cellClick"; "selectedRowsChange": "selectedRowsChange"; "visibleColumnsChange": "visibleColumnsChange"; }, ["expandTemplate", "columns"], never, false, never>;
 }
+//# sourceMappingURL=table.component.d.ts.map
