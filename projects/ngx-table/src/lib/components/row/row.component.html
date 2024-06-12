@@ -17,6 +17,7 @@
   <td [hide]="!dataTable.selectColumnVisible" class="select-column">
     <input
            type="checkbox" [(ngModel)]="selected"
+           [hide]="dataTable.selectVisibilityKey !== '' && item[dataTable.selectVisibilityKey]"
            [title]="dataTable.labels.selectRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])"
            [attr.aria-label]="dataTable.labels.selectRow.replace('{cell_content}', ''+item[dataTable.primaryColumn])"/>
   </td>

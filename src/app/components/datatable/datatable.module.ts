@@ -11,11 +11,13 @@ import { DataTableDemo3Component } from './demo3/data-table-demo3';
 import { DataTableDemo4Component } from './demo4/data-table-demo4';
 import { DataTableDemo5Component } from './demo5/data-table-demo5';
 import { DataTableDemo6Component } from './demo6/data-table-demo6';
+import { DataTableDemo7Component } from './demo7/demo7.component';
+import { DataTableDemo8Component } from './demo8/data-table-demo8';
 // routing
 import { DataTableRoutingModule } from './datatable-routing.module';
-import { DataTableDemo7Component } from './demo7/demo7.component';
 import { TableWrapperComponent } from './demo7/table-wrapper/table-wrapper.component';
 import { ColumnWrapperComponent } from './demo7/column-wrapper/column-wrapper.component';
+
 
 @NgModule({
   imports: [
@@ -32,6 +34,7 @@ import { ColumnWrapperComponent } from './demo7/column-wrapper/column-wrapper.co
     DataTableDemo5Component,
     DataTableDemo6Component,
     DataTableDemo7Component,
+    DataTableDemo8Component,
     TableWrapperComponent,
     ColumnWrapperComponent
   ]

@@ -117,6 +117,7 @@ export class AppModule { }
 * `limit` (`number` | default: `10`) number of items per page, valid only pagination is enabled. If `limit` value is not a valid (not contained into `pageLimits` array) it will be defaulted to `pageLimits`'s first value. 
 * `sortBy` (`string` | default: `''`) column table is sorted by.
 * `sortAsc` (`boolean` | default: `true`) valid only if `sortBy` is not defaulted. Defines the sorting order. If `true` sort is ascending, descending otherwise.
+* `selectVisibilityKey` (`string` | default: `''`) when `selectColumn` is `true`, the name of the item's property that determines if the select checkbox is visible. If not given, the checkbox is visible by default.
 
 ### data-table-column
 * `property` (`string` | default: _no default_) item's `JSONObject` key used to retrieve the row cell content.

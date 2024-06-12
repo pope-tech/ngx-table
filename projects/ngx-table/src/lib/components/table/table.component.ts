@@ -58,6 +58,13 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
     return this._itemCount;
   }
 
+  get selectableItemCount(): number {
+    if (this.selectVisibilityKey !== '') {
+      return this._itemCount - this.items.filter(item => Boolean(item[this.selectVisibilityKey]) === true).length;
+    }
+    return this._itemCount;
+  }
+
   set itemCount(count: number) {
     this._itemCount = count;
     this.notifier.next();
@@ -81,6 +88,7 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   @Input() rowColors: RowCallback;
   @Input() rowTooltip: RowCallback;
   @Input() selectColumn = false;
+  @Input() selectVisibilityKey = '';
   @Input() multiSelect = true;
   @Input() substituteRows = true;
   @Input() expandableRows = false;
@@ -367,15 +375,17 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   onRowSelectChanged(row: DataTableRowComponent) {
 
     // maintain the selectedRow(s) view
+    const item = this.items[row.index];
+    const selectShouldBeHidden = this.selectVisibilityKey !== '' && item && Boolean(item[this.selectVisibilityKey]);
     if (this.multiSelect) {
       const index = this.selectedRows.indexOf(row);
-      if (row.selected && index < 0) {
+      if (row.selected && index < 0 && !selectShouldBeHidden) {
         this.selectedRows.push(row);
-      } else if (!row.selected && index >= 0) {
+      } else if ((!row.selected || selectShouldBeHidden) && index >= 0) {
         this.selectedRows.splice(index, 1);
       }
     } else {
-      if (row.selected) {
+      if (row.selected && !selectShouldBeHidden) {
         this.selectedRow = row;
       } else if (this.selectedRow === row) {
         delete this.selectedRow;
