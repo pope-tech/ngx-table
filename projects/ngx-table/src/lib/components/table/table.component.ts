@@ -59,7 +59,7 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   }
 
   get selectableItemCount(): number {
-    if (this.selectVisibilityKey !== '') {
+    if (this.selectVisibilityKey !== '' && this.items && this.items.length > 0) {
       return this._itemCount - this.items.filter(item => Boolean(item[this.selectVisibilityKey]) === true).length;
     }
     return this._itemCount;
