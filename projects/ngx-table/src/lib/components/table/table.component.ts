@@ -263,7 +263,6 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
 
   reloadItems() {
     this.reloading = true;
-    this.selectAllCheckbox = false;
     this.reload.emit(this._getRemoteParameters());
   }
 
