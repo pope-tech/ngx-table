@@ -6,7 +6,8 @@ import { DataTableDemo3Component } from './demo3/data-table-demo3';
 import { DataTableDemo4Component } from './demo4/data-table-demo4';
 import { DataTableDemo5Component } from './demo5/data-table-demo5';
 import { DataTableDemo6Component } from './demo6/data-table-demo6';
-import { DataTableDemo7Component } from "./demo7/demo7.component";
+import { DataTableDemo7Component } from './demo7/demo7.component';
+import { DataTableDemo8Component } from './demo8/data-table-demo8';
 
 const routes: Routes = [
   {
@@ -42,6 +43,11 @@ const routes: Routes = [
     path: 'demo7',
     component: DataTableDemo7Component,
     data: {src: 'datatable/demo1/data-table-demo1' }
+  },
+  {
+    path: 'demo8',
+    component: DataTableDemo8Component,
+    data: {src: 'datatable/demo8/data-table-demo8' }
   }
 ];
 

@@ -1,0 +1,39 @@
+import { Component, ViewChild } from '@angular/core';
+import { Cars } from './data-table-demo8-data';
+import { DataTable, DataTableResource } from '@popetech/ngx-table';
+
+
+@Component({
+  selector: 'app-data-table-demo-2',
+  templateUrl: './data-table-demo8.html'
+})
+export class DataTableDemo8Component {
+
+    yearLimit = 1999;
+    carResource = new DataTableResource(Cars);
+    cars = [];
+    carCount = 0;
+
+    @ViewChild(DataTable, { static: true }) carsTable: DataTable;
+
+    constructor() {
+        this.rowColors = this.rowColors.bind(this);
+
+        this.carResource.count().then(count => this.carCount = count);
+    }
+
+    reloadCars(params) {
+        this.carResource.query(params).then(cars => this.cars = cars);
+    }
+
+    // custom features:
+    carClicked(car) {
+        alert(car.model);
+    }
+
+    rowColors(car) {
+        if (car.year >= this.yearLimit) {
+          return 'rgb(255, 255, 197)';
+        }
+    }
+}

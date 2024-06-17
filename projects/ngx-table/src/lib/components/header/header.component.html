@@ -10,7 +10,7 @@
             [attr.aria-haspopup]="true"
             [attr.aria-expanded]="columnSelectorOpen"
             (click)="columnSelectorOpen = !columnSelectorOpen;">
-      <i class="fa fa-list" aria-hidden="true"></i>
+      <i class="fa fa-columns" aria-hidden="true"></i>
       <span class="sr-only">{{ dataTable.labels.headerColumnSelector.replace('{title}', dataTable.title) }}</span>
     </button>
     <div class="column-selector-wrapper">

@@ -27,7 +27,7 @@
             [hide]="!multiSelect"
                  type="checkbox"
                  [(ngModel)]="selectAllCheckbox"
-                 [disabled]="itemCount === 0"
+                 [disabled]="selectableItemCount === 0"
                  [title]="labels.selectAllRows"/>
         </td>
         <th *ngFor="let column of columns, index as i" #th
