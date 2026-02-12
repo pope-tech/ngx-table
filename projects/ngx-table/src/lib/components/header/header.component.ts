@@ -27,7 +27,7 @@ export class DataTableHeaderComponent {
   }
 
   @HostListener('document:keyup', ['$event']) onKeyUpHandler(event) {
-    if (event.keyCode === 27 || (event.keyCode === 9 && !this.elemRef.nativeElement.contains(event.target))) {
+    if (event.keyCode === 27 || (event.keyCode === 9 && !(this.elemRef.nativeElement.contains(event.target) && !event.target.id.includes('refresh-button')))) {
       this.columnSelectorOpen = false;
     }
   }
