@@ -2,14 +2,14 @@
   <p class="h4 title" *ngIf="dataTable.showTitle" [textContent]="dataTable.title"></p>
   <div class="button-panel">
     <button type="button" class="btn btn-default btn-sm refresh-button"
-            [id]="dataTable.id + '-refresh-button'"
+            [attr.id]="dataTable?.id ? dataTable.id + '-refresh-button' : null"
             (click)="dataTable.reloadItems()">
       <i class="fa fa-refresh" aria-hidden="true"></i>
       <span class="sr-only">{{ dataTable.labels.headerReload.replace('{title}', dataTable.title) }}</span>
     </button>
     <button type="button" class="btn btn-default btn-sm column-selector-button" [class.active]="columnSelectorOpen"
             [attr.aria-haspopup]="true"
-            [id]="dataTable.id + '-columns-select-button'"
+            [attr.id]="dataTable?.id ? dataTable.id + '-columns-select-button-test' : null"
             [attr.aria-expanded]="columnSelectorOpen"
             (click)="columnSelectorOpen = !columnSelectorOpen;">
       <i class="fa fa-columns" aria-hidden="true"></i>
