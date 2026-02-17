@@ -386,12 +386,10 @@ const defaultTranslations = {
     selectAllRows: 'select all rows',
     expandColumn: 'expand',
     expandRow: 'expand {cell_content}',
-    sortedAscending: '{title} table sorted by {header} ascending',
-    sortedDescending: '{title} table sorted by {header} descending',
-    sortAscending: 'activate to sort ascending',
-    sortDescending: 'activate to sort descending',
+    sortedAscending: 'sorted by {header} ascending.',
+    sortedDescending: 'sorted by {header} descending.',
     paginationLimit: 'Limit',
-    paginationText: 'Results: {from} to {to} of {total}',
+    paginationText: 'Results: {from} to {to} of {total}.',
     paginationTotalPages: 'of',
     firstPage: 'first page',
     prevPage: 'previous page',
@@ -400,8 +398,8 @@ const defaultTranslations = {
     pageNumberNofM: '({N} of {M})',
     nextPage: 'next page',
     lastPage: 'last page',
-    loadingText: '{title} table is loading',
-    loadedText: '{title} table loaded'
+    loadingText: 'is loading.',
+    loadedText: 'loaded.'
 };
 
 /*tslint:disable-next-line*/
@@ -603,197 +601,224 @@ class DataTablePaginationComponent {
 const _c0 = ["dataTableExpand"];
 const _c1 = a0 => ({ column: a0 });
 const _c2 = (a0, a1) => ({ "fa-sort-asc": a0, "fa-sort-desc": a1 });
-function DataTableComponent_data_table_header_6_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_Conditional_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵtext(0);
+} if (rf & 2) {
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵtextInterpolate1(" ", ctx_r0.title, " table ");
+} }
+function DataTableComponent_data_table_header_10_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "data-table-header");
 } }
-function DataTableComponent_th_19_button_3_span_1_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_th_23_button_3_span_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "span", 26);
 } if (rf & 2) {
     const ctx_r3 = i0.ɵɵnextContext(2);
-    const column_r2 = ctx_r3.$implicit;
+    const column_r3 = ctx_r3.$implicit;
     const i_r5 = ctx_r3.index;
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("id", "col-" + ctx_r2.id + "-" + i_r5)("textContent", column_r2.header);
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("id", "col-" + ctx_r0.id + "-" + i_r5)("textContent", column_r3.header);
 } }
-function DataTableComponent_th_19_button_3_span_2_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_th_23_button_3_span_2_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "span", 27);
 } if (rf & 2) {
     const ctx_r3 = i0.ɵɵnextContext(2);
-    const column_r2 = ctx_r3.$implicit;
+    const column_r3 = ctx_r3.$implicit;
     const i_r5 = ctx_r3.index;
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("id", "col-" + ctx_r2.id + "-" + i_r5)("ngTemplateOutlet", column_r2.headerTemplate)("ngTemplateOutletContext", i0.ɵɵpureFunction1(3, _c1, column_r2));
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("id", "col-" + ctx_r0.id + "-" + i_r5)("ngTemplateOutlet", column_r3.headerTemplate)("ngTemplateOutletContext", i0.ɵɵpureFunction1(3, _c1, column_r3));
 } }
-function DataTableComponent_th_19_button_3_span_3_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "span", 28);
-    i0.ɵɵelement(1, "i", 29)(2, "i", 30);
+function DataTableComponent_th_23_button_3_span_3_Conditional_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "i", 29);
+    i0.ɵɵelementStart(1, "span", 30);
+    i0.ɵɵtext(2, "Not Sorted");
+    i0.ɵɵelementEnd();
+} }
+function DataTableComponent_th_23_button_3_span_3_Conditional_2_Conditional_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵtext(0, " Sorted Ascending ");
+} }
+function DataTableComponent_th_23_button_3_span_3_Conditional_2_Conditional_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵtext(0, " Sorted Descending ");
+} }
+function DataTableComponent_th_23_button_3_span_3_Conditional_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "i", 31);
+    i0.ɵɵelementStart(1, "span", 30);
+    i0.ɵɵtemplate(2, DataTableComponent_th_23_button_3_span_3_Conditional_2_Conditional_2_Template, 1, 0)(3, DataTableComponent_th_23_button_3_span_3_Conditional_2_Conditional_3_Template, 1, 0);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const column_r2 = i0.ɵɵnextContext(2).$implicit;
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("hide", column_r2.property === ctx_r2.sortBy);
-    i0.ɵɵadvance();
-    i0.ɵɵproperty("hide", column_r2.property !== ctx_r2.sortBy)("ngClass", i0.ɵɵpureFunction2(3, _c2, ctx_r2.sortAsc, !ctx_r2.sortAsc));
+    const ctx_r0 = i0.ɵɵnextContext(4);
+    i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction2(2, _c2, ctx_r0.sortAsc, !ctx_r0.sortAsc));
+    i0.ɵɵadvance(2);
+    i0.ɵɵconditional(ctx_r0.sortAsc ? 2 : 3);
 } }
-function DataTableComponent_th_19_button_3_span_4_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_th_23_button_3_span_3_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "span", 28);
+    i0.ɵɵtemplate(1, DataTableComponent_th_23_button_3_span_3_Conditional_1_Template, 3, 0)(2, DataTableComponent_th_23_button_3_span_3_Conditional_2_Template, 4, 5);
+    i0.ɵɵelementEnd();
+} if (rf & 2) {
+    const column_r3 = i0.ɵɵnextContext(2).$implicit;
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵadvance();
+    i0.ɵɵconditional(column_r3.property !== ctx_r0.sortBy ? 1 : 2);
+} }
+function DataTableComponent_th_23_button_3_span_4_Template(rf, ctx) { if (rf & 1) {
     const _r6 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "span", 31);
-    i0.ɵɵlistener("mousedown", function DataTableComponent_th_19_button_3_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r6); const column_r2 = i0.ɵɵnextContext(2).$implicit; const th_r7 = i0.ɵɵreference(1); const ctx_r2 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r2.resizeColumnStart($event, column_r2, th_r7)); });
+    i0.ɵɵelementStart(0, "span", 32);
+    i0.ɵɵlistener("mousedown", function DataTableComponent_th_23_button_3_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r6); const column_r3 = i0.ɵɵnextContext(2).$implicit; const th_r7 = i0.ɵɵreference(1); const ctx_r0 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r0.resizeColumnStart($event, column_r3, th_r7)); });
     i0.ɵɵelementEnd();
 } }
-function DataTableComponent_th_19_button_3_Template(rf, ctx) { if (rf & 1) {
-    const _r1 = i0.ɵɵgetCurrentView();
+function DataTableComponent_th_23_button_3_Template(rf, ctx) { if (rf & 1) {
+    const _r2 = i0.ɵɵgetCurrentView();
     i0.ɵɵelementStart(0, "button", 21);
-    i0.ɵɵlistener("click", function DataTableComponent_th_19_button_3_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r1); const column_r2 = i0.ɵɵnextContext().$implicit; const ctx_r2 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r2.headerClicked(column_r2, $event)); });
-    i0.ɵɵtemplate(1, DataTableComponent_th_19_button_3_span_1_Template, 1, 2, "span", 22)(2, DataTableComponent_th_19_button_3_span_2_Template, 1, 5, "span", 23)(3, DataTableComponent_th_19_button_3_span_3_Template, 3, 6, "span", 24)(4, DataTableComponent_th_19_button_3_span_4_Template, 1, 0, "span", 25);
+    i0.ɵɵlistener("click", function DataTableComponent_th_23_button_3_Template_button_click_0_listener($event) { i0.ɵɵrestoreView(_r2); const column_r3 = i0.ɵɵnextContext().$implicit; const ctx_r0 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r0.headerClicked(column_r3, $event)); });
+    i0.ɵɵtemplate(1, DataTableComponent_th_23_button_3_span_1_Template, 1, 2, "span", 22)(2, DataTableComponent_th_23_button_3_span_2_Template, 1, 5, "span", 23)(3, DataTableComponent_th_23_button_3_span_3_Template, 3, 1, "span", 24)(4, DataTableComponent_th_23_button_3_span_4_Template, 1, 0, "span", 25);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const ctx_r3 = i0.ɵɵnextContext();
-    const column_r2 = ctx_r3.$implicit;
+    const column_r3 = ctx_r3.$implicit;
     const i_r5 = ctx_r3.index;
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("disabled", ctx_r2.itemCount === 0)("title", !ctx_r2.sortAsc ? ctx_r2.labels.sortAscending : ctx_r2.labels.sortDescending);
-    i0.ɵɵattribute("aria-controls", column_r2.sortable ? ctx_r2.id : null)("aria-labelledby", "col-" + ctx_r2.id + "-" + i_r5);
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("disabled", ctx_r0.itemCount === 0);
+    i0.ɵɵattribute("aria-controls", column_r3.sortable ? ctx_r0.id : null)("aria-labelledby", "col-" + ctx_r0.id + "-" + i_r5);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", !column_r2.headerTemplate);
+    i0.ɵɵproperty("ngIf", !column_r3.headerTemplate);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", column_r2.headerTemplate);
+    i0.ɵɵproperty("ngIf", column_r3.headerTemplate);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", column_r2.sortable);
+    i0.ɵɵproperty("ngIf", column_r3.sortable);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", column_r2.resizable);
+    i0.ɵɵproperty("ngIf", column_r3.resizable);
 } }
-function DataTableComponent_th_19_span_4_span_1_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_th_23_span_4_span_1_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelement(0, "span", 4);
 } if (rf & 2) {
-    const column_r2 = i0.ɵɵnextContext(2).$implicit;
-    i0.ɵɵproperty("textContent", column_r2.header);
+    const column_r3 = i0.ɵɵnextContext(2).$implicit;
+    i0.ɵɵproperty("textContent", column_r3.header);
 } }
-function DataTableComponent_th_19_span_4_span_2_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "span", 34);
+function DataTableComponent_th_23_span_4_span_2_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "span", 35);
 } if (rf & 2) {
-    const column_r2 = i0.ɵɵnextContext(2).$implicit;
-    i0.ɵɵproperty("ngTemplateOutlet", column_r2.headerTemplate)("ngTemplateOutletContext", i0.ɵɵpureFunction1(2, _c1, column_r2));
+    const column_r3 = i0.ɵɵnextContext(2).$implicit;
+    i0.ɵɵproperty("ngTemplateOutlet", column_r3.headerTemplate)("ngTemplateOutletContext", i0.ɵɵpureFunction1(2, _c1, column_r3));
 } }
-function DataTableComponent_th_19_span_4_span_3_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_th_23_span_4_span_3_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "span", 28);
-    i0.ɵɵelement(1, "i", 29)(2, "i", 30);
+    i0.ɵɵelement(1, "i", 36)(2, "i", 37);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const column_r2 = i0.ɵɵnextContext(2).$implicit;
-    const ctx_r2 = i0.ɵɵnextContext();
+    const column_r3 = i0.ɵɵnextContext(2).$implicit;
+    const ctx_r0 = i0.ɵɵnextContext();
     i0.ɵɵadvance();
-    i0.ɵɵproperty("hide", column_r2.property === ctx_r2.sortBy);
+    i0.ɵɵproperty("hide", column_r3.property === ctx_r0.sortBy);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("hide", column_r2.property !== ctx_r2.sortBy)("ngClass", i0.ɵɵpureFunction2(3, _c2, ctx_r2.sortAsc, !ctx_r2.sortAsc));
+    i0.ɵɵproperty("hide", column_r3.property !== ctx_r0.sortBy)("ngClass", i0.ɵɵpureFunction2(3, _c2, ctx_r0.sortAsc, !ctx_r0.sortAsc));
 } }
-function DataTableComponent_th_19_span_4_span_4_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_th_23_span_4_span_4_Template(rf, ctx) { if (rf & 1) {
     const _r8 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "span", 31);
-    i0.ɵɵlistener("mousedown", function DataTableComponent_th_19_span_4_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r8); const column_r2 = i0.ɵɵnextContext(2).$implicit; const th_r7 = i0.ɵɵreference(1); const ctx_r2 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r2.resizeColumnStart($event, column_r2, th_r7)); });
+    i0.ɵɵelementStart(0, "span", 32);
+    i0.ɵɵlistener("mousedown", function DataTableComponent_th_23_span_4_span_4_Template_span_mousedown_0_listener($event) { i0.ɵɵrestoreView(_r8); const column_r3 = i0.ɵɵnextContext(2).$implicit; const th_r7 = i0.ɵɵreference(1); const ctx_r0 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r0.resizeColumnStart($event, column_r3, th_r7)); });
     i0.ɵɵelementEnd();
 } }
-function DataTableComponent_th_19_span_4_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_th_23_span_4_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "span");
-    i0.ɵɵtemplate(1, DataTableComponent_th_19_span_4_span_1_Template, 1, 1, "span", 32)(2, DataTableComponent_th_19_span_4_span_2_Template, 1, 4, "span", 33)(3, DataTableComponent_th_19_span_4_span_3_Template, 3, 6, "span", 24)(4, DataTableComponent_th_19_span_4_span_4_Template, 1, 0, "span", 25);
+    i0.ɵɵtemplate(1, DataTableComponent_th_23_span_4_span_1_Template, 1, 1, "span", 33)(2, DataTableComponent_th_23_span_4_span_2_Template, 1, 4, "span", 34)(3, DataTableComponent_th_23_span_4_span_3_Template, 3, 6, "span", 24)(4, DataTableComponent_th_23_span_4_span_4_Template, 1, 0, "span", 25);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const column_r2 = i0.ɵɵnextContext().$implicit;
+    const column_r3 = i0.ɵɵnextContext().$implicit;
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", !column_r2.headerTemplate);
+    i0.ɵɵproperty("ngIf", !column_r3.headerTemplate);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", column_r2.headerTemplate);
+    i0.ɵɵproperty("ngIf", column_r3.headerTemplate);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", column_r2.sortable);
+    i0.ɵɵproperty("ngIf", column_r3.sortable);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", column_r2.resizable);
+    i0.ɵɵproperty("ngIf", column_r3.resizable);
 } }
-function DataTableComponent_th_19_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_th_23_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "th", 19, 0);
     i0.ɵɵpipe(2, "px");
-    i0.ɵɵtemplate(3, DataTableComponent_th_19_button_3_Template, 5, 8, "button", 20)(4, DataTableComponent_th_19_span_4_Template, 5, 4, "span", 5);
+    i0.ɵɵtemplate(3, DataTableComponent_th_23_button_3_Template, 5, 7, "button", 20)(4, DataTableComponent_th_23_span_4_Template, 5, 4, "span", 5);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const column_r2 = ctx.$implicit;
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵstyleProp("width", i0.ɵɵpipeBind1(2, 11, column_r2.width));
-    i0.ɵɵclassProp("sortable", column_r2.sortable)("resizable", column_r2.resizable);
-    i0.ɵɵproperty("hide", !column_r2.visible)("ngClass", column_r2.styleClassObject);
-    i0.ɵɵattribute("aria-sort", column_r2.sortable ? column_r2.property === ctx_r2.sortBy ? ctx_r2.sortAsc ? "ascending" : "descending" : "none" : null);
+    const column_r3 = ctx.$implicit;
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵstyleProp("width", i0.ɵɵpipeBind1(2, 11, column_r3.width));
+    i0.ɵɵclassProp("sortable", column_r3.sortable)("resizable", column_r3.resizable);
+    i0.ɵɵproperty("hide", !column_r3.visible)("ngClass", column_r3.styleClassObject);
+    i0.ɵɵattribute("aria-sort", column_r3.sortable ? column_r3.property === ctx_r0.sortBy ? ctx_r0.sortAsc ? "ascending" : "descending" : "none" : null);
     i0.ɵɵadvance(3);
-    i0.ɵɵproperty("ngIf", column_r2.sortable);
+    i0.ɵɵproperty("ngIf", column_r3.sortable);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngIf", !column_r2.sortable);
+    i0.ɵɵproperty("ngIf", !column_r3.sortable);
 } }
-function DataTableComponent_tbody_20_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_tbody_24_Template(rf, ctx) { if (rf & 1) {
     const _r9 = i0.ɵɵgetCurrentView();
-    i0.ɵɵelementStart(0, "tbody", 35, 1);
-    i0.ɵɵlistener("selectedChange", function DataTableComponent_tbody_20_Template_tbody_selectedChange_0_listener() { i0.ɵɵrestoreView(_r9); const row_r10 = i0.ɵɵreference(1); const ctx_r2 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r2.onRowSelectChanged(row_r10)); });
+    i0.ɵɵelementStart(0, "tbody", 38, 1);
+    i0.ɵɵlistener("selectedChange", function DataTableComponent_tbody_24_Template_tbody_selectedChange_0_listener() { i0.ɵɵrestoreView(_r9); const row_r10 = i0.ɵɵreference(1); const ctx_r0 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r0.onRowSelectChanged(row_r10)); });
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const item_r11 = ctx.$implicit;
     const index_r12 = ctx.index;
     i0.ɵɵproperty("item", item_r11)("index", index_r12);
 } }
-function DataTableComponent_tbody_21_Template(rf, ctx) { if (rf & 1) {
+function DataTableComponent_tbody_25_Template(rf, ctx) { if (rf & 1) {
     i0.ɵɵelementStart(0, "tbody")(1, "tr")(2, "td");
     i0.ɵɵtext(3);
     i0.ɵɵelementEnd()()();
 } if (rf & 2) {
-    const ctx_r2 = i0.ɵɵnextContext();
+    const ctx_r0 = i0.ɵɵnextContext();
     i0.ɵɵadvance(2);
-    i0.ɵɵattribute("colspan", ctx_r2.columnCount);
+    i0.ɵɵattribute("colspan", ctx_r0.columnCount);
     i0.ɵɵadvance();
-    i0.ɵɵtextInterpolate(ctx_r2.noDataMessage);
+    i0.ɵɵtextInterpolate(ctx_r0.noDataMessage);
 } }
-function DataTableComponent_tbody_22_tr_1_td_5_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "td", 39);
+function DataTableComponent_tbody_26_tr_1_td_5_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "td", 42);
 } if (rf & 2) {
     const column_r13 = ctx.$implicit;
     i0.ɵɵproperty("hide", !column_r13.visible);
 } }
-function DataTableComponent_tbody_22_tr_1_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "tr", 38);
-    i0.ɵɵelement(1, "td", 39);
-    i0.ɵɵelementStart(2, "td", 39);
+function DataTableComponent_tbody_26_tr_1_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "tr", 41);
+    i0.ɵɵelement(1, "td", 42);
+    i0.ɵɵelementStart(2, "td", 42);
     i0.ɵɵtext(3, "\u00A0");
     i0.ɵɵelementEnd();
-    i0.ɵɵelement(4, "td", 39);
-    i0.ɵɵtemplate(5, DataTableComponent_tbody_22_tr_1_td_5_Template, 1, 1, "td", 40);
+    i0.ɵɵelement(4, "td", 42);
+    i0.ɵɵtemplate(5, DataTableComponent_tbody_26_tr_1_td_5_Template, 1, 1, "td", 43);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
     const index_r14 = ctx.index;
-    const ctx_r2 = i0.ɵɵnextContext(2);
-    i0.ɵɵclassProp("row-odd", (index_r14 + ctx_r2.items.length) % 2 === 0)("row-even", (index_r14 + ctx_r2.items.length) % 2 === 1);
+    const ctx_r0 = i0.ɵɵnextContext(2);
+    i0.ɵɵclassProp("row-odd", (index_r14 + ctx_r0.items.length) % 2 === 0)("row-even", (index_r14 + ctx_r0.items.length) % 2 === 1);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("hide", !ctx_r2.expandColumnVisible);
+    i0.ɵɵproperty("hide", !ctx_r0.expandColumnVisible);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("hide", !ctx_r2.indexColumnVisible);
+    i0.ɵɵproperty("hide", !ctx_r0.indexColumnVisible);
     i0.ɵɵadvance(2);
-    i0.ɵɵproperty("hide", !ctx_r2.selectColumnVisible);
+    i0.ɵɵproperty("hide", !ctx_r0.selectColumnVisible);
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngForOf", ctx_r2.columns);
+    i0.ɵɵproperty("ngForOf", ctx_r0.columns);
 } }
-function DataTableComponent_tbody_22_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "tbody", 36);
-    i0.ɵɵtemplate(1, DataTableComponent_tbody_22_tr_1_Template, 6, 8, "tr", 37);
+function DataTableComponent_tbody_26_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "tbody", 39);
+    i0.ɵɵtemplate(1, DataTableComponent_tbody_26_tr_1_Template, 6, 8, "tr", 40);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const ctx_r2 = i0.ɵɵnextContext();
+    const ctx_r0 = i0.ɵɵnextContext();
     i0.ɵɵadvance();
-    i0.ɵɵproperty("ngForOf", ctx_r2.substituteItems);
+    i0.ɵɵproperty("ngForOf", ctx_r0.substituteItems);
 } }
-function DataTableComponent_div_23_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "div", 41)(1, "i");
-    i0.ɵɵelement(2, "i", 42);
+function DataTableComponent_div_27_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "div", 44)(1, "i");
+    i0.ɵɵelement(2, "i", 45);
     i0.ɵɵelementEnd()();
 } }
-function DataTableComponent_data_table_pagination_24_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelement(0, "data-table-pagination", 43);
+function DataTableComponent_data_table_pagination_28_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelement(0, "data-table-pagination", 46);
 } if (rf & 2) {
-    const ctx_r2 = i0.ɵɵnextContext();
-    i0.ɵɵproperty("limits", ctx_r2.pageLimits);
+    const ctx_r0 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("limits", ctx_r0.pageLimits);
 } }
 let nextId = 0;
 class DataTableComponent {
@@ -1094,10 +1119,12 @@ class DataTableComponent {
     }
     _notify() {
         const loading = this.reloading;
-        this.reloadNotification = loading ?
-            this.labels.loadingText.replace('{title}', this.title) :
-            this.labels.loadedText.replace('{title}', this.title);
-        if (!loading) {
+        this.reloadNotification = loading ? this.labels.loadingText : this.labels.loadedText;
+        if (loading) {
+            this.paginationNotification = '';
+            this.sortNotification = '';
+        }
+        else {
             if (this.pagination) {
                 this.paginationNotification = this.labels.paginationText
                     .replace('{from}', '' + (Math.ceil(this.itemCount / this.limit) !== 0 ? this.offset + 1 : '0'))
@@ -1110,7 +1137,6 @@ class DataTableComponent {
             if (this.columns !== undefined && this.sortBy !== undefined) {
                 const col = this.columns.toArray().find(column => column.property === this.sortBy);
                 this.sortNotification = (this.sortAsc ? this.labels.sortedAscending : this.labels.sortedDescending)
-                    .replace('{title}', this.title)
                     .replace('{header}', col.header);
             }
             else {
@@ -1137,40 +1163,49 @@ class DataTableComponent {
             let _t;
             i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.paginator = _t.first);
             i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.rows = _t);
-        } }, inputs: { wrapperClass: "wrapperClass", items: "items", itemCount: "itemCount", title: "title", showTitle: "showTitle", header: "header", pagination: "pagination", indexColumn: "indexColumn", indexColumnHeader: "indexColumnHeader", rowColors: "rowColors", rowTooltip: "rowTooltip", selectColumn: "selectColumn", selectVisibilityKey: "selectVisibilityKey", multiSelect: "multiSelect", substituteRows: "substituteRows", expandableRows: "expandableRows", labels: "labels", selectOnRowClick: "selectOnRowClick", autoReload: "autoReload", showReloading: "showReloading", noDataMessage: "noDataMessage", pageLimits: "pageLimits", primaryColumn: "primaryColumn", sortBy: "sortBy", sortAsc: "sortAsc", offset: "offset", limit: "limit", page: "page" }, outputs: { reload: "reload", rowClick: "rowClick", rowDoubleClick: "rowDoubleClick", headerClick: "headerClick", cellClick: "cellClick", selectedRowsChange: "selectedRowsChange", visibleColumnsChange: "visibleColumnsChange" }, decls: 25, vars: 26, consts: [["th", ""], ["row", ""], [1, "data-table-wrapper"], ["role", "status", "aria-live", "polite", "aria-atomic", "false", "aria-relevant", "text", 1, "sr-only"], [3, "textContent"], [4, "ngIf"], [1, "data-table-box"], ["tabindex", "-1", 1, "table", "data-table", 3, "id"], [1, "sr-only", 3, "textContent"], [1, "expand-column-header", 3, "hide"], ["scope", "col", 1, "index-column-header", 3, "hide"], [1, "select-column-header", 3, "hide"], [1, "sr-only", 3, "for"], ["type", "checkbox", 3, "ngModelChange", "id", "hide", "ngModel", "disabled", "title"], ["scope", "col", "class", "column-header", 3, "hide", "sortable", "resizable", "ngClass", "width", 4, "ngFor", "ngForOf"], ["class", "data-table-row-wrapper", "dataTableRow", "", 3, "item", "index", "selectedChange", 4, "ngFor", "ngForOf"], ["class", "substitute-rows", 4, "ngIf"], ["class", "busy", 4, "ngIf"], [3, "limits", 4, "ngIf"], ["scope", "col", 1, "column-header", 3, "hide", "ngClass"], [3, "disabled", "title", "click", 4, "ngIf"], [3, "click", "disabled", "title"], [3, "id", "textContent", 4, "ngIf"], [3, "id", "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], ["class", "column-sort-icon", 4, "ngIf"], ["class", "column-resize-handle", 3, "mousedown", 4, "ngIf"], [3, "id", "textContent"], [3, "id", "ngTemplateOutlet", "ngTemplateOutletContext"], [1, "column-sort-icon"], ["aria-hidden", "true", 1, "fa", "fa-sort", "column-sortable-icon", 3, "hide"], ["aria-hidden", "true", 1, "fa", 3, "hide", "ngClass"], [1, "column-resize-handle", 3, "mousedown"], [3, "textContent", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], ["dataTableRow", "", 1, "data-table-row-wrapper", 3, "selectedChange", "item", "index"], [1, "substitute-rows"], ["role", "presentation", 3, "row-odd", "row-even", 4, "ngFor", "ngForOf"], ["role", "presentation"], [3, "hide"], [3, "hide", 4, "ngFor", "ngForOf"], [1, "busy"], [1, "fa", "fa-spin", "fa-cog", "fa-2x"], [3, "limits"]], template: function DataTableComponent_Template(rf, ctx) { if (rf & 1) {
+        } }, inputs: { wrapperClass: "wrapperClass", items: "items", itemCount: "itemCount", title: "title", showTitle: "showTitle", header: "header", pagination: "pagination", indexColumn: "indexColumn", indexColumnHeader: "indexColumnHeader", rowColors: "rowColors", rowTooltip: "rowTooltip", selectColumn: "selectColumn", selectVisibilityKey: "selectVisibilityKey", multiSelect: "multiSelect", substituteRows: "substituteRows", expandableRows: "expandableRows", labels: "labels", selectOnRowClick: "selectOnRowClick", autoReload: "autoReload", showReloading: "showReloading", noDataMessage: "noDataMessage", pageLimits: "pageLimits", primaryColumn: "primaryColumn", sortBy: "sortBy", sortAsc: "sortAsc", offset: "offset", limit: "limit", page: "page" }, outputs: { reload: "reload", rowClick: "rowClick", rowDoubleClick: "rowDoubleClick", headerClick: "headerClick", cellClick: "cellClick", selectedRowsChange: "selectedRowsChange", visibleColumnsChange: "visibleColumnsChange" }, decls: 29, vars: 27, consts: [["th", ""], ["row", ""], [1, "data-table-wrapper"], ["role", "status", "aria-live", "polite", "aria-atomic", "false", "aria-relevant", "text", 1, "sr-only"], [3, "textContent"], [4, "ngIf"], [1, "data-table-box"], ["tabindex", "-1", 1, "table", "data-table", 3, "id"], [1, "sr-only", 3, "textContent"], [1, "expand-column-header", 3, "hide"], ["scope", "col", 1, "index-column-header", 3, "hide"], [1, "select-column-header", 3, "hide"], [1, "sr-only", 3, "for"], ["type", "checkbox", 3, "ngModelChange", "id", "hide", "ngModel", "disabled", "title"], ["scope", "col", "class", "column-header", 3, "hide", "sortable", "resizable", "ngClass", "width", 4, "ngFor", "ngForOf"], ["class", "data-table-row-wrapper", "dataTableRow", "", 3, "item", "index", "selectedChange", 4, "ngFor", "ngForOf"], ["class", "substitute-rows", 4, "ngIf"], ["class", "busy", 4, "ngIf"], [3, "limits", 4, "ngIf"], ["scope", "col", 1, "column-header", 3, "hide", "ngClass"], [3, "disabled", "click", 4, "ngIf"], [3, "click", "disabled"], [3, "id", "textContent", 4, "ngIf"], [3, "id", "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], ["class", "column-sort-icon", 4, "ngIf"], ["class", "column-resize-handle", 3, "mousedown", 4, "ngIf"], [3, "id", "textContent"], [3, "id", "ngTemplateOutlet", "ngTemplateOutletContext"], [1, "column-sort-icon"], ["aria-hidden", "true", 1, "fa", "fa-sort", "column-sortable-icon"], [1, "sr-only"], ["aria-hidden", "true", 1, "fa", 3, "ngClass"], [1, "column-resize-handle", 3, "mousedown"], [3, "textContent", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext", 4, "ngIf"], [3, "ngTemplateOutlet", "ngTemplateOutletContext"], ["aria-hidden", "true", 1, "fa", "fa-sort", "column-sortable-icon", 3, "hide"], ["aria-hidden", "true", 1, "fa", 3, "hide", "ngClass"], ["dataTableRow", "", 1, "data-table-row-wrapper", 3, "selectedChange", "item", "index"], [1, "substitute-rows"], ["role", "presentation", 3, "row-odd", "row-even", 4, "ngFor", "ngForOf"], ["role", "presentation"], [3, "hide"], [3, "hide", 4, "ngFor", "ngForOf"], [1, "busy"], [1, "fa", "fa-spin", "fa-cog", "fa-2x"], [3, "limits"]], template: function DataTableComponent_Template(rf, ctx) { if (rf & 1) {
             i0.ɵɵelementStart(0, "div", 2)(1, "span", 3);
-            i0.ɵɵelement(2, "span", 4)(3, "span", 4)(4, "span", 4)(5, "span", 4);
+            i0.ɵɵtemplate(2, DataTableComponent_Conditional_2_Template, 1, 1);
+            i0.ɵɵelement(3, "span", 4);
+            i0.ɵɵtext(4, "\u00A0 ");
+            i0.ɵɵelement(5, "span", 4);
+            i0.ɵɵtext(6, "\u00A0 ");
+            i0.ɵɵelement(7, "span", 4);
+            i0.ɵɵtext(8, "\u00A0 ");
+            i0.ɵɵelement(9, "span", 4);
             i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(6, DataTableComponent_data_table_header_6_Template, 1, 0, "data-table-header", 5);
-            i0.ɵɵelementStart(7, "div", 6)(8, "table", 7);
-            i0.ɵɵelement(9, "caption", 8);
-            i0.ɵɵelementStart(10, "thead")(11, "tr");
-            i0.ɵɵelement(12, "td", 9);
-            i0.ɵɵelementStart(13, "th", 10);
-            i0.ɵɵelement(14, "span", 4);
+            i0.ɵɵtemplate(10, DataTableComponent_data_table_header_10_Template, 1, 0, "data-table-header", 5);
+            i0.ɵɵelementStart(11, "div", 6)(12, "table", 7);
+            i0.ɵɵelement(13, "caption", 8);
+            i0.ɵɵelementStart(14, "thead")(15, "tr");
+            i0.ɵɵelement(16, "td", 9);
+            i0.ɵɵelementStart(17, "th", 10);
+            i0.ɵɵelement(18, "span", 4);
             i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(15, "td", 11)(16, "label", 12);
-            i0.ɵɵtext(17);
+            i0.ɵɵelementStart(19, "td", 11)(20, "label", 12);
+            i0.ɵɵtext(21);
             i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(18, "input", 13);
-            i0.ɵɵtwoWayListener("ngModelChange", function DataTableComponent_Template_input_ngModelChange_18_listener($event) { i0.ɵɵtwoWayBindingSet(ctx.selectAllCheckbox, $event) || (ctx.selectAllCheckbox = $event); return $event; });
+            i0.ɵɵelementStart(22, "input", 13);
+            i0.ɵɵtwoWayListener("ngModelChange", function DataTableComponent_Template_input_ngModelChange_22_listener($event) { i0.ɵɵtwoWayBindingSet(ctx.selectAllCheckbox, $event) || (ctx.selectAllCheckbox = $event); return $event; });
             i0.ɵɵelementEnd()();
-            i0.ɵɵtemplate(19, DataTableComponent_th_19_Template, 5, 13, "th", 14);
+            i0.ɵɵtemplate(23, DataTableComponent_th_23_Template, 5, 13, "th", 14);
             i0.ɵɵelementEnd()();
-            i0.ɵɵtemplate(20, DataTableComponent_tbody_20_Template, 2, 2, "tbody", 15)(21, DataTableComponent_tbody_21_Template, 4, 2, "tbody", 5)(22, DataTableComponent_tbody_22_Template, 2, 1, "tbody", 16);
+            i0.ɵɵtemplate(24, DataTableComponent_tbody_24_Template, 2, 2, "tbody", 15)(25, DataTableComponent_tbody_25_Template, 4, 2, "tbody", 5)(26, DataTableComponent_tbody_26_Template, 2, 1, "tbody", 16);
             i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(23, DataTableComponent_div_23_Template, 3, 0, "div", 17);
+            i0.ɵɵtemplate(27, DataTableComponent_div_27_Template, 3, 0, "div", 17);
             i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(24, DataTableComponent_data_table_pagination_24_Template, 1, 1, "data-table-pagination", 18);
+            i0.ɵɵtemplate(28, DataTableComponent_data_table_pagination_28_Template, 1, 1, "data-table-pagination", 18);
             i0.ɵɵelementEnd();
         } if (rf & 2) {
             i0.ɵɵadvance(2);
+            i0.ɵɵconditional(ctx.reloadNotification || ctx.paginationNotification || ctx.sortNotification || ctx.columnSelectorNotification ? 2 : -1);
+            i0.ɵɵadvance();
             i0.ɵɵproperty("textContent", ctx.reloadNotification);
-            i0.ɵɵadvance();
+            i0.ɵɵadvance(2);
             i0.ɵɵproperty("textContent", ctx.paginationNotification);
-            i0.ɵɵadvance();
+            i0.ɵɵadvance(2);
             i0.ɵɵproperty("textContent", ctx.sortNotification);
-            i0.ɵɵadvance();
+            i0.ɵɵadvance(2);
             i0.ɵɵproperty("textContent", ctx.columnSelectorNotification);
             i0.ɵɵadvance();
             i0.ɵɵproperty("ngIf", ctx.header);
@@ -1212,7 +1247,7 @@ class DataTableComponent {
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTableComponent, [{
         type: Component,
-        args: [{ selector: 'data-table', template: "<div class=\"data-table-wrapper\">\n  <span class=\"sr-only\" role=\"status\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"text\">\n    <span [textContent]=\"reloadNotification\"></span>\n    <span [textContent]=\"paginationNotification\"></span>\n    <span [textContent]=\"sortNotification\"></span>\n    <span [textContent]=\"columnSelectorNotification\"></span>\n  </span>\n\n  <data-table-header *ngIf=\"header\"></data-table-header>\n\n  <div class=\"data-table-box\" [class]=\"wrapperClass\">\n    <table class=\"table data-table\" [id]=\"id\" tabindex=\"-1\">\n      <caption class=\"sr-only\" [textContent]=\"title\"></caption>\n      <thead>\n      <tr>\n        <td [hide]=\"!expandColumnVisible\" class=\"expand-column-header\">\n        </td>\n        <th scope=\"col\" [hide]=\"!indexColumnVisible\" class=\"index-column-header\">\n          <span [textContent]=\"indexColumnHeader\"></span>\n        </th>\n        <td [hide]=\"!selectColumnVisible\" class=\"select-column-header\">\n          <label [for]=\"id + '-select-all-column'\" class=\"sr-only\">\n            {{ labels.selectAllRows }}\n          </label>\n          <input\n            [id]=\"id + '-select-all-column'\"\n            [hide]=\"!multiSelect\"\n                 type=\"checkbox\"\n                 [(ngModel)]=\"selectAllCheckbox\"\n                 [disabled]=\"selectableItemCount === 0\"\n                 [title]=\"labels.selectAllRows\"/>\n        </td>\n        <th *ngFor=\"let column of columns, index as i\" #th\n            [hide]=\"!column.visible\"\n            [class.sortable]=\"column.sortable\"\n            [class.resizable]=\"column.resizable\"\n            scope=\"col\"\n            [attr.aria-sort]=\"column.sortable ? (column.property === sortBy ? (sortAsc ? 'ascending' : 'descending') : 'none') : null\"\n            [ngClass]=\"column.styleClassObject\" class=\"column-header\" [style.width]=\"column.width | px\" >\n          <button *ngIf=\"column.sortable\" (click)=\"headerClicked(column, $event)\"\n                  [attr.aria-controls]=\"column.sortable ? id : null\"\n                  [disabled]=\"itemCount === 0\"\n                  [attr.aria-labelledby]=\"'col-'+id+'-'+i\"\n                  [title]=\"!sortAsc ? labels.sortAscending : labels.sortDescending\">\n            <span *ngIf=\"!column.headerTemplate\" [id]=\"'col-'+id+'-'+i\"\n                  [textContent]=\"column.header\"></span>\n            <span *ngIf=\"column.headerTemplate\" [id]=\"'col-'+id+'-'+i\" [ngTemplateOutlet]=\"column.headerTemplate\"\n                  [ngTemplateOutletContext]=\"{column: column}\"></span>\n            <span class=\"column-sort-icon\" *ngIf=\"column.sortable\">\n              <i [hide]=\"column.property === sortBy\" class=\"fa fa-sort column-sortable-icon\"\n                aria-hidden=\"true\"></i>\n              <i [hide]=\"column.property !== sortBy\" class=\"fa\"\n                [ngClass]=\"{'fa-sort-asc': sortAsc, 'fa-sort-desc': !sortAsc}\" aria-hidden=\"true\"></i>\n            </span>\n            <span *ngIf=\"column.resizable\" class=\"column-resize-handle\"\n                  (mousedown)=\"resizeColumnStart($event, column, th)\"></span>\n          </button>\n          <span *ngIf=\"!column.sortable\">\n            <span *ngIf=\"!column.headerTemplate\"\n                  [textContent]=\"column.header\"></span>\n            <span *ngIf=\"column.headerTemplate\" [ngTemplateOutlet]=\"column.headerTemplate\"\n                  [ngTemplateOutletContext]=\"{column: column}\"></span>\n            <span class=\"column-sort-icon\" *ngIf=\"column.sortable\">\n               <i [hide]=\"column.property === sortBy\" class=\"fa fa-sort column-sortable-icon\"\n                  aria-hidden=\"true\"></i>\n               <i [hide]=\"column.property !== sortBy\" class=\"fa\"\n                  [ngClass]=\"{'fa-sort-asc': sortAsc, 'fa-sort-desc': !sortAsc}\" aria-hidden=\"true\"></i>\n            </span>\n            <span *ngIf=\"column.resizable\" class=\"column-resize-handle\"\n                  (mousedown)=\"resizeColumnStart($event, column, th)\"></span>\n          </span>\n        </th>\n      </tr>\n      </thead>\n      <tbody *ngFor=\"let item of items; let index=index\" class=\"data-table-row-wrapper\"\n             dataTableRow #row [item]=\"item\" [index]=\"index\" (selectedChange)=\"onRowSelectChanged(row)\">\n      </tbody>\n      <tbody *ngIf=\"itemCount === 0 && noDataMessage\">\n        <tr>\n          <td [attr.colspan]=\"columnCount\">{{ noDataMessage }}</td>\n        </tr>\n      </tbody>\n      <tbody class=\"substitute-rows\" *ngIf=\"pagination && substituteRows\">\n      <tr *ngFor=\"let item of substituteItems, let index = index\"\n          [class.row-odd]=\"(index + items.length) % 2 === 0\"\n          [class.row-even]=\"(index + items.length) % 2 === 1\" role=\"presentation\">\n        <td [hide]=\"!expandColumnVisible\"></td>\n        <td [hide]=\"!indexColumnVisible\">&nbsp;</td>\n        <td [hide]=\"!selectColumnVisible\"></td>\n        <td *ngFor=\"let column of columns\" [hide]=\"!column.visible\">\n      </tr>\n      </tbody>\n    </table>\n    <div class=\"busy\" *ngIf=\"showReloading && reloading\">\n      <i><i class=\"fa fa-spin fa-cog fa-2x\"></i></i>\n    </div>\n  </div>\n\n  <data-table-pagination *ngIf=\"pagination\" [limits]=\"pageLimits\"></data-table-pagination>\n</div>\n", styles: [":host ::ng-deep .data-table.table>tbody+tbody{border-top:none}:host ::ng-deep .data-table.table td{vertical-align:middle}:host ::ng-deep .data-table>thead>tr>th,:host ::ng-deep .data-table>tbody>tr>td{overflow:hidden}:host ::ng-deep .data-table>thead>tr>td{border-bottom:2px solid #dee2e6}:host ::ng-deep .row-odd{background-color:#f6f6f6}.data-table .substitute-rows>tr:hover,:host ::ng-deep .data-table .data-table-row:hover{background-color:#ececec}.data-table{box-shadow:0 0 15px #ececec}.column-header{position:relative}.expand-column-header{width:50px}.select-column-header{width:50px;text-align:center}.index-column-header{width:40px}.column-header.sortable button{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:0;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;text-align:left}.column-header .column-sort-icon{margin-left:8px}.column-header.resizable .column-sort-icon{margin-right:8px}.column-header .column-sort-icon .column-sortable-icon{color:#d3d3d3}.column-header .column-resize-handle{position:absolute;top:0;right:0;margin:0;padding:0;width:8px;height:100%;cursor:col-resize}.data-table-box{position:relative}.busy{position:absolute;z-index:1;inset:0;background-color:#00000040}.busy>i{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}\n"] }]
+        args: [{ selector: 'data-table', template: "<div class=\"data-table-wrapper\">\n  <span class=\"sr-only\" role=\"status\" aria-live=\"polite\" aria-atomic=\"false\" aria-relevant=\"text\">\n    @if (reloadNotification || paginationNotification || sortNotification || columnSelectorNotification) {\n      {{ this.title }} table\n    }\n    <span [textContent]=\"reloadNotification\"></span>&nbsp;\n    <span [textContent]=\"paginationNotification\"></span>&nbsp;\n    <span [textContent]=\"sortNotification\"></span>&nbsp;\n    <span [textContent]=\"columnSelectorNotification\"></span>\n  </span>\n\n  <data-table-header *ngIf=\"header\"></data-table-header>\n\n  <div class=\"data-table-box\" [class]=\"wrapperClass\">\n    <table class=\"table data-table\" [id]=\"id\" tabindex=\"-1\">\n      <caption class=\"sr-only\" [textContent]=\"title\"></caption>\n      <thead>\n      <tr>\n        <td [hide]=\"!expandColumnVisible\" class=\"expand-column-header\">\n        </td>\n        <th scope=\"col\" [hide]=\"!indexColumnVisible\" class=\"index-column-header\">\n          <span [textContent]=\"indexColumnHeader\"></span>\n        </th>\n        <td [hide]=\"!selectColumnVisible\" class=\"select-column-header\">\n          <label [for]=\"id + '-select-all-column'\" class=\"sr-only\">\n            {{ labels.selectAllRows }}\n          </label>\n          <input\n            [id]=\"id + '-select-all-column'\"\n            [hide]=\"!multiSelect\"\n                 type=\"checkbox\"\n                 [(ngModel)]=\"selectAllCheckbox\"\n                 [disabled]=\"selectableItemCount === 0\"\n                 [title]=\"labels.selectAllRows\"/>\n        </td>\n        <th *ngFor=\"let column of columns, index as i\" #th\n            [hide]=\"!column.visible\"\n            [class.sortable]=\"column.sortable\"\n            [class.resizable]=\"column.resizable\"\n            scope=\"col\"\n            [attr.aria-sort]=\"column.sortable ? (column.property === sortBy ? (sortAsc ? 'ascending' : 'descending') : 'none') : null\"\n            [ngClass]=\"column.styleClassObject\" class=\"column-header\" [style.width]=\"column.width | px\" >\n          <button *ngIf=\"column.sortable\" (click)=\"headerClicked(column, $event)\"\n                  [attr.aria-controls]=\"column.sortable ? id : null\"\n                  [disabled]=\"itemCount === 0\"\n                  [attr.aria-labelledby]=\"'col-'+id+'-'+i\">\n            <span *ngIf=\"!column.headerTemplate\" [id]=\"'col-'+id+'-'+i\"\n                  [textContent]=\"column.header\"></span>\n            <span *ngIf=\"column.headerTemplate\" [id]=\"'col-'+id+'-'+i\" [ngTemplateOutlet]=\"column.headerTemplate\"\n                  [ngTemplateOutletContext]=\"{column: column}\"></span>\n            <span class=\"column-sort-icon\" *ngIf=\"column.sortable\">\n              @if (column.property !== sortBy) {\n                <i class=\"fa fa-sort column-sortable-icon\" aria-hidden=\"true\"></i>\n                <span class=\"sr-only\">Not Sorted</span>\n              } @else {\n                <i class=\"fa\" [ngClass]=\"{'fa-sort-asc': sortAsc, 'fa-sort-desc': !sortAsc}\" aria-hidden=\"true\"></i>\n                <span class=\"sr-only\">\n                  @if (sortAsc) {\n                    Sorted Ascending\n                  } @else {\n                    Sorted Descending\n                  }\n                </span>\n              }\n            </span>\n            <span *ngIf=\"column.resizable\" class=\"column-resize-handle\"\n                  (mousedown)=\"resizeColumnStart($event, column, th)\"></span>\n          </button>\n          <span *ngIf=\"!column.sortable\">\n            <span *ngIf=\"!column.headerTemplate\"\n                  [textContent]=\"column.header\"></span>\n            <span *ngIf=\"column.headerTemplate\" [ngTemplateOutlet]=\"column.headerTemplate\"\n                  [ngTemplateOutletContext]=\"{column: column}\"></span>\n            <span class=\"column-sort-icon\" *ngIf=\"column.sortable\">\n               <i [hide]=\"column.property === sortBy\" class=\"fa fa-sort column-sortable-icon\"\n                  aria-hidden=\"true\"></i>\n               <i [hide]=\"column.property !== sortBy\" class=\"fa\"\n                  [ngClass]=\"{'fa-sort-asc': sortAsc, 'fa-sort-desc': !sortAsc}\" aria-hidden=\"true\"></i>\n            </span>\n            <span *ngIf=\"column.resizable\" class=\"column-resize-handle\"\n                  (mousedown)=\"resizeColumnStart($event, column, th)\"></span>\n          </span>\n        </th>\n      </tr>\n      </thead>\n      <tbody *ngFor=\"let item of items; let index=index\" class=\"data-table-row-wrapper\"\n             dataTableRow #row [item]=\"item\" [index]=\"index\" (selectedChange)=\"onRowSelectChanged(row)\">\n      </tbody>\n      <tbody *ngIf=\"itemCount === 0 && noDataMessage\">\n        <tr>\n          <td [attr.colspan]=\"columnCount\">{{ noDataMessage }}</td>\n        </tr>\n      </tbody>\n      <tbody class=\"substitute-rows\" *ngIf=\"pagination && substituteRows\">\n      <tr *ngFor=\"let item of substituteItems, let index = index\"\n          [class.row-odd]=\"(index + items.length) % 2 === 0\"\n          [class.row-even]=\"(index + items.length) % 2 === 1\" role=\"presentation\">\n        <td [hide]=\"!expandColumnVisible\"></td>\n        <td [hide]=\"!indexColumnVisible\">&nbsp;</td>\n        <td [hide]=\"!selectColumnVisible\"></td>\n        <td *ngFor=\"let column of columns\" [hide]=\"!column.visible\">\n      </tr>\n      </tbody>\n    </table>\n    <div class=\"busy\" *ngIf=\"showReloading && reloading\">\n      <i><i class=\"fa fa-spin fa-cog fa-2x\"></i></i>\n    </div>\n  </div>\n\n  <data-table-pagination *ngIf=\"pagination\" [limits]=\"pageLimits\"></data-table-pagination>\n</div>\n", styles: [":host ::ng-deep .data-table.table>tbody+tbody{border-top:none}:host ::ng-deep .data-table.table td{vertical-align:middle}:host ::ng-deep .data-table>thead>tr>th,:host ::ng-deep .data-table>tbody>tr>td{overflow:hidden}:host ::ng-deep .data-table>thead>tr>td{border-bottom:2px solid #dee2e6}:host ::ng-deep .row-odd{background-color:#f6f6f6}.data-table .substitute-rows>tr:hover,:host ::ng-deep .data-table .data-table-row:hover{background-color:#ececec}.data-table{box-shadow:0 0 15px #ececec}.column-header{position:relative}.expand-column-header{width:50px}.select-column-header{width:50px;text-align:center}.index-column-header{width:40px}.column-header.sortable button{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;background:none;border:0;color:inherit;cursor:pointer;font:inherit;line-height:normal;overflow:visible;padding:0;-webkit-appearance:button;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;text-align:left}.column-header .column-sort-icon{margin-left:8px}.column-header.resizable .column-sort-icon{margin-right:8px}.column-header .column-sort-icon .column-sortable-icon{color:#d3d3d3}.column-header .column-resize-handle{position:absolute;top:0;right:0;margin:0;padding:0;width:8px;height:100%;cursor:col-resize}.data-table-box{position:relative}.busy{position:absolute;z-index:1;inset:0;background-color:#00000040}.busy>i{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}\n"] }]
     }], () => [], { wrapperClass: [{
             type: Input
         }], items: [{

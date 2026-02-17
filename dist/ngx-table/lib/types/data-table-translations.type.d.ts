@@ -11,8 +11,6 @@ export interface DataTableTranslations {
     expandRow?: string;
     sortedAscending?: string;
     sortedDescending?: string;
-    sortAscending?: string;
-    sortDescending?: string;
     paginationLimit?: string;
     paginationText?: string;
     paginationTotalPages?: string;

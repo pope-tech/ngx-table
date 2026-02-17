@@ -444,11 +444,12 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   _notify(): void {
     const loading = this.reloading;
 
-    this.reloadNotification = loading ?
-      this.labels.loadingText.replace('{title}', this.title) :
-      this.labels.loadedText.replace('{title}', this.title);
+    this.reloadNotification = loading ? this.labels.loadingText: this.labels.loadedText;
 
-    if (!loading) {
+    if (loading) {
+      this.paginationNotification = '';
+      this.sortNotification = '';
+    } else {
       if (this.pagination) {
         this.paginationNotification = this.labels.paginationText
           .replace('{from}', '' + (Math.ceil(this.itemCount / this.limit) !== 0 ? this.offset + 1 : '0'))
@@ -460,7 +461,6 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
       if (this.columns !== undefined && this.sortBy !== undefined) {
         const col = this.columns.toArray().find(column => column.property === this.sortBy) as DataTableColumnDirective;
         this.sortNotification = (this.sortAsc ? this.labels.sortedAscending : this.labels.sortedDescending)
-          .replace('{title}', this.title)
           .replace('{header}', col.header);
       } else {
         this.sortNotification = '';

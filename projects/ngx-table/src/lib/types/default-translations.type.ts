@@ -11,12 +11,10 @@ export const defaultTranslations: DataTableTranslations = {
   selectAllRows: 'select all rows',
   expandColumn: 'expand',
   expandRow: 'expand {cell_content}',
-  sortedAscending: '{title} table sorted by {header} ascending',
-  sortedDescending: '{title} table sorted by {header} descending',
-  sortAscending: 'activate to sort ascending',
-  sortDescending: 'activate to sort descending',
+  sortedAscending: 'sorted by {header} ascending.',
+  sortedDescending: 'sorted by {header} descending.',
   paginationLimit: 'Limit',
-  paginationText: 'Results: {from} to {to} of {total}',
+  paginationText: 'Results: {from} to {to} of {total}.',
   paginationTotalPages: 'of',
   firstPage: 'first page',
   prevPage: 'previous page',
@@ -25,6 +23,6 @@ export const defaultTranslations: DataTableTranslations = {
   pageNumberNofM: '({N} of {M})',
   nextPage: 'next page',
   lastPage: 'last page',
-  loadingText: '{title} table is loading',
-  loadedText: '{title} table loaded'
+  loadingText: 'is loading.',
+  loadedText: 'loaded.'
 };
