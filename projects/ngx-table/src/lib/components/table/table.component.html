@@ -1,8 +1,11 @@
 <div class="data-table-wrapper">
   <span class="sr-only" role="status" aria-live="polite" aria-atomic="false" aria-relevant="text">
-    <span [textContent]="reloadNotification"></span>
-    <span [textContent]="paginationNotification"></span>
-    <span [textContent]="sortNotification"></span>
+    @if (reloadNotification || paginationNotification || sortNotification || columnSelectorNotification) {
+      {{ this.title }} table
+    }
+    <span [textContent]="reloadNotification"></span>&nbsp;
+    <span [textContent]="paginationNotification"></span>&nbsp;
+    <span [textContent]="sortNotification"></span>&nbsp;
     <span [textContent]="columnSelectorNotification"></span>
   </span>
 
@@ -40,17 +43,25 @@
           <button *ngIf="column.sortable" (click)="headerClicked(column, $event)"
                   [attr.aria-controls]="column.sortable ? id : null"
                   [disabled]="itemCount === 0"
-                  [attr.aria-labelledby]="'col-'+id+'-'+i"
-                  [title]="!sortAsc ? labels.sortAscending : labels.sortDescending">
+                  [attr.aria-labelledby]="'col-'+id+'-'+i">
             <span *ngIf="!column.headerTemplate" [id]="'col-'+id+'-'+i"
                   [textContent]="column.header"></span>
             <span *ngIf="column.headerTemplate" [id]="'col-'+id+'-'+i" [ngTemplateOutlet]="column.headerTemplate"
                   [ngTemplateOutletContext]="{column: column}"></span>
             <span class="column-sort-icon" *ngIf="column.sortable">
-              <i [hide]="column.property === sortBy" class="fa fa-sort column-sortable-icon"
-                aria-hidden="true"></i>
-              <i [hide]="column.property !== sortBy" class="fa"
-                [ngClass]="{'fa-sort-asc': sortAsc, 'fa-sort-desc': !sortAsc}" aria-hidden="true"></i>
+              @if (column.property !== sortBy) {
+                <i class="fa fa-sort column-sortable-icon" aria-hidden="true"></i>
+                <span class="sr-only">Not Sorted</span>
+              } @else {
+                <i class="fa" [ngClass]="{'fa-sort-asc': sortAsc, 'fa-sort-desc': !sortAsc}" aria-hidden="true"></i>
+                <span class="sr-only">
+                  @if (sortAsc) {
+                    Sorted Ascending
+                  } @else {
+                    Sorted Descending
+                  }
+                </span>
+              }
             </span>
             <span *ngIf="column.resizable" class="column-resize-handle"
                   (mousedown)="resizeColumnStart($event, column, th)"></span>
