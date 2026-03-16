@@ -434,15 +434,87 @@ function drag(event, { move: move, up: up }) {
 }
 
 const _c0$1 = ["pageInput"];
-function DataTablePaginationComponent_option_9_Template(rf, ctx) { if (rf & 1) {
-    i0.ɵɵelementStart(0, "option", 25);
+function DataTablePaginationComponent_div_5_option_4_Template(rf, ctx) { if (rf & 1) {
+    i0.ɵɵelementStart(0, "option", 21);
     i0.ɵɵtext(1);
     i0.ɵɵelementEnd();
 } if (rf & 2) {
-    const l_r2 = ctx.$implicit;
-    i0.ɵɵproperty("value", l_r2);
+    const l_r4 = ctx.$implicit;
+    i0.ɵɵproperty("value", l_r4);
     i0.ɵɵadvance();
-    i0.ɵɵtextInterpolate(l_r2);
+    i0.ɵɵtextInterpolate(l_r4);
+} }
+function DataTablePaginationComponent_div_5_Template(rf, ctx) { if (rf & 1) {
+    const _r2 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "div", 8)(1, "div", 17);
+    i0.ɵɵelement(2, "label", 18);
+    i0.ɵɵelementEnd();
+    i0.ɵɵelementStart(3, "select", 19);
+    i0.ɵɵtwoWayListener("ngModelChange", function DataTablePaginationComponent_div_5_Template_select_ngModelChange_3_listener($event) { i0.ɵɵrestoreView(_r2); const ctx_r2 = i0.ɵɵnextContext(); i0.ɵɵtwoWayBindingSet(ctx_r2.limit, $event) || (ctx_r2.limit = $event); return i0.ɵɵresetView($event); });
+    i0.ɵɵtemplate(4, DataTablePaginationComponent_div_5_option_4_Template, 2, 2, "option", 20);
+    i0.ɵɵelementEnd()();
+} if (rf & 2) {
+    const ctx_r2 = i0.ɵɵnextContext();
+    i0.ɵɵadvance(2);
+    i0.ɵɵproperty("textContent", ctx_r2.dataTable.labels.paginationLimit);
+    i0.ɵɵattribute("for", ctx_r2.id + "-page-limit");
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("id", ctx_r2.id + "-page-limit");
+    i0.ɵɵtwoWayProperty("ngModel", ctx_r2.limit);
+    i0.ɵɵadvance();
+    i0.ɵɵproperty("ngForOf", ctx_r2.limits);
+} }
+function DataTablePaginationComponent_button_9_Template(rf, ctx) { if (rf & 1) {
+    const _r5 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "button", 22);
+    i0.ɵɵlistener("click", function DataTablePaginationComponent_button_9_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r5); const ctx_r2 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r2.pageFirst()); });
+    i0.ɵɵelement(1, "i", 23);
+    i0.ɵɵelementStart(2, "span", 24);
+    i0.ɵɵtext(3, "first page");
+    i0.ɵɵelementEnd()();
+} if (rf & 2) {
+    const ctx_r2 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("title", ctx_r2.dataTable.labels.firstPage);
+    i0.ɵɵattribute("aria-controls", ctx_r2.dataTable.id);
+} }
+function DataTablePaginationComponent_button_10_Template(rf, ctx) { if (rf & 1) {
+    const _r6 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "button", 25);
+    i0.ɵɵlistener("click", function DataTablePaginationComponent_button_10_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r6); const ctx_r2 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r2.pageBack()); });
+    i0.ɵɵelement(1, "i", 26);
+    i0.ɵɵelementStart(2, "span", 24);
+    i0.ɵɵtext(3, "previous page");
+    i0.ɵɵelementEnd()();
+} if (rf & 2) {
+    const ctx_r2 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("title", ctx_r2.dataTable.labels.prevPage);
+    i0.ɵɵattribute("aria-controls", ctx_r2.dataTable.id);
+} }
+function DataTablePaginationComponent_button_19_Template(rf, ctx) { if (rf & 1) {
+    const _r8 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "button", 27);
+    i0.ɵɵlistener("click", function DataTablePaginationComponent_button_19_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r8); const ctx_r2 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r2.pageForward()); });
+    i0.ɵɵelement(1, "i", 28);
+    i0.ɵɵelementStart(2, "span", 24);
+    i0.ɵɵtext(3, "next page");
+    i0.ɵɵelementEnd()();
+} if (rf & 2) {
+    const ctx_r2 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("title", ctx_r2.dataTable.labels.nextPage);
+    i0.ɵɵattribute("aria-controls", ctx_r2.dataTable.id);
+} }
+function DataTablePaginationComponent_button_20_Template(rf, ctx) { if (rf & 1) {
+    const _r9 = i0.ɵɵgetCurrentView();
+    i0.ɵɵelementStart(0, "button", 29);
+    i0.ɵɵlistener("click", function DataTablePaginationComponent_button_20_Template_button_click_0_listener() { i0.ɵɵrestoreView(_r9); const ctx_r2 = i0.ɵɵnextContext(); return i0.ɵɵresetView(ctx_r2.pageLast()); });
+    i0.ɵɵelement(1, "i", 30);
+    i0.ɵɵelementStart(2, "span", 24);
+    i0.ɵɵtext(3, "last page");
+    i0.ɵɵelementEnd()();
+} if (rf & 2) {
+    const ctx_r2 = i0.ɵɵnextContext();
+    i0.ɵɵproperty("title", ctx_r2.dataTable.labels.lastPage);
+    i0.ɵɵattribute("aria-controls", ctx_r2.dataTable.id);
 } }
 let nextId$1 = 0;
 class DataTablePaginationComponent {
@@ -503,90 +575,57 @@ class DataTablePaginationComponent {
         } if (rf & 2) {
             let _t;
             i0.ɵɵqueryRefresh(_t = i0.ɵɵloadQuery()) && (ctx.pageInput = _t.first);
-        } }, inputs: { limits: "limits" }, decls: 37, vars: 29, consts: [["pageInput", ""], [1, "row"], [1, "pagination-range", "col"], [3, "textContent"], [1, "pagination-limit", "col-md-3"], [1, "input-group"], [1, "input-group-prepend"], [1, "input-group-text", 3, "textContent"], [1, "form-control", 3, "ngModelChange", "id", "ngModel", "disabled"], [3, "value", 4, "ngFor", "ngForOf"], [1, "pagination-pages", "offset-md-3", "col-md-6"], [1, "pagination-page"], [1, "btn", "btn-default", "pagination-firstpage", 3, "click", "disabled", "title"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-left"], [1, "sr-only"], [1, "btn", "btn-default", "pagination-prevpage", 3, "click", "disabled", "title"], ["aria-hidden", "true", 1, "fa", "fa-angle-left"], [1, "input-group-prepend", "d-sm-block", "d-none"], [1, "input-group-text"], ["type", "number", "min", "1", "step", "1", 1, "form-control", 3, "blur", "keyup.enter", "keyup.esc", "id", "max", "disabled", "ngModel", "title"], [1, "input-group-append"], [1, "btn", "btn-default", "pagination-nextpage", 3, "click", "disabled", "title"], ["aria-hidden", "true", 1, "fa", "fa-angle-right"], [1, "btn", "btn-default", "pagination-lastpage", 3, "click", "disabled", "title"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-right"], [3, "value"]], template: function DataTablePaginationComponent_Template(rf, ctx) { if (rf & 1) {
+        } }, inputs: { limits: "limits" }, decls: 21, vars: 16, consts: [["pageInput", ""], [1, "row"], [1, "pagination-range", "col"], [3, "textContent"], [1, "pagination-limit", "col-md-3"], ["class", "input-group", 4, "ngIf"], [1, "pagination-pages", "offset-md-3", "col-md-6", 3, "hidden"], [1, "pagination-page"], [1, "input-group"], ["class", "btn btn-default pagination-firstpage", 3, "title", "click", 4, "ngIf"], ["class", "btn btn-default pagination-prevpage", 3, "title", "click", 4, "ngIf"], [1, "input-group-prepend", "d-sm-block", "d-none"], [1, "input-group-text"], ["type", "number", "min", "1", "step", "1", 1, "form-control", 3, "blur", "keyup.enter", "keyup.esc", "id", "max", "ngModel", "title"], [1, "input-group-append"], ["class", "btn btn-default pagination-nextpage", 3, "title", "click", 4, "ngIf"], ["class", "btn btn-default pagination-lastpage", 3, "title", "click", 4, "ngIf"], [1, "input-group-prepend"], [1, "input-group-text", 3, "textContent"], [1, "form-control", 3, "ngModelChange", "id", "ngModel"], [3, "value", 4, "ngFor", "ngForOf"], [3, "value"], [1, "btn", "btn-default", "pagination-firstpage", 3, "click", "title"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-left"], [1, "sr-only"], [1, "btn", "btn-default", "pagination-prevpage", 3, "click", "title"], ["aria-hidden", "true", 1, "fa", "fa-angle-left"], [1, "btn", "btn-default", "pagination-nextpage", 3, "click", "title"], ["aria-hidden", "true", 1, "fa", "fa-angle-right"], [1, "btn", "btn-default", "pagination-lastpage", 3, "click", "title"], ["aria-hidden", "true", 1, "fa", "fa-angle-double-right"]], template: function DataTablePaginationComponent_Template(rf, ctx) { if (rf & 1) {
             const _r1 = i0.ɵɵgetCurrentView();
             i0.ɵɵelementStart(0, "div", 1)(1, "div", 2);
             i0.ɵɵelement(2, "span", 3);
             i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(3, "div", 1)(4, "div", 4)(5, "div", 5)(6, "div", 6);
-            i0.ɵɵelement(7, "label", 7);
+            i0.ɵɵelementStart(3, "div", 1)(4, "div", 4);
+            i0.ɵɵtemplate(5, DataTablePaginationComponent_div_5_Template, 5, 5, "div", 5);
             i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(8, "select", 8);
-            i0.ɵɵtwoWayListener("ngModelChange", function DataTablePaginationComponent_Template_select_ngModelChange_8_listener($event) { i0.ɵɵrestoreView(_r1); i0.ɵɵtwoWayBindingSet(ctx.limit, $event) || (ctx.limit = $event); return i0.ɵɵresetView($event); });
-            i0.ɵɵtemplate(9, DataTablePaginationComponent_option_9_Template, 2, 2, "option", 9);
-            i0.ɵɵelementEnd()()();
-            i0.ɵɵelementStart(10, "div", 10)(11, "div", 11)(12, "div", 5)(13, "button", 12);
-            i0.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_13_listener() { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.pageFirst()); });
-            i0.ɵɵelement(14, "i", 13);
-            i0.ɵɵelementStart(15, "span", 14);
-            i0.ɵɵtext(16, "first page");
+            i0.ɵɵelementStart(6, "div", 6)(7, "div", 7)(8, "div", 8);
+            i0.ɵɵtemplate(9, DataTablePaginationComponent_button_9_Template, 4, 2, "button", 9)(10, DataTablePaginationComponent_button_10_Template, 4, 2, "button", 10);
+            i0.ɵɵelementStart(11, "div", 11)(12, "label", 12);
+            i0.ɵɵtext(13);
             i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(17, "button", 15);
-            i0.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_17_listener() { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.pageBack()); });
-            i0.ɵɵelement(18, "i", 16);
-            i0.ɵɵelementStart(19, "span", 14);
-            i0.ɵɵtext(20, "previous page");
-            i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(21, "div", 17)(22, "label", 18);
-            i0.ɵɵtext(23);
-            i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(24, "input", 19, 0);
-            i0.ɵɵlistener("blur", function DataTablePaginationComponent_Template_input_blur_24_listener($event) { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.validate($event)); })("keyup.enter", function DataTablePaginationComponent_Template_input_keyup_enter_24_listener($event) { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.validate($event)); })("keyup.esc", function DataTablePaginationComponent_Template_input_keyup_esc_24_listener() { i0.ɵɵrestoreView(_r1); const pageInput_r3 = i0.ɵɵreference(25); return i0.ɵɵresetView(pageInput_r3.value = ctx.page); });
+            i0.ɵɵelementStart(14, "input", 13, 0);
+            i0.ɵɵlistener("blur", function DataTablePaginationComponent_Template_input_blur_14_listener($event) { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.validate($event)); })("keyup.enter", function DataTablePaginationComponent_Template_input_keyup_enter_14_listener($event) { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.validate($event)); })("keyup.esc", function DataTablePaginationComponent_Template_input_keyup_esc_14_listener() { i0.ɵɵrestoreView(_r1); const pageInput_r7 = i0.ɵɵreference(15); return i0.ɵɵresetView(pageInput_r7.value = ctx.page); });
             i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(26, "div", 20)(27, "span", 18);
-            i0.ɵɵtext(28);
+            i0.ɵɵelementStart(16, "div", 14)(17, "span", 12);
+            i0.ɵɵtext(18);
             i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(29, "button", 21);
-            i0.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_29_listener() { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.pageForward()); });
-            i0.ɵɵelement(30, "i", 22);
-            i0.ɵɵelementStart(31, "span", 14);
-            i0.ɵɵtext(32, "next page");
-            i0.ɵɵelementEnd()();
-            i0.ɵɵelementStart(33, "button", 23);
-            i0.ɵɵlistener("click", function DataTablePaginationComponent_Template_button_click_33_listener() { i0.ɵɵrestoreView(_r1); return i0.ɵɵresetView(ctx.pageLast()); });
-            i0.ɵɵelement(34, "i", 24);
-            i0.ɵɵelementStart(35, "span", 14);
-            i0.ɵɵtext(36, "last page");
-            i0.ɵɵelementEnd()()()()()();
+            i0.ɵɵtemplate(19, DataTablePaginationComponent_button_19_Template, 4, 2, "button", 15)(20, DataTablePaginationComponent_button_20_Template, 4, 2, "button", 16);
+            i0.ɵɵelementEnd()()()();
         } if (rf & 2) {
             i0.ɵɵadvance(2);
             i0.ɵɵproperty("textContent", ctx.dataTable.labels.paginationText.replace("{from}", ctx.Math.ceil(ctx.dataTable.itemCount / ctx.dataTable.limit) !== 0 ? ctx.dataTable.offset + 1 + "" : "0").replace("{to}", ctx.Math.min(ctx.dataTable.offset + ctx.dataTable.limit, ctx.dataTable.itemCount) + "").replace("{total}", ctx.dataTable.itemCount + ""));
-            i0.ɵɵadvance(5);
-            i0.ɵɵproperty("textContent", ctx.dataTable.labels.paginationLimit);
-            i0.ɵɵattribute("for", ctx.id + "-page-limit");
+            i0.ɵɵadvance(3);
+            i0.ɵɵproperty("ngIf", ctx.dataTable.itemCount > 0);
             i0.ɵɵadvance();
-            i0.ɵɵproperty("id", ctx.id + "-page-limit");
-            i0.ɵɵtwoWayProperty("ngModel", ctx.limit);
-            i0.ɵɵproperty("disabled", ctx.dataTable.itemCount === 0);
+            i0.ɵɵproperty("hidden", ctx.dataTable.itemCount === 0);
+            i0.ɵɵadvance(3);
+            i0.ɵɵproperty("ngIf", ctx.dataTable.offset > 0);
             i0.ɵɵadvance();
-            i0.ɵɵproperty("ngForOf", ctx.limits);
-            i0.ɵɵadvance(4);
-            i0.ɵɵproperty("disabled", ctx.dataTable.offset <= 0)("title", ctx.dataTable.labels.firstPage);
-            i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
-            i0.ɵɵadvance(4);
-            i0.ɵɵproperty("disabled", ctx.dataTable.offset <= 0)("title", ctx.dataTable.labels.prevPage);
-            i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
-            i0.ɵɵadvance(5);
+            i0.ɵɵproperty("ngIf", ctx.dataTable.offset > 0);
+            i0.ɵɵadvance(2);
             i0.ɵɵattribute("for", ctx.id + "-page-input");
             i0.ɵɵadvance();
             i0.ɵɵtextInterpolate1(" ", ctx.dataTable.labels.pageNumberLabel, " ");
             i0.ɵɵadvance();
             i0.ɵɵpropertyInterpolate("max", ctx.maxPage);
-            i0.ɵɵproperty("id", ctx.id + "-page-input")("disabled", ctx.dataTable.itemCount === 0)("ngModel", ctx.page)("title", ctx.dataTable.labels.pageNumber + " " + ctx.dataTable.labels.pageNumberNofM.replace("{N}", "" + ctx.page).replace("{M}", "" + ctx.maxPage));
+            i0.ɵɵproperty("id", ctx.id + "-page-input")("ngModel", ctx.page)("title", ctx.dataTable.labels.pageNumber + " " + ctx.dataTable.labels.pageNumberNofM.replace("{N}", "" + ctx.page).replace("{M}", "" + ctx.maxPage));
             i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
             i0.ɵɵadvance(4);
             i0.ɵɵtextInterpolate2(" ", ctx.dataTable.labels.paginationTotalPages, "\u00A0", ctx.dataTable.lastPage, " ");
             i0.ɵɵadvance();
-            i0.ɵɵproperty("disabled", ctx.dataTable.offset + ctx.dataTable.limit >= ctx.dataTable.itemCount)("title", ctx.dataTable.labels.nextPage);
-            i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
-            i0.ɵɵadvance(4);
-            i0.ɵɵproperty("disabled", ctx.dataTable.offset + ctx.dataTable.limit >= ctx.dataTable.itemCount)("title", ctx.dataTable.labels.lastPage);
-            i0.ɵɵattribute("aria-controls", ctx.dataTable.id);
-        } }, dependencies: [i1.NgForOf, i2.NgSelectOption, i2.ɵNgSelectMultipleOption, i2.DefaultValueAccessor, i2.NumberValueAccessor, i2.SelectControlValueAccessor, i2.NgControlStatus, i2.MinValidator, i2.MaxValidator, i2.NgModel], styles: [".pagination-controllers[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]{text-align:right}.pagination-box[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}"] }); }
+            i0.ɵɵproperty("ngIf", ctx.dataTable.offset + ctx.dataTable.limit < ctx.dataTable.itemCount);
+            i0.ɵɵadvance();
+            i0.ɵɵproperty("ngIf", ctx.dataTable.offset + ctx.dataTable.limit < ctx.dataTable.itemCount);
+        } }, dependencies: [i1.NgForOf, i1.NgIf, i2.NgSelectOption, i2.ɵNgSelectMultipleOption, i2.DefaultValueAccessor, i2.NumberValueAccessor, i2.SelectControlValueAccessor, i2.NgControlStatus, i2.MinValidator, i2.MaxValidator, i2.NgModel], styles: [".pagination-controllers[_ngcontent-%COMP%]   select[_ngcontent-%COMP%]{text-align:right}.pagination-box[_ngcontent-%COMP%]   button[_ngcontent-%COMP%]{outline:none!important}"] }); }
 }
 (() => { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(DataTablePaginationComponent, [{
         type: Component,
-        args: [{ selector: 'data-table-pagination', template: "<div class=\"row\">\n  <div class=\"pagination-range col\">\n    <span [textContent]=\"dataTable.labels.paginationText\n        .replace('{from}', this.Math.ceil(dataTable.itemCount / dataTable.limit) !== 0 ? dataTable.offset + 1 + '' : '0')\n        .replace('{to}', this.Math.min(dataTable.offset + dataTable.limit, dataTable.itemCount) + '')\n        .replace('{total}', dataTable.itemCount + '')\"></span>\n  </div>\n</div>\n<div class=\"row\">\n  <div class=\"pagination-limit col-md-3\">\n    <div class=\"input-group\">\n      <div class=\"input-group-prepend\">\n        <label [attr.for]=\"id + '-page-limit'\" class=\"input-group-text\" [textContent]=\"dataTable.labels.paginationLimit\"></label>\n      </div>\n      <select [id]=\"id + '-page-limit'\" class=\"form-control\" [(ngModel)]=\"limit\" [disabled]=\"dataTable.itemCount === 0\">\n        <option *ngFor=\"let l of limits\" [value]=\"l\">{{ l }}</option>\n      </select>\n    </div>\n  </div>\n  <div class=\"pagination-pages offset-md-3 col-md-6\">\n    <div class=\"pagination-page\">\n      <div class=\"input-group\">\n        <button [disabled]=\"dataTable.offset <= 0\"\n                (click)=\"pageFirst()\"\n                class=\"btn btn-default pagination-firstpage\"\n                [title]=\"dataTable.labels.firstPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-double-left\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">first page</span>\n        </button>\n        <button [disabled]=\"dataTable.offset <= 0\"\n                (click)=\"pageBack()\"\n                class=\"btn btn-default pagination-prevpage\"\n                [title]=\"dataTable.labels.prevPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-left\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">previous page</span>\n        </button>\n\n        <div class=\"input-group-prepend d-sm-block d-none\">\n          <label class=\"input-group-text\" [attr.for]=\"id + '-page-input'\">\n            {{ dataTable.labels.pageNumberLabel }}\n          </label>\n        </div>\n        <input #pageInput type=\"number\"\n               [id]=\"id + '-page-input'\"\n               class=\"form-control\" min=\"1\" step=\"1\" max=\"{{maxPage}}\"\n               [disabled]=\"dataTable.itemCount === 0\"\n               [ngModel]=\"page\"\n               (blur)=\"validate($event)\"\n               (keyup.enter)=\"validate($event)\"\n               (keyup.esc)=\"pageInput.value = page\"\n               [title]=\"dataTable.labels.pageNumber + ' ' +\n                    dataTable.labels.pageNumberNofM.replace('{N}', ''+page).replace('{M}', ''+maxPage)\"\n               [attr.aria-controls]=\"dataTable.id\"/>\n        <div class=\"input-group-append\">\n            <span class=\"input-group-text\">\n              {{ dataTable.labels.paginationTotalPages }}&nbsp;{{ dataTable.lastPage }}\n            </span>\n        </div>\n\n        <button [disabled]=\"(dataTable.offset + dataTable.limit) >= dataTable.itemCount\"\n                (click)=\"pageForward()\"\n                class=\"btn btn-default pagination-nextpage\"\n                [title]=\"dataTable.labels.nextPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">next page</span>\n        </button>\n        <button [disabled]=\"(dataTable.offset + dataTable.limit) >= dataTable.itemCount\"\n                (click)=\"pageLast()\"\n                class=\"btn btn-default pagination-lastpage\"\n                [title]=\"dataTable.labels.lastPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-double-right\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">last page</span>\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n", styles: [".pagination-controllers select{text-align:right}.pagination-box button{outline:none!important}\n"] }]
+        args: [{ selector: 'data-table-pagination', template: "<div class=\"row\">\n  <div class=\"pagination-range col\">\n    <span [textContent]=\"dataTable.labels.paginationText\n        .replace('{from}', this.Math.ceil(dataTable.itemCount / dataTable.limit) !== 0 ? dataTable.offset + 1 + '' : '0')\n        .replace('{to}', this.Math.min(dataTable.offset + dataTable.limit, dataTable.itemCount) + '')\n        .replace('{total}', dataTable.itemCount + '')\"></span>\n  </div>\n</div>\n<div class=\"row\">\n  <div class=\"pagination-limit col-md-3\">\n    <div class=\"input-group\" *ngIf=\"dataTable.itemCount > 0\">\n      <div class=\"input-group-prepend\">\n        <label [attr.for]=\"id + '-page-limit'\" class=\"input-group-text\" [textContent]=\"dataTable.labels.paginationLimit\"></label>\n      </div>\n      <select [id]=\"id + '-page-limit'\" class=\"form-control\" [(ngModel)]=\"limit\">\n        <option *ngFor=\"let l of limits\" [value]=\"l\">{{ l }}</option>\n      </select>\n    </div>\n  </div>\n  <div class=\"pagination-pages offset-md-3 col-md-6\" [hidden]=\"dataTable.itemCount === 0\">\n    <div class=\"pagination-page\">\n      <div class=\"input-group\">\n        <button *ngIf=\"dataTable.offset > 0\"\n                (click)=\"pageFirst()\"\n                class=\"btn btn-default pagination-firstpage\"\n                [title]=\"dataTable.labels.firstPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-double-left\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">first page</span>\n        </button>\n        <button *ngIf=\"dataTable.offset > 0\"\n                (click)=\"pageBack()\"\n                class=\"btn btn-default pagination-prevpage\"\n                [title]=\"dataTable.labels.prevPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-left\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">previous page</span>\n        </button>\n\n        <div class=\"input-group-prepend d-sm-block d-none\">\n          <label class=\"input-group-text\" [attr.for]=\"id + '-page-input'\">\n            {{ dataTable.labels.pageNumberLabel }}\n          </label>\n        </div>\n        <input #pageInput type=\"number\"\n               [id]=\"id + '-page-input'\"\n               class=\"form-control\" min=\"1\" step=\"1\" max=\"{{maxPage}}\"\n               [ngModel]=\"page\"\n               (blur)=\"validate($event)\"\n               (keyup.enter)=\"validate($event)\"\n               (keyup.esc)=\"pageInput.value = page\"\n               [title]=\"dataTable.labels.pageNumber + ' ' +\n                    dataTable.labels.pageNumberNofM.replace('{N}', ''+page).replace('{M}', ''+maxPage)\"\n               [attr.aria-controls]=\"dataTable.id\"/>\n        <div class=\"input-group-append\">\n            <span class=\"input-group-text\">\n              {{ dataTable.labels.paginationTotalPages }}&nbsp;{{ dataTable.lastPage }}\n            </span>\n        </div>\n\n        <button *ngIf=\"(dataTable.offset + dataTable.limit) < dataTable.itemCount\"\n                (click)=\"pageForward()\"\n                class=\"btn btn-default pagination-nextpage\"\n                [title]=\"dataTable.labels.nextPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">next page</span>\n        </button>\n        <button *ngIf=\"(dataTable.offset + dataTable.limit) < dataTable.itemCount\"\n                (click)=\"pageLast()\"\n                class=\"btn btn-default pagination-lastpage\"\n                [title]=\"dataTable.labels.lastPage\"\n                [attr.aria-controls]=\"dataTable.id\">\n          <i class=\"fa fa-angle-double-right\" aria-hidden=\"true\"></i>\n          <span class=\"sr-only\">last page</span>\n        </button>\n      </div>\n    </div>\n  </div>\n</div>\n", styles: [".pagination-controllers select{text-align:right}.pagination-box button{outline:none!important}\n"] }]
     }], () => [{ type: DataTableComponent, decorators: [{
                 type: Inject,
                 args: [forwardRef(() => DataTableComponent)]
