@@ -101,6 +101,7 @@ export class AppModule { }
 * `indexColumn` (`boolean` | default: `true`) when `true` the table shows a 0-indexed column.
 * `indexColumnHeader` (`string` | default: `''`) text shown as column header for the index column.
 * `selectColumn` (`boolean` | default: `false`) when `true` the table shows a checkbox column for selecting specific row.
+* `selectColumnLabelVisible` (`boolean` | default: `false`) makes the label for the "select all rows" checkbox visible
 * `multiSelect` (`boolean` | default: `false`) allows multi-row selection, showing a checkbox at select's column header.
 * `labels` (`DataTableTranslations` | default: `defaultTranslations`) interface holding all needed labels. You can pass a subset of the labels. The missing labels will be defaulted.
 * `expandableRow` (`boolean` | default: `false`) when `true` each row will have a collapsible content.
