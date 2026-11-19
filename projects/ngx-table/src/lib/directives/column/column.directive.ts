@@ -35,6 +35,10 @@ export class DataTableColumnDirective implements OnInit {
     this._initCellClass();
   }
 
+  get columnId() {
+    return `ngx-table-column-${this.property}`;
+  }
+
   private _initCellClass() {
     if (!this.styleClass && this.property) {
       if (/^[a-zA-Z0-9_]+$/.test(this.property)) {
