@@ -88,6 +88,7 @@ export class DataTableComponent implements DataTableParams, OnInit, AfterContent
   @Input() rowColors: RowCallback;
   @Input() rowTooltip: RowCallback;
   @Input() selectColumn = false;
+  @Input() selectColumnLabelVisible = false;
   @Input() selectVisibilityKey = '';
   @Input() multiSelect = true;
   @Input() substituteRows = true;

@@ -6,7 +6,7 @@ export const defaultTranslations: DataTableTranslations = {
   headerColumnSelectorAdded: '{column_name} added to {title} table',
   headerColumnSelectorRemoved: '{column_name} removed from {title} table',
   indexColumn: 'index',
-  selectColumn: 'select',
+  selectColumn: 'Select',
   selectRow: 'select {cell_content}',
   selectAllRows: 'select all rows',
   expandColumn: 'expand',
