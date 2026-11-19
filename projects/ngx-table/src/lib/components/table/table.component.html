@@ -21,18 +21,22 @@
         <th scope="col" [hide]="!indexColumnVisible" class="index-column-header">
           <span [textContent]="indexColumnHeader"></span>
         </th>
-        <td [hide]="!selectColumnVisible" class="select-column-header">
-          <label [for]="id + '-select-all-column'" class="sr-only">
-            {{ labels.selectAllRows }}
-          </label>
-          <input
-            [id]="id + '-select-all-column'"
-            [hide]="!multiSelect"
-                 type="checkbox"
-                 [(ngModel)]="selectAllCheckbox"
-                 [disabled]="selectableItemCount === 0"
-                 [title]="labels.selectAllRows"/>
-        </td>
+        <th [hide]="!selectColumnVisible" class="select-column-header">
+          <div class="select-all-rows-header">
+            <label
+              [for]="id + '-select-all-column'"
+              [ngClass]="{'sr-only': !selectColumnLabelVisible}">
+              {{ labels.selectColumn }}
+            </label>
+            <input
+              [id]="id + '-select-all-column'"
+              [hide]="!multiSelect"
+              type="checkbox"
+              [(ngModel)]="selectAllCheckbox"
+              [disabled]="selectableItemCount === 0"
+              [title]="labels.selectAllRows"/>
+          </div>
+        </th>
         <th *ngFor="let column of columns, index as i" #th
             [hide]="!column.visible"
             [class.sortable]="column.sortable"
