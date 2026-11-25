@@ -11,6 +11,7 @@ import {
   Renderer2
 } from '@angular/core';
 import { DataTableComponent } from '../table/table.component';
+import { DataTableColumnDirective } from "../../directives/column/column.directive"
 
 @Component({
   selector: '[dataTableRow]',
@@ -49,6 +50,10 @@ export class DataTableRowComponent implements OnInit, OnDestroy {
     } else {
       return this.index + 1;
     }
+  }
+
+  get rowId() {
+    return `ngx-table-row-${this.displayIndex}`;
   }
 
   getTooltip() {

@@ -13,7 +13,7 @@
       <i [ngClass]="{'fa-caret-right': !expanded, 'fa-caret-down': expanded}" class="fa fa-lg" aria-hidden="true"></i>
     </button>
   </td>
-  <td [hide]="!dataTable.indexColumnVisible" class="index-column" [textContent]="displayIndex"></td>
+  <td [hide]="!dataTable.indexColumnVisible" class="index-column" [textContent]="displayIndex" [id]="rowId"></td>
   <td [hide]="!dataTable.selectColumnVisible" class="select-column">
     <input
            type="checkbox" [(ngModel)]="selected"
